@@ -1,96 +1,47 @@
-# 00 GitHub 註冊、開通與 Fork SOP（給完全新手）
-
-> 這份是給「我聽過 GitHub 但沒真的用過」的同學。
-> 從註冊到 fork 完手冊 template，全程 30 分鐘。
+# 00 GitHub 註冊、開通與 Fork SOP
 
 ---
 
 ## 為什麼你需要 GitHub 帳號？
 
-| 情境 | 沒 GitHub 帳號 | 有 GitHub 帳號 |
+| 情境 | 沒 GitHub  | 有 GitHub  |
 |---|---|---|
-| 寫履歷 | 「我會寫 Python」 | 「github.com/yourname」(看得到 30 個 commits) |
 | 面試 | 嘴上講過去做的事 | 「打開來給你看，這個 PR 是當時的 review」 |
 | 找專案 | 找不到 | star、fork、追蹤 trending |
 | 跟組員協作 | 用 LINE / Dropbox 傳 code | 用 PR / Issue |
 
-> **業界職位 95% 看 GitHub。沒帳號＝隱形。**
-
 ---
 
-## Part 1：註冊 GitHub 帳號（10 分鐘）
+## Part 1：註冊 GitHub 帳號
 
-### Step 1.1 — 開瀏覽器訪問
+### Step 1.1 — 進入連結
 
 https://github.com/signup
 
 ### Step 1.2 — 填註冊資料
 
-| 欄位 | 怎麼填 |
-|---|---|
-| **Email** | 你長期會用的（建議 Gmail，**不要用學校信箱**，畢業後拿不到） |
-| **Password** | ≥ 15 字元、含大小寫 + 數字 + 符號 |
-| **Username** | ⚠️ **這個會出現在所有連結裡，仔細想**！例：`dex-lu`、`luvincent` 不要 `xxx1234abc` |
-
-> **Username 建議**：
-> - 全小寫
-> - 用真名 / 暱稱
-> - 短、好記、好念
-> - 不要含 underscore（許多平台不認）
-> - 例：`dex` / `dexlu` / `lu-dex` / `dex-2026`
-
 ### Step 1.3 — 驗證 + 完成
 
-1. 解 captcha
-2. 收信驗證信件、點 verify
-3. 帳號開通
+1. 收信驗證信件、點 verify
+2. 帳號開通
 
-### Step 1.4 — 設定 Profile（強烈建議）
+### Step 1.4 — 設定 Profile
 
-訪問 https://github.com/settings/profile，填：
+到 https://github.com/settings/profile，填寫
 
-- [ ] **Name**：你的真名（中文 / 英文都可）
-- [ ] **Bio**：一句話自介，例：「DE 養成中 / 從 BD 轉職 / 喜歡資料」
-- [ ] **Location**：Taiwan
-- [ ] **Pronouns**：可填可不填
-- [ ] **大頭照**：放一張真實照片（不要 anime 頭像 — 業界比較信任真實人）
 
-### Step 1.5 — 開兩階段認證（必做）
+### Step 1.5 — 兩階段認證
 
-https://github.com/settings/security
+到 https://github.com/settings/security
 → 開 2FA（用 Google Authenticator app）
-→ **下載備援代碼存到密碼管理工具**（萬一手機掉了還救得回）
 
-### Step 1.6 — 建立 README repo（你的 GitHub 名片）
-
-訪問 https://github.com/new
-→ Repository name 填**跟 username 完全一樣**
-→ Public + Add README → Create
-
-這個 repo 的 README 會顯示在你 GitHub 首頁。模板：
-
-```markdown
-# 嗨，我是 {你的名字}
-
-🚀 正在做的事
-- TibaMe DE 養成班 學員
-- 從 {過去職業} 轉職資料工程
-
-📚 最近在學
-- Python / SQL / Airflow / dbt
-- 第 8 週小組專題：{你選的情境}
-
-🔗 聯絡
-- Email: ...
-- Threads: ...
-```
-
----
-
-## Part 2：本機環境設定（10 分鐘）
+## Part 2：本機環境設定
 
 ### Step 2.1 — 安裝 Git
 
+教學：https://git-scm.com/book/zh-tw/v2/%E9%96%8B%E5%A7%8B-Git-%E5%AE%89%E8%A3%9D%E6%95%99%E5%AD%B8
+
+參考安裝步驟：
 | OS | 怎麼裝 |
 |---|---|
 | **macOS** | 打開 terminal → `xcode-select --install` |
@@ -98,20 +49,20 @@ https://github.com/settings/security
 | **Linux** | `sudo apt install git`（Ubuntu）或 `brew install git` |
 
 驗證：
-```bash
+```到終端機 CLI 輸入：
 git --version
-# git version 2.42.x （只要有版本號就 OK）
+# git version 2.42.x 
 ```
 
 ### Step 2.2 — 設定 Git 身分
 
-```bash
+```到終端機 CLI 輸入：
 git config --global user.name "你的 GitHub 用戶名"
 git config --global user.email "你註冊 GitHub 用的 email"
 git config --global init.defaultBranch main
 ```
 
-⚠️ email 務必跟 GitHub 一致，不然 commits 不會算到你頭上！
+⚠️ email 務必跟 GitHub 一致，不然 commits 可能會跑掉！
 
 ### Step 2.3 — 設定 SSH（之後 push 不用打密碼）
 
@@ -161,7 +112,7 @@ gh auth login
 
 ---
 
-## Part 3：Fork 手冊 Template（5 分鐘）
+## Part 3：Fork 手冊 Template
 
 ### Step 3.1 — 訪問手冊 repo
 
@@ -204,7 +155,7 @@ git push
 
 ---
 
-## Part 4：開新 Repo 給小組專題用（10 分鐘）
+## Part 4： 各小組開專題用 Repo
 
 ### Step 4.1 — 用 template-repo 開新 repo
 
