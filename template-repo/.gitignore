@@ -1,0 +1,64 @@
+# Secrets
+.env
+.env.local
+.env.*.local
+*.key
+*.pem
+credentials.json
+service-account*.json
+
+# Data
+data/raw/
+data/processed/
+data/interim/
+data/external/
+*.csv
+*.parquet
+*.json.gz
+!data/README.md
+!data/sample.csv
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+env/
+.eggs/
+*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Airflow
+airflow.cfg
+airflow.db
+logs/
+unittests.cfg
+webserver_config.py
+
+# Docker
+*.pid
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Build
+dist/
+build/

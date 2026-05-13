@@ -1,0 +1,49 @@
+# Core
+python-dotenv>=1.0.0
+pydantic>=2.5.0
+
+# Data
+pandas>=2.2.0
+numpy>=1.26.0
+pyarrow>=15.0.0
+
+# DB drivers
+pymongo>=4.6.0
+sqlalchemy>=2.0.0
+pymysql>=1.1.0
+psycopg2-binary>=2.9.0
+
+# HTTP / scraping
+requests>=2.31.0
+httpx>=0.27.0
+beautifulsoup4>=4.12.0
+playwright>=1.42.0
+scrapy>=2.11.0
+
+# Pipeline
+apache-airflow>=2.9.0
+
+# Analytics / ML
+scikit-learn>=1.4.0
+sentence-transformers>=2.5.0
+
+# LLM
+openai>=1.20.0
+anthropic>=0.20.0
+
+# Serve
+streamlit>=1.30.0
+fastapi>=0.110.0
+uvicorn>=0.27.0
+folium>=0.16.0
+
+# Monitoring
+sentry-sdk>=1.40.0
+
+# Test / dev
+pytest>=8.0.0
+pytest-cov>=4.1.0
+pytest-mock>=3.12.0
+ruff>=0.3.0
+black>=24.0.0
+mypy>=1.8.0

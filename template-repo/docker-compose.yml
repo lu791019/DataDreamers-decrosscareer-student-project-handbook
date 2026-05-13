@@ -1,0 +1,60 @@
+version: "3.9"
+
+services:
+  mongo:
+    image: mongo:7
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+    healthcheck:
+      test: ["CMD", "mongosh", "--eval", "db.adminCommand('ping')"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+
+  mysql:
+    image: mysql:8
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DB}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql-data:/var/lib/mysql
+
+  app:
+    build: .
+    env_file: .env
+    ports:
+      - "8501:8501"   # Streamlit
+      - "8000:8000"   # FastAPI
+    volumes:
+      - ./src:/app/src
+      - ./dags:/app/dags
+    depends_on:
+      mongo:
+        condition: service_healthy
+      mysql:
+        condition: service_started
+
+  airflow:
+    image: apache/airflow:2.9.0
+    env_file: .env
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./src:/opt/airflow/src
+      - airflow-data:/opt/airflow
+    depends_on:
+      - mongo
+      - mysql
+    command: standalone
+
+volumes:
+  mongo-data:
+  mysql-data:
+  airflow-data:
