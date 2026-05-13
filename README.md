@@ -30,15 +30,20 @@
 
 ## 手冊閱讀方法
 
-```
-你在哪個階段          → 讀哪幾份
-─────────────────────────────────
-還沒組好隊            → README → 02 → 06 評分標準
-組好了選題中          → 04 痛點地圖 → scenarios/* 挑一個對齊
-動工中卡關            → 01 藍圖 + 03 SOP
-快 demo 了            → 06 評分標準 + 05 復盤模板
-專案結束想升級履歷    → 05 課後加強路徑
-```
+依你目前的狀態，找到適合的閱讀路徑：
+
+| 你的狀態 | 🎯 必讀（先看） | 📖 接著補 | ⏱ 估時 |
+|---|---|---|---|
+| 🌱 **完全沒用過 GitHub** | [00 GitHub 註冊 SOP](00-github-setup-sop.md) | [03 協作 SOP](03-collaboration-sop.md) | 30 min |
+| 🤝 **還沒組好隊 / 不知怎麼啟動** | [02 10 階段流程](02-team-process.md)（① 啟動段） | [07 敏捷與工具選型](07-agile-and-tools.md) | 45 min |
+| 🎯 **組好了、正在選題** | [04 痛點 × 業界地圖](04-pain-points-industry-map.md) | [scenarios/](scenarios/) 挑 1-2 個對齊 | 60 min |
+| 🏗 **開始實作、不知如何設計** | [01 通用管線藍圖](01-pipeline-blueprint.md) | 對應的 scenario 文件 | 45 min |
+| 🛠 **動工中卡關 / 流程亂** | [03 協作 SOP](03-collaboration-sop.md) + [07 敏捷與工具](07-agile-and-tools.md) | [02 10 階段流程](02-team-process.md)（⑥ 衝刺段） | 60 min |
+| 🎤 **快到 demo 了** | [06 Demo Day 評分表](06-demo-day-rubric.md) | [05 復盤模板](05-retro-and-after.md)（先寫 sprint retro） | 30 min |
+| 📜 **專題完了想升級履歷** | [05 課後加強路徑](05-retro-and-after.md) | 重看 [06 評分表](06-demo-day-rubric.md) self-check | 90 min |
+| 👀 **第一次來、想全覽** | 從本 README 看完目錄 → 看 1 部 [學長姐 demo](https://www.youtube.com/playlist?list=PL0seqKy3cp6nYX8aFh9oicSh0Gg4BGhQd) | [02 10 階段流程](02-team-process.md) | 90 min |
+
+> 💡 **不確定該看哪條路徑？** 從第一列開始往下找，遇到第一個「對」的情境就停 —— 那條最適合你現在。
 
 ---
 
