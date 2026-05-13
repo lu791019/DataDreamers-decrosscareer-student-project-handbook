@@ -8,15 +8,15 @@
 
 | 情境 | 沒 GitHub | 有 GitHub |
 |---|---|---|
-| 面試 | 嘴上講過去做的事 | 「打開來給你看，這個 PR 是當時的 review」 |
+| 面試 | 只能用講的 | 打開 github 證明 |
 | 找專案 | 找不到 | star / fork / 追蹤 trending |
 | 跟組員協作 | 用 LINE / Dropbox 傳 code | 用 PR / Issue |
 
 ---
 
-## 推薦學習資源（中文）
+## 推薦學習資源
 
-不用我這份從頭講，下面這 3 份社群口碑都很好，挑一份看就夠：
+以下挑一份看就夠：
 
 | 資源 | 適合 | 連結 |
 |---|---|---|
@@ -39,12 +39,11 @@
 3. 開兩階段認證：https://github.com/settings/security
 4. 開一個跟 username 同名的 repo + README — 這會變你的 GitHub 名片首頁
 
-> 💡 username 想清楚再選！會跟你一輩子。建議：全小寫、用真名或暱稱、好記、不含 `_`。
+### Step 2 — 本機環境
 
-### Step 2 — 本機環境（5 分鐘）
+github安裝：https://git-scm.com/book/zh-tw/v2/%E9%96%8B%E5%A7%8B-Git-%E5%AE%89%E8%A3%9D%E6%95%99%E5%AD%B8
 
-```bash
-# macOS / Linux 內建 git；Windows 裝 https://git-scm.com/download/win
+```終端機 CLI 輸入
 
 git --version  # 確認 git 有了
 
@@ -53,16 +52,16 @@ git config --global user.email "你註冊 GitHub 用的 email"
 git config --global init.defaultBranch main
 ```
 
-⚠️ email 務必跟 GitHub 一致，不然 commits 不會算到你頭上。
+⚠️ email 務必跟 GitHub 一致，不然 commits 會亂掉。
 
-### Step 3 — 驗證 push 能跑（5 分鐘）
+### Step 3 — 驗證 push 能跑
 
 選一種：
 - **HTTPS + Personal Access Token**：最簡單，照 GitHub 提示走
 - **SSH key**：之後 push 不用打密碼，[官方教學](https://docs.github.com/zh/authentication/connecting-to-github-with-ssh)
 
 驗證：
-```bash
+```終端機 CLI 輸入
 # HTTPS 直接 clone 試試
 git clone https://github.com/lu791019/tibame-student-project-handbook.git
 
@@ -70,11 +69,13 @@ git clone https://github.com/lu791019/tibame-student-project-handbook.git
 ssh -T git@github.com
 ```
 
-### Step 4 — 裝 gh CLI（可選但推薦）
+### Step 4 — 裝 gh CLI（不一定需要）
 
-```bash
+```終端機 CLI 輸入
+
 # macOS
 brew install gh
+
 # Windows
 winget install --id GitHub.cli
 
@@ -103,7 +104,6 @@ gh repo create your-team/G3-restaurant-pos --public --clone
 2. **開 branch protection**：repo → Settings → Branches → Add rule
    - ✅ Require PR before merging
    - ✅ Require 1 approval
-3. **開 labels**：`sprint-1` / `sprint-2` / `sprint-3` / `p0` / `p1` / `blocker`
 
 ---
 
