@@ -176,4 +176,19 @@
 
 ---
 
+## 🎯 小作業：用評分表給自己現況做 self check
+
+不是等 demo day 才看 — sprint 2 結束就要先做一次，知道差距還來得及補。
+
+- [ ] 7 個維度都打分（不要客氣、不要嚴苛、誠實就好）
+- [ ] 寫成 `docs/self-check-w{N}.md` commit 進 repo
+- [ ] 框出最低分的 2 個維度，列「下週要補什麼」
+- [ ] demo day 前再做最後一次 self check（最低 checklist 那段）
+
+**交付**：PR 連結貼到指定 channel；最低分維度寫成 task 進 task.md。
+
+> 💡 第一次做通常會嚇到分數比想像低 —— 那才正確。沒嚇到表示你沒誠實打分。
+
+---
+
 下一步：[scenarios/ — 看具體情境走一遍 →](scenarios/)

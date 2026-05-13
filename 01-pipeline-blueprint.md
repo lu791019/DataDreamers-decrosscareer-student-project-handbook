@@ -156,4 +156,19 @@
 
 ---
 
+## 🎯 小作業：畫出你的專題 6 階段架構圖
+
+照著本章 6 階段藍圖，把你們組選的情境填進去。
+
+- [ ] 用 draw.io / Excalidraw / Mermaid 畫一張架構圖（Source → Ingest → Storage → Transform → Serve → Observe）
+- [ ] 每個階段標出**選的工具**和**為什麼選**（1 句話即可）
+- [ ] 存到 repo 的 `docs/architecture.md`
+- [ ] 對應的 scenarios/scenario-N 看一次當參考
+
+**交付**：PR 連結貼到指定 channel。
+
+> 💡 用 Mermaid 寫進 markdown 最省事，PR review 看得到 diff、未來改動有歷史。
+
+---
+
 下一步：[02 小組專案 10 階段流程 →](02-team-process.md)

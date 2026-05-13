@@ -318,4 +318,19 @@ demo 前發現的問題：要熬夜。
 
 ---
 
+## 🎯 小作業：寫好 PLAN.md + task.md 第一版
+
+把本章的 10 階段轉成你們組的執行計畫。
+
+- [ ] 用 [template-repo/PLAN.md](template-repo/PLAN.md) 為模板，填好「問題定義 + 系統設計 + Sprint 計畫」三段
+- [ ] 用 [template-repo/task.md](template-repo/task.md) 為模板，把 Sprint 1（W3）的任務拆成 4-6 個 task
+- [ ] 每個 task 都標 owner（不准「大家一起」）
+- [ ] 各人主擔的角色寫進 PLAN.md「分工」段（4 種角色：Ingest / Pipeline / Analytics / Product）
+
+**交付**：把這兩份檔案 commit + push，repo 連結貼到指定 channel。
+
+> 💡 Sprint 1 的任務切夠小（每個 < 1 天能完成），整週才跑得動。覺得切不下去 → 看 04 情境裡的範例 commit log。
+
+---
+
 下一步：[03 業界協作 SOP →](03-collaboration-sop.md)

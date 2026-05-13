@@ -338,4 +338,21 @@ make dev    # 5 分鐘內能跑起來
 
 ---
 
+## 🎯 小作業：跑完一個完整的 PR 流程
+
+每個人都要實際走一次「branch → commit → PR → review → merge」。
+
+- [ ] 每人開一個 `feature/{你的名字}-{改什麼}` branch
+- [ ] 做一個小改動（補 README 自介、加 emoji、加一段 docs 都行）
+- [ ] commit message 用 Conventional Commits 格式（`feat:` / `docs:` / `fix:` ...）
+- [ ] 開 PR，填好 PR template
+- [ ] 互相 review（至少留 1 條 [blocker] / [suggest] / [nit] 的 prefix 留言）
+- [ ] reviewer approve → PR 合進 main
+
+**交付**：repo PR 列表的截圖，或直接貼 PR 連結到指定 channel。
+
+> 💡 第一個 PR 故意小一點，重點是「跑通整個流程」不是「改很多」。
+
+---
+
 下一步：[04 8 情境痛點 × 業界對應地圖 →](04-pain-points-industry-map.md)

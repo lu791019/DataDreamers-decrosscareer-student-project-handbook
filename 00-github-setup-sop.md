@@ -296,6 +296,22 @@ Host github.com-work
 
 ---
 
+## 🎯 小作業：開好你們組的專題 repo
+
+組好隊、選好情境後，把「未來 8 週的家」開出來。
+
+- [ ] 開一個 **Public** repo（名稱：`{組名}-{情境簡寫}`，例：`G3-restaurant-pos`）
+- [ ] Add README + `.gitignore`（Python） + MIT License
+- [ ] 邀請組員為 collaborator（公開只是「能看」，要 push 還是要這一步）
+- [ ] 設 main branch protection（PR + 1 approve）
+- [ ] 第一個 commit：把 4 人名字 + 角色寫進 README
+
+**交付**：repo URL 貼到指定 channel。
+
+> 💡 為什麼公開：8 週後這個 repo 是你的面試代表作，公開的話面試官可以直接看你的 PR / commit / 討論深度。怕 API key 外洩 → 看 03 章 secret 管理。
+
+---
+
 ## 下一步
 
 - 不熟 git 指令？讀 [03 業界協作 SOP](03-collaboration-sop.md)

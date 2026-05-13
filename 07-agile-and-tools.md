@@ -399,4 +399,20 @@ pipeline 失敗自動通知到 #alerts，不靠人手動看
 
 ---
 
+## 🎯 小作業：把協作基建一次架好
+
+W0 結束前要完成，不然 Sprint 1 開始會混亂。
+
+- [ ] 選好溝通工具（Discord / Slack / LINE 三選一）+ 開好 channels（依本章 channel 設計）
+- [ ] 選好 PM 工具（GitHub Projects / Trello / Linear 三選一）+ 把 Sprint 1 任務都建成 issue/card
+- [ ] 約定 daily standup 形式（同步 / 異步）+ 固定時間
+- [ ] 約定 sprint planning / review / retro 三個會議的固定時段
+- [ ] 至少設 1 個自動化（GitHub PR → Discord/Slack 通知）
+
+**交付**：把工具清單 + 會議時段表 + 第一張任務看板的截圖貼到指定 channel。
+
+> 💡 工具沒選好 = 接下來 8 週都在切換 + 找訊息。第 1 週多花 1 小時，整個 sprint 都會更順。
+
+---
+
 ← [回到 README](README.md) | 接下來：[02 階段流程把這些觀念套用進去 →](02-team-process.md)

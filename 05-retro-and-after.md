@@ -223,4 +223,20 @@
 
 ---
 
+## 🎯 小作業：寫第一份 sprint retro
+
+Sprint 1 結束的週日，全組坐下來做。
+
+- [ ] 用 KPT 模板（Keep / Problem / Try）寫
+- [ ] Keep / Problem / Try 各至少 2 條
+- [ ] 每條 Try 都對應一個下週的 action item + assignee
+- [ ] 存到 repo 的 `docs/retro/sprint-1.md` commit
+- [ ] 把上週 Try 的 action items 抄到下一份 sprint plan
+
+**交付**：PR 連結貼到指定 channel。
+
+> 💡 寫「都很好」「都很順」= 沒做 retro，這時候請組長重開一次討論。誠實的 retro 才有用。
+
+---
+
 下一步：[06 Demo Day 評分表 →](06-demo-day-rubric.md)
