@@ -84,29 +84,6 @@ gh auth login  # 一條指令登入
 
 ---
 
-## 開好小組專題 repo
-
-開 Public repo 給小組用：
-
-```bash
-# 方法 A：用 gh CLI
-gh repo create your-team/G3-restaurant-pos --public --clone
-
-# 方法 B：網頁
-# 1. https://github.com/new
-# 2. Public + Add README + .gitignore (Python) + MIT License
-# 3. Create → clone 下來
-```
-
-### 加組員 + 設規範
-
-1. **加組員為 collaborator**：repo → Settings → Collaborators → Add people（公開只是「能看」，要 push 還是要這一步）
-2. **開 branch protection**：repo → Settings → Branches → Add rule
-   - ✅ Require PR before merging
-   - ✅ Require 1 approval
-
----
-
 ## 常見問題
 
 **Q: "Author identity unknown"**
@@ -142,11 +119,37 @@ gh pr create  # 或網頁開 PR
 
 組好隊、選好情境後，把「未來 8 週的家」開出來。
 
-- [ ] 開一個 **Public** repo（名稱：`{組名}-{情境簡寫}`，例：`G3-restaurant-pos`）
-- [ ] Add README + `.gitignore`（Python） + MIT License
-- [ ] 邀請組員為 collaborator
-- [ ] 設 main branch protection（PR + 1 approve）
-- [ ] 第一個 commit：把 4 人名字 + 角色寫進 README
+### Step 1 — 開一個 Public repo
+
+**方法 A：用 gh CLI**
+```bash
+gh repo create your-team/G3-restaurant-pos --public --clone
+```
+
+**方法 B：網頁開**
+1. 進 https://github.com/new
+2. 設定：**Public** + Add README + `.gitignore`（Python） + MIT License
+3. Create → clone 下來
+
+### Step 2 — 加組員 + 設規範
+
+1. **加組員為 collaborator**：repo → Settings → Collaborators → Add people
+   （公開只是「能看」，要 push 還是要這一步）
+2. **開 branch protection**：repo → Settings → Branches → Add rule
+   - ✅ Require PR before merging
+   - ✅ Require 1 approval
+
+### Step 3 — 第一個 commit
+
+把組員 4 人的名字 + 角色寫進 README，commit + push。
+
+### 完成 checklist
+
+- [ ] Public repo 已開（名稱遵循 `{組名}-{情境簡寫}`，例：`G3-restaurant-pos`）
+- [ ] README + `.gitignore`（Python） + MIT License 都加好
+- [ ] 所有組員已加為 collaborator
+- [ ] main branch protection 已設（PR + 1 approve）
+- [ ] 第一個 commit 已 push（含 4 人名單在 README）
 
 **交付**：repo URL 貼到指定 channel。
 
