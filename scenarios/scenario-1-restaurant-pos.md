@@ -74,17 +74,17 @@ fork [template-repo/](../template-repo/) → 改 README → 設定 GitHub Action
 
 ### ⑥ 衝刺
 
-**Sprint 1（W3）跑通**：
+**Sprint 1（W10-W12）跑通**：
 - ingest Kaggle CSV → MySQL → 跑一個 SQL 算出昨日 top 10
 - Streamlit 顯示這個 top 10
 - ✅ 端到端 1 條線
 
-**Sprint 2（W4-5）擴充**：
+**Sprint 2（W13-W15）擴充**：
 - 加 Airflow 排程
 - 加補貨建議演算法（7 日 SMA + 安全庫存）
 - 三視圖切換
 
-**Sprint 3（W6）打磨**：
+**Sprint 3（W16-W18）打磨**：
 - 加 dbt tests
 - 加 LINE 失敗通知
 - UI 優化
@@ -200,18 +200,18 @@ Closes #9
 
 ---
 
-## 完整時程（總 8 週）
+## 完整時程（總 20 週）
 
 | 週 | 階段 | 重點產出 |
 |---|---|---|
-| W0 | 啟動 | team charter / 選定本情境 |
-| W1 | Discovery | persona / data inventory |
-| W2 | 設計 + 分工 | 4 張圖 / RACI |
-| W3 | Sprint 1 | 跑通 ingest → MySQL → Streamlit |
-| W4-5 | Sprint 2 | 排程 + 補貨演算法 + 三視圖 |
-| W6 | Sprint 3 | 監控 + 文件 + LINE notify |
-| W7 | 整合 + 上線 | docker compose / 雲端部署 |
-| W7-8 | Demo + 復盤 | dry run × 3 / 個人 retro |
+| W1-W3 | 啟動 | team charter / 選定本情境 |
+| W2-W4 | Discovery | persona / data inventory |
+| W4-W7 | 設計 + 分工 | 4 張圖 / RACI |
+| W10-W12 | Sprint 1 | 跑通 ingest → MySQL → Streamlit |
+| W13-W15 | Sprint 2 | 排程 + 補貨演算法 + 三視圖 |
+| W16-W18 | Sprint 3 | 監控 + 文件 + LINE notify |
+| W19 | 整合 + 上線 | docker compose / 雲端部署 |
+| W20 | Demo + 復盤 | dry run × 3 / 個人 retro |
 
 ---
 

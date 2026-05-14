@@ -75,16 +75,16 @@ PTT 銀行版              （每日 / 每小時）  (raw_complaints  + pandas  
 
 ### ⑥ 衝刺
 
-**Sprint 1（W3）**：
+**Sprint 1（W10-W12）**：
 - 1000 筆 CFPB → MongoDB → LLM 跑分類
 - 看分類準確率（人工抽 30 筆對）
 
-**Sprint 2（W4-5）**：
+**Sprint 2（W13-W15）**：
 - 整套 pipeline 自動跑
 - 情緒分析 + SLA 警示邏輯
 - Streamlit dashboard 雛形
 
-**Sprint 3（W6）**：
+**Sprint 3（W16-W18）**：
 - LINE Bot 推播
 - 加 cost watcher（每天 LLM 花多少）
 - 主管視圖 / 客服視圖切換
@@ -175,18 +175,18 @@ USER = "客訴內容：{complaint_text}"
 
 ---
 
-## 完整時程
+## 完整時程（總 20 週）
 
 | 週 | 階段 | 重點產出 |
 |---|---|---|
-| W0 | 啟動 | LLM API key + cost budget |
-| W1 | Discovery | 分類體系設計 |
-| W2 | 設計 + 分工 | prompt engineering plan |
-| W3 | Sprint 1 | 1000 筆跑通 + 精度評估 |
-| W4-5 | Sprint 2 | 全自動 pipeline + dashboard |
-| W6 | Sprint 3 | LINE Bot + cost control |
-| W7 | 整合 + 上線 | end-to-end test + 雲端 |
-| W7-8 | Demo + 復盤 | 強調 LLM 應用商業價值 |
+| W1-W3 | 啟動 | LLM API key + cost budget |
+| W2-W4 | Discovery | 分類體系設計 |
+| W4-W7 | 設計 + 分工 | prompt engineering plan |
+| W10-W12 | Sprint 1 | 1000 筆跑通 + 精度評估 |
+| W13-W15 | Sprint 2 | 全自動 pipeline + dashboard |
+| W16-W18 | Sprint 3 | LINE Bot + cost control |
+| W19 | 整合 + 上線 | end-to-end test + 雲端 |
+| W20 | Demo + 復盤 | 強調 LLM 應用商業價值 |
 
 ---
 

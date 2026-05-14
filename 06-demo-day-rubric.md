@@ -155,7 +155,7 @@
 □ 一個指令能跑起來
 □ 線上有可訪問的 live demo URL
 □ 至少有一支監控（pipeline 失敗會通知）
-□ 過去 8 週的 commits 看得出「有人在做事」（不是 demo 前一天 commit 200 次）
+□ 過去整個課程的 commits 看得出「有人在做事」（不是 demo 前一天 commit 200 次）
 □ 至少有一個 reviewed-merged 的 PR
 □ docs/ 裡有 architecture / api-contract / retro 三個 markdown
 □ 我能在 5 分鐘 / 10 分鐘版本之間切換

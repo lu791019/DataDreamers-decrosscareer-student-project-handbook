@@ -74,17 +74,17 @@ Uber Movement          每 15 分鐘         (raw_trips /     + Python LSTM    +
 
 ### ⑥ 衝刺
 
-**Sprint 1（W3）**：
+**Sprint 1（W10-W12）**：
 - 1 個月 TLC 資料載進 BigQuery
 - 跑出「過去 30 天每小時 H3 hex 行程數」
 - 簡單地圖顯示
 
-**Sprint 2（W4-5）**：
+**Sprint 2（W13-W15）**：
 - Airflow 每 15 分鐘 incremental update
 - LSTM 訓練 + 預測未來 30 分鐘
 - 預測 vs 實際對照
 
-**Sprint 3（W6）**：
+**Sprint 3（W16-W18）**：
 - FastAPI `/predict?lat=&lng=&minutes=` endpoint
 - Streamlit 熱點地圖 + 預測切換
 - 加 BigQuery cost monitoring
@@ -167,18 +167,18 @@ GROUP BY 1, 2
 
 ---
 
-## 完整時程
+## 完整時程（總 20 週）
 
 | 週 | 階段 | 重點產出 |
 |---|---|---|
-| W0 | 啟動 | GCP 額度 + BigQuery setup |
-| W1 | Discovery | H3 切分策略 |
-| W2 | 設計 + 分工 | schema + 模型選型 |
-| W3 | Sprint 1 | 1 月資料 + 地圖 |
-| W4-5 | Sprint 2 | 自動化 + LSTM + 評估 |
-| W6 | Sprint 3 | API + 互動地圖 + cost monitor |
-| W7 | 整合 + 上線 | end-to-end |
-| W7-8 | Demo + 復盤 | 強調規模 + 預測準確度 |
+| W1-W3 | 啟動 | GCP 額度 + BigQuery setup |
+| W2-W4 | Discovery | H3 切分策略 |
+| W4-W7 | 設計 + 分工 | schema + 模型選型 |
+| W10-W12 | Sprint 1 | 1 月資料 + 地圖 |
+| W13-W15 | Sprint 2 | 自動化 + LSTM + 評估 |
+| W16-W18 | Sprint 3 | API + 互動地圖 + cost monitor |
+| W19 | 整合 + 上線 | end-to-end |
+| W20 | Demo + 復盤 | 強調規模 + 預測準確度 |
 
 ---
 

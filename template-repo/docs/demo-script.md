@@ -125,14 +125,14 @@
 
 ### 7:30 - 8:30｜監控 + 復盤
 
-- Sentry 截圖：「過去 8 週的 error rate 從 X 降 Y」
+- Sentry 截圖：「整個課程的 error rate 從 X 降 Y」
 - 復盤紀錄：「Sprint 2 我們改了 schema 流程後 conflicts 降 80%」
 
 ---
 
 ### 8:30 - 9:30｜未來迭代
 
-如果再給 8 週：
+如果再給更多時間：
 1. {進階 1：例如 Vector DB / Kafka}
 2. {進階 2}
 3. {進階 3}

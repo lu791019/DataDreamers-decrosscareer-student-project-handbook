@@ -74,16 +74,16 @@ GitHub Jobs API                            skills_index)    embedding match）  
 
 ### ⑥ 衝刺
 
-**Sprint 1（W3）**：
+**Sprint 1（W10-W12）**：
 - 1000 個 DE 職缺爬通 → MongoDB
 - 簡單 dashboard 顯示薪資分佈
 
-**Sprint 2（W4-5）**：
+**Sprint 2（W13-W15）**：
 - LLM 抽技能（從職缺描述）
 - 多職缺類型（DE / SWE / DA / DS）
 - Airflow 自動化
 
-**Sprint 3（W6）**：
+**Sprint 3（W16-W18）**：
 - 技能熱度排行（時序）
 - 個人化推薦（給定技能組合，看哪個職缺 match）
 - 對比勞動部數據校準
@@ -179,18 +179,18 @@ EXAMPLE = """
 
 ---
 
-## 完整時程
+## 完整時程（總 20 週）
 
 | 週 | 階段 | 重點產出 |
 |---|---|---|
-| W0 | 啟動 | 法律 / 倫理討論 |
-| W1 | Discovery | persona + 技能 taxonomy |
-| W2 | 設計 + 分工 | 爬蟲架構 + 反制策略 |
-| W3 | Sprint 1 | 1000 職缺爬通 |
-| W4-5 | Sprint 2 | LLM 技能抽取 + 自動化 |
-| W6 | Sprint 3 | 趨勢 + 推薦 |
-| W7 | 整合 + 上線 | dashboard 部署 |
-| W7-8 | Demo + 復盤 | 強調轉職者價值 |
+| W1-W3 | 啟動 | 法律 / 倫理討論 |
+| W2-W4 | Discovery | persona + 技能 taxonomy |
+| W4-W7 | 設計 + 分工 | 爬蟲架構 + 反制策略 |
+| W10-W12 | Sprint 1 | 1000 職缺爬通 |
+| W13-W15 | Sprint 2 | LLM 技能抽取 + 自動化 |
+| W16-W18 | Sprint 3 | 趨勢 + 推薦 |
+| W19 | 整合 + 上線 | dashboard 部署 |
+| W20 | Demo + 復盤 | 強調轉職者價值 |
 
 ---
 

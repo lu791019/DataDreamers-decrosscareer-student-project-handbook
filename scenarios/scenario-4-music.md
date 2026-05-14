@@ -76,17 +76,17 @@ Kaggle KKBOX       (rate limit 30/sec) listenings /     (audio features      OAu
 
 ### ⑥ 衝刺
 
-**Sprint 1（W3）**：
+**Sprint 1（W10-W12）**：
 - 用自己帳號跑通 OAuth + 抓 50 首歌
 - MongoDB 存
 - 跑 v1 推薦
 
-**Sprint 2（W4-5）**：
+**Sprint 2（W13-W15）**：
 - 整套 pipeline 自動跑
 - v2 + v3 推薦演算法
 - Streamlit 雛形
 
-**Sprint 3（W6）**：
+**Sprint 3（W16-W18）**：
 - 推薦評估（給用戶看、收 feedback）
 - 多用戶（組員 3 人）測試
 - UI 優化
@@ -171,18 +171,18 @@ def recommend(user_id: str, top_k: int = 20):
 
 ---
 
-## 完整時程
+## 完整時程（總 20 週）
 
 | 週 | 階段 | 重點產出 |
 |---|---|---|
-| W0 | 啟動 | Spotify Dev account |
-| W1 | Discovery | 推薦演算法選型 |
-| W2 | 設計 + 分工 | OAuth + schema |
-| W3 | Sprint 1 | OAuth + 50 首 + v1 推薦 |
-| W4-5 | Sprint 2 | 自動化 + v2/v3 + dashboard |
-| W6 | Sprint 3 | 多用戶測試 + 評估 |
-| W7 | 整合 + 上線 | Streamlit Cloud + OAuth deploy |
-| W7-8 | Demo + 復盤 | conversion 數據 |
+| W1-W3 | 啟動 | Spotify Dev account |
+| W2-W4 | Discovery | 推薦演算法選型 |
+| W4-W7 | 設計 + 分工 | OAuth + schema |
+| W10-W12 | Sprint 1 | OAuth + 50 首 + v1 推薦 |
+| W13-W15 | Sprint 2 | 自動化 + v2/v3 + dashboard |
+| W16-W18 | Sprint 3 | 多用戶測試 + 評估 |
+| W19 | 整合 + 上線 | Streamlit Cloud + OAuth deploy |
+| W20 | Demo + 復盤 | conversion 數據 |
 
 ---
 

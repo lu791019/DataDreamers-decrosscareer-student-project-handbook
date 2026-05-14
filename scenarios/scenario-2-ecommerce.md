@@ -72,17 +72,17 @@ momo / PChome      Scrapy/             MySQL            pandas + SQL       FastA
 
 ### ⑥ 衝刺
 
-**Sprint 1（W3）跑通**：
+**Sprint 1（W10-W12）跑通**：
 - 1 個平台 + 10 個 SKU 爬通
 - MySQL 存
 - 一個簡單 line chart
 
-**Sprint 2（W4-5）擴充**：
+**Sprint 2（W13-W15）擴充**：
 - 4 個平台
 - SKU 對齊（用 sentence-transformers embedding）
 - Airflow 每小時
 
-**Sprint 3（W6）打磨**：
+**Sprint 3（W16-W18）打磨**：
 - 加定價建議邏輯
 - 加 Sentry 監控爬蟲失敗
 - FastAPI 暴露給「品牌的內部系統」用
@@ -180,18 +180,18 @@ assignee: @dex
 
 ---
 
-## 完整時程
+## 完整時程（總 20 週）
 
 | 週 | 階段 | 重點產出 |
 |---|---|---|
-| W0 | 啟動 | 選定品類 |
-| W1 | Discovery | persona + 4 個平台站圖 |
-| W2 | 設計 + 分工 | scrapy 架構 + SKU 對齊方案 |
-| W3 | Sprint 1 | 1 平台 10 SKU 通 |
-| W4-5 | Sprint 2 | 4 平台 + SKU match + Airflow |
-| W6 | Sprint 3 | 定價建議 + FastAPI + 監控 |
-| W7 | 整合 + 上線 | Cloud Run + Streamlit Cloud |
-| W7-8 | Demo + 復盤 | 強調自動化價值 |
+| W1-W3 | 啟動 | 選定品類 |
+| W2-W4 | Discovery | persona + 4 個平台站圖 |
+| W4-W7 | 設計 + 分工 | scrapy 架構 + SKU 對齊方案 |
+| W10-W12 | Sprint 1 | 1 平台 10 SKU 通 |
+| W13-W15 | Sprint 2 | 4 平台 + SKU match + Airflow |
+| W16-W18 | Sprint 3 | 定價建議 + FastAPI + 監控 |
+| W19 | 整合 + 上線 | Cloud Run + Streamlit Cloud |
+| W20 | Demo + 復盤 | 強調自動化價值 |
 
 ---
 

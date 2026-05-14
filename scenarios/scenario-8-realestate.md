@@ -74,16 +74,16 @@ Google Maps API（建設）     政府 API           (transactions   (區域 agg
 
 ### ⑥ 衝刺
 
-**Sprint 1（W3）**：
+**Sprint 1（W10-W12）**：
 - 1 個城市（台北）1 季實價登錄 → MySQL
 - 簡單地圖（每筆交易一個點）
 
-**Sprint 2（W4-5）**：
+**Sprint 2（W13-W15）**：
 - 6 都全載
 - 周邊 POI 整合
 - 區域 aggregate + 時序圖
 
-**Sprint 3（W6）**：
+**Sprint 3（W16-W18）**：
 - 預測模型（LSTM 或 Prophet）
 - 評分系統（區域投資分數）
 - 互動地圖 + dashboard
@@ -178,18 +178,18 @@ VALUES (?, ST_SetSRID(ST_MakePoint(lng, lat), 4326), ...)
 
 ---
 
-## 完整時程
+## 完整時程（總 20 週）
 
 | 週 | 階段 | 重點產出 |
 |---|---|---|
-| W0 | 啟動 | 城市範圍選定 |
-| W1 | Discovery | 區域切分策略 |
-| W2 | 設計 + 分工 | PostGIS 設計 + 模型選型 |
-| W3 | Sprint 1 | 台北 1 季 + 簡單地圖 |
-| W4-5 | Sprint 2 | 6 都 + POI + 趨勢 |
-| W6 | Sprint 3 | 預測 + 評分 + 互動 |
-| W7 | 整合 + 上線 | end-to-end |
-| W7-8 | Demo + 復盤 | 強調買房決策價值 |
+| W1-W3 | 啟動 | 城市範圍選定 |
+| W2-W4 | Discovery | 區域切分策略 |
+| W4-W7 | 設計 + 分工 | PostGIS 設計 + 模型選型 |
+| W10-W12 | Sprint 1 | 台北 1 季 + 簡單地圖 |
+| W13-W15 | Sprint 2 | 6 都 + POI + 趨勢 |
+| W16-W18 | Sprint 3 | 預測 + 評分 + 互動 |
+| W19 | 整合 + 上線 | end-to-end |
+| W20 | Demo + 復盤 | 強調買房決策價值 |
 
 ---
 

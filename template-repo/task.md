@@ -4,7 +4,7 @@
 
 ---
 
-## Sprint 1（W3）— 端到端跑通
+## Sprint 1（W10-W12）— 端到端跑通
 
 - [ ] T-001 {ingest 任務}                @owner #issue commit
 - [ ] T-002 {storage schema}             @owner #issue commit
@@ -18,21 +18,21 @@
 
 ---
 
-## Sprint 2（W4-W5）— 擴充 + 自動化
+## Sprint 2（W13-W15）— 擴充 + 自動化
 
 - [ ] T-101 ...
 - [ ] T-102 ...
 
 ---
 
-## Sprint 3（W6）— 打磨 + 監控
+## Sprint 3（W16-W18）— 打磨 + 監控
 
 - [ ] T-201 ...
 - [ ] T-202 ...
 
 ---
 
-## 整合與上線（W7）
+## 整合與上線（W19）
 
 - [ ] I-001 全模組 docker compose 跑通
 - [ ] I-002 雲端部署 dashboard
@@ -42,7 +42,7 @@
 
 ---
 
-## Demo 準備（W7-W8）
+## Demo 準備（W19-W20）
 
 - [ ] D-001 投影片 v1
 - [ ] D-002 業務版 5 分鐘講稿
@@ -54,7 +54,7 @@
 
 ---
 
-## Final（W8）
+## Final（W20）
 
 - [ ] F-001 個人 retro
 - [ ] F-002 小組 retro
