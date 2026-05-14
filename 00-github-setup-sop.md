@@ -118,22 +118,22 @@ gh pr create  # 或網頁開 PR
 
 ## 🎯 小作業：開好各組的專題 repo
 
-分好組、選好情境後，把「未來 8 週的家」開出來。
+分好組、選好情境後，建立「專題共用程式碼和共同協作區域」，也就是「專題用 Repo」建立好
 
 下面提供 **兩種版本** 選一個用：
 
 | 版本 | 適合 | 重點 |
 |---|---|---|
-| 🌱 **一般版** | 第一次開團隊 repo、想快上手 | 組長個人帳號開 repo + 加組員 |
-| 🚀 **專業版** | 想接近業界做法、面試代表作要乾淨 | Org 開團隊主 repo + 每人自己開 portfolio repo |
+| 🌱 **一般版** | 第一次開團隊 repo、想快上手 | 組長個人帳號開 repo + 加組員進入 |
+| 🚀 **專業版** | 想接近業界做法、面試代表作要乾淨 | 建立一個 組織 Github， 開團隊主 repo ， 另外每人自己 fork回來，並開 portfolio repo |
 
-> 💡 **沒選擇障礙就選一般版**。專題結束想升級時再 Transfer 到 org 也來得及，code 不用重寫。
+> 💡 **沒選擇障礙就選一般版**。專題結束想升級時再 Transfer 到 org 也來得及，程式碼和設定可以搬遷過去不用重寫
 
 ---
 
 ### 🌱 一般版：組長個人 repo
 
-由組長一人在自己 GitHub 帳號開 repo，其他組員加為 collaborator。
+由組長一人在自己 GitHub 帳號開 repo，將組員加為 collaborator
 
 #### Step 1 — 開 Public repo
 
@@ -142,15 +142,15 @@ gh pr create  # 或網頁開 PR
 gh repo create your-team/G3-restaurant-pos --public --clone
 ```
 
-**方法 B：網頁開**
+**方法 B：用網頁開**
 1. 進 https://github.com/new
-2. 設定：**Public** + Add README + `.gitignore`（Python） + MIT License
+2. 設定：**Public** + Add README
 3. Create → clone 下來
 
 #### Step 2 — 加組員 + 設規範
 
 1. **加組員為 collaborator**：repo → Settings → Collaborators → Add people
-   （公開只是「能看」，要 push 還是要這一步）
+   （ Public只是「看得到」，要協作更新程式碼 (pull、push 權限) 要做 Collaborators 這一步）
 2. **開 branch protection**：repo → Settings → Branches → Add rule
    - ✅ Require PR before merging
    - ✅ Require 1 approval
@@ -173,77 +173,46 @@ gh repo create your-team/G3-restaurant-pos --public --clone
 
 | 風險 | 說明 |
 |---|---|
-| Repo owner 只有組長 | 組長可隨時刪 / kick / 改 private |
-| 組長畢業 / 改名 / 銷帳號 | 履歷指向死連結 |
+| Repo owner 只有組長 | 會有誤刪的狀況 |
+| 銷帳號 | 履歷指向死連結 |
 | commit graph 視覺集中在組長帳號 | 其他人在 contributors 區較不顯眼 |
 
 **降風險作法**：
-- README 寫明「本 repo 為小組共同作品，組長為技術代管」
+- README 寫明「本 repo 為小組共同作品，組長為代管，組長也的確會有需要花較多心神和時間，所以放在組長這也算合理」
 - commit 時用 `Co-authored-by:` 把貢獻歸給每人（看 03 章）
 - 每人定期 fork 一份到自己帳號當備份
 
 ---
 
-### 🚀 專業版：Org 主 repo + 個人 portfolio repo
+### 🚀 專業版：組織 Org 主 repo + 個人 Github 的 portfolio repo
 
-跟業界 senior engineer 一樣的雙軌做法。
+跟 Side Project 一樣的雙軌做法
 
 ```
-github.com/tir105-g3/restaurant-pos     ← 團隊主 repo（Organization）
+github.com/tir105-g3/restaurant-pos     ← 團隊的主 repo（Organization Github）
                 ↑↓ 互相連結
-github.com/yourname/portfolio           ← 你的代表作清單（每人一份）
+github.com/yourname/portfolio           ← 美人的個人作品集（每人一份）
 ```
 
-#### Step 1 — 開團隊 Organization
+#### Step 1 — 開團隊 Organization Github Account
 
 1. 進 https://github.com/account/organizations/new → 選 **Free** plan
-2. Org 名稱建議：`tir105-g3` 或 `dexteam-pos`
-3. Settings → Members → Invite 4 位組員都加進來
-4. 在 org 底下開 public repo（步驟跟一般版 Step 1 一樣，只是 owner 換成 org）
-5. 開 branch protection（同一般版 Step 2）
+2. Settings → Members → Invite 組員都加進來
+3. 在 org 底下開 public repo（步驟跟一般版 Step 1 一樣，只是 owner 換成 org）
+4. 開 branch protection（同一般版 Step 2）
 
 #### Step 2 — 每人開個人 portfolio repo
 
 每位組員都要做一次：
 
-1. 在自己 GitHub 帳號開一個 Public repo：`{your-username}/portfolio`
-2. README 用下面範本（重點是「列出代表作 + 講清楚自己角色」）
-
-```markdown
-# Hi, 我是 {你的名字} 👋
-
-DE / AI 工程師 / 從 {過去職業} 轉職中
-TibaMe TIR105 養成班 · 找 {目標職位}
-
----
-
-## 🚀 代表作
-
-### 1. 餐飲多門市庫存優化（團隊專題，TibaMe TIR105 G3）
-**角色**：Pipeline Owner（Airflow / Docker / CI）
-**技術棧**：Python · Airflow · MySQL · Streamlit · Docker · GCP
-**我的貢獻**：[15 個 PR](https://github.com/tir105-g3/restaurant-pos/pulls?q=author:yourname) · 280 個 commits
-**完整 repo**：[tir105-g3/restaurant-pos](https://github.com/tir105-g3/restaurant-pos)
-[📺 Demo 影片](...) · [📊 架構圖](...) · [📝 我寫的踩坑 blog](...)
-
-### 2. {你的個人 side project}
-...
-
----
-
-## 📚 學習筆記 / Blog
-- ...
-
-## 📫 找我
-- Email / LinkedIn / Threads
-```
+在自己 GitHub 帳號開一個 Public repo：`{your-username}/portfolio`
 
 #### Step 3 — 兩邊互相連結
 
-- 團隊 repo README 加：「本專題由 4 人合作，每人 portfolio：@a @b @c @d」
-- 個人 portfolio 加：「此專題的團隊 repo：[tir105-g3/restaurant-pos](...)」
+- 團隊 Repo README 加：「本專題由以下成員合作，每人 portfolio：@a @b @c @d」
+- 個人 portfolio 加：「此專題的團隊 repo：[團隊 Repo 連結]」
 
-#### 完成 checklist
+#### 完成確認 checklist
 
 - [ ] 已開團隊 Organization（Free plan）
 - [ ] 團隊主 repo 開在 org 底下，4 人都進 org
@@ -255,16 +224,16 @@ TibaMe TIR105 養成班 · 找 {目標職位}
 
 **交付**：團隊 repo URL + 4 人個人 portfolio URL 都貼到 line 群組
 
-#### 💎 為什麼這樣最好
+#### 💎 為何這樣做
 
-- 團隊作品共有（沒人能獨佔）
+- 團隊作品共有
 - 每人有自己的「面試入口」（履歷只貼一個 portfolio URL）
 - portfolio 不限這個專題（side project / 學習筆記都能放）
-- 跟業界 senior 履歷做法一致
+- 不只培訓的作品集，而是當作真正的 Side Project
 
 ---
 
-> 💡 兩種版本的共通理由：8 週後這個 repo 會是面試代表作。公開的話面試官可以直接看你的 PR / commit / 討論深度。怕 API key 外洩 → 看 03 章 secret 管理。
+> 💡 兩種版本的共通理由：課程結束後，這個 repo 會是面試代表作。公開的話面試官可以直接看你的 PR / commit / 討論深度。
 
 ---
 
