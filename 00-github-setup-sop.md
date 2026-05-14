@@ -106,19 +106,19 @@ gh pr create  # 或網頁開 PR
 
 ---
 
-## 最低 checklist
+## Github 設定盤點 Checklist
 
-- [ ] 有 GitHub 帳號 + Profile 填好 + 大頭照
-- [ ] 開了 2FA
+- [ ] 建立 GitHub 帳號
+- [ ] 設定 2FA
 - [ ] 本機 git config 設好 user.name / user.email
-- [ ] 能成功 push 1 個 commit
+- [ ] 理解或嘗試過 git pull、commit、push 等基礎功能
 - [ ] 看過上面 3 份教學至少 1 份
 
 ---
 
-## 🎯 小作業：開好你們組的專題 repo
+## 🎯 小作業：開好各組的專題 repo
 
-組好隊、選好情境後，把「未來 8 週的家」開出來。
+分好組、選好情境，組長將專案的 git repo 設定好
 
 ### Step 1 — 開一個 Public repo
 
