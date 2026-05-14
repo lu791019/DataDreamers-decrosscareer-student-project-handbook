@@ -14,7 +14,7 @@
 
 ## 業界對標
 
-→ 詳見 [05 痛點地圖 - 情境 5](../05-pain-points-industry-map.md#情境-5叫車服務交通熱點--車輛調度)
+→ 詳見 [04 痛點地圖 - 情境 5](../04-pain-points-industry-map.md#情境-5叫車服務交通熱點--車輛調度)
 
 **過往學長姐 demo**：
 - [13 國道車流 LSTM（TJR102）](https://youtu.be/uZMLE1ebBI0)

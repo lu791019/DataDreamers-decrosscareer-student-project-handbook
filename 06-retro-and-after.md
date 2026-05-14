@@ -106,7 +106,7 @@
 ### 第 1 個月：把專題變成「履歷代表作」
 
 #### Week 1：repo 重整
-- [ ] README 重寫（用 [03 SOP](04-collaboration-sop.md) 的元素清單）
+- [ ] README 重寫（用 [05 業界協作 SOP](05-collaboration-sop.md) 的元素清單）
 - [ ] 加上 GIF demo（用 [Kap](https://getkap.co/) 錄 20 秒）
 - [ ] 把 commit message 全部審一次，太爛的 squash
 - [ ] 加 LICENSE（MIT 最簡單）
@@ -177,7 +177,7 @@
 ```
 
 ### 5 分鐘版（技術面深聊）
-跟著 [02 階段流程的 demo 結構](03-team-process.md#demo-結構技術版-10-分鐘)走，但減掉前後段，留：
+跟著 [03 階段流程的 demo 結構](03-team-process.md#demo-結構技術版-10-分鐘)走，但減掉前後段，留：
 1. **問題 30 秒**
 2. **架構 + 選型 90 秒**：為什麼選 A 不選 B
 3. **demo 90 秒**

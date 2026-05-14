@@ -14,7 +14,7 @@
 
 ## 業界對標
 
-→ 詳見 [05 痛點地圖 - 情境 8](../05-pain-points-industry-map.md#情境-8不動產房價趨勢分析)
+→ 詳見 [04 痛點地圖 - 情境 8](../04-pain-points-industry-map.md#情境-8不動產房價趨勢分析)
 
 **過往學長姐 demo**：
 - [14 房價走勢密碼（TJR102）](https://youtu.be/qNotAKYpsP8)

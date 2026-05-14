@@ -14,7 +14,7 @@
 
 ## 業界對標
 
-→ 詳見 [05 痛點地圖 - 情境 7](../05-pain-points-industry-map.md#情境-7媒體業新聞輿情即時監測)
+→ 詳見 [04 痛點地圖 - 情境 7](../04-pain-points-industry-map.md#情境-7媒體業新聞輿情即時監測)
 
 **過往學長姐 demo（最多參考的情境）**：
 - [05 社群輿情分析（TIR103）](https://youtu.be/wECp8ge09YU)

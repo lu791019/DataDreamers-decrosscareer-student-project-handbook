@@ -1,4 +1,4 @@
-# 00 GitHub 註冊、開通與 Fork SOP
+# 專案協作第 0 週 ｜ 00 GitHub 註冊、開通與 Fork SOP
 
 > 沒用過 GitHub？這篇給你最快的路徑。不重寫一遍別人寫好的教學 — 我們直接指你去看最棒的。
 
@@ -239,9 +239,9 @@ github.com/yourname/portfolio           ← 美人的個人作品集（每人一
 
 ## 下一步
 
-- 不熟 git 指令？看上面三份教學任一份 + 讀 [04 業界協作 SOP](04-collaboration-sop.md)
+- 不熟 git 指令？看上面三份教學任一份 + 讀 [05 業界協作 SOP](05-collaboration-sop.md)
 - 開好 repo 不知道做什麼？讀 [03 小組 10 階段流程](03-team-process.md)
-- 選不出題目？讀 [05 痛點地圖](05-pain-points-industry-map.md)
+- 選不出題目？讀 [04 痛點地圖](04-pain-points-industry-map.md)
 
 ---
 

@@ -1,4 +1,4 @@
-# 03 小組專案 10 階段流程
+# 專案協作第 3 週 ｜ 03 小組專案 10 階段流程
 
 > 這是把整個課程的小組專案做完的完整 SOP。每階段都有：**目標 / 產出物 / 時間預算 / 卡關處方 / 建議**。
 
@@ -186,7 +186,7 @@ demo 前發現的問題：要熬夜。
 - README / PLAN / task.md 三件套
 
 ### 細節展開
-- Git 與 PR 流程 → [04 業界協作 SOP](04-collaboration-sop.md)
+- Git 與 PR 流程 → [05 業界協作 SOP](05-collaboration-sop.md)
 - 工具選型 → [02 敏捷開發與工具選型](02-agile-and-tools.md)
 
 > 前置期最後 2-3 週的事，慢慢架不要硬塞一天。
@@ -356,4 +356,4 @@ demo 前發現的問題：要熬夜。
 
 ---
 
-下一步：[04 業界協作 SOP →](04-collaboration-sop.md)
+下一步：[04 8 情境痛點 × 業界對應地圖 →](04-pain-points-industry-map.md)
