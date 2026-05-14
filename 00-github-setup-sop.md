@@ -239,9 +239,9 @@ github.com/yourname/portfolio           ← 美人的個人作品集（每人一
 
 ## 下一步
 
-- 不熟 git 指令？看上面三份教學任一份 + 讀 [03 業界協作 SOP](03-collaboration-sop.md)
-- 開好 repo 不知道做什麼？讀 [02 小組 10 階段流程](02-team-process.md)
-- 選不出題目？讀 [04 痛點地圖](04-pain-points-industry-map.md)
+- 不熟 git 指令？看上面三份教學任一份 + 讀 [04 業界協作 SOP](04-collaboration-sop.md)
+- 開好 repo 不知道做什麼？讀 [03 小組 10 階段流程](03-team-process.md)
+- 選不出題目？讀 [05 痛點地圖](05-pain-points-industry-map.md)
 
 ---
 

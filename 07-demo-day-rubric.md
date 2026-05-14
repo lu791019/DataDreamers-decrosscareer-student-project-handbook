@@ -1,4 +1,4 @@
-# 06 Demo Day 評分表
+# 07 Demo Day 評分表
 
 > 業界 demo 最低門檻是什麼？這份表給你答案。
 > 同時也是教練 / 業師評你專題的標準。
@@ -79,7 +79,7 @@
 | ✅ 11-15 | Conventional commits、PR template、深度 review、Issue tracking、有 retro 紀錄 |
 
 **checklist**：
-- [ ] Commit message 符合 [03 SOP](03-collaboration-sop.md) 規範
+- [ ] Commit message 符合 [03 SOP](04-collaboration-sop.md) 規範
 - [ ] 每個 PR 都有 description + review
 - [ ] 有 Issue tracking（不是只有口頭討論）
 - [ ] 有 Branch protection 設定
@@ -131,7 +131,7 @@
 
 **checklist**：
 - [ ] 能說「業界誰會做這個」
-- [ ] 對照 [04 痛點地圖](04-pain-points-industry-map.md) 的業界職位
+- [ ] 對照 [05 痛點地圖](05-pain-points-industry-map.md) 的業界職位
 - [ ] 知道 1-2 家真實公司在做類似的事
 
 ---
@@ -168,7 +168,7 @@
 
 ## 評委 / 教練給分時通常會問
 
-1. **「為什麼這題是業界值得做的？」** → 對應 [04 痛點地圖](04-pain-points-industry-map.md)
+1. **「為什麼這題是業界值得做的？」** → 對應 [05 痛點地圖](05-pain-points-industry-map.md)
 2. **「如果資料量 ×100 你會怎麼改？」** → 看你選型有沒有 scale 邏輯
 3. **「你最得意的 1 個設計？」** → 你要有準備
 4. **「你最後悔的 1 個決定？」** → 不要說「都很好」，誠實得分高

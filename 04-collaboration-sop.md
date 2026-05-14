@@ -1,4 +1,4 @@
-# 03 業界協作 SOP
+# 04 業界協作 SOP
 
 > 把「會用 git push」升級成「會跟其他工程師協作」的具體規範。所有 artifact 都有現成樣板可以直接套用。
 
@@ -355,4 +355,4 @@ make dev    # 5 分鐘內能跑起來
 
 ---
 
-下一步：[04 8 情境痛點 × 業界對應地圖 →](04-pain-points-industry-map.md)
+下一步：[05 8 情境痛點 × 業界對應地圖 →](05-pain-points-industry-map.md)

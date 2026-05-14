@@ -1,4 +1,4 @@
-# 02 小組專案 10 階段流程
+# 03 小組專案 10 階段流程
 
 > 這是把整個課程的小組專案做完的完整 SOP。每階段都有：**目標 / 產出物 / 時間預算 / 卡關處方 / 建議**。
 
@@ -179,15 +179,15 @@ demo 前發現的問題：要熬夜。
 
 ### 產出物
 - GitHub repo 建好（看 [00 章 SOP](00-github-setup-sop.md) 一般版或專業版）
-- 溝通工具（Discord / Slack / LINE）+ channels 建好（看 [07 章](07-agile-and-tools.md)）
+- 溝通工具（Discord / Slack / LINE）+ channels 建好（看 [02 章](02-agile-and-tools.md)）
 - PM 工具（GitHub Projects / Trello / Linear）設好
 - Branch 規範：`main` / `develop` / `feature/*` / `fix/*`
 - 第一個 PR 跑通 CI
 - README / PLAN / task.md 三件套
 
 ### 細節展開
-- Git 與 PR 流程 → [03 業界協作 SOP](03-collaboration-sop.md)
-- 工具選型 → [07 敏捷開發與工具選型](07-agile-and-tools.md)
+- Git 與 PR 流程 → [04 業界協作 SOP](04-collaboration-sop.md)
+- 工具選型 → [02 敏捷開發與工具選型](02-agile-and-tools.md)
 
 > 前置期最後 2-3 週的事，慢慢架不要硬塞一天。
 
@@ -195,12 +195,15 @@ demo 前發現的問題：要熬夜。
 
 ## ⑥ 衝刺（W10-W18，3 個 sprint）
 
-### 節奏（每週固定）
+> 這節是 [02 章敏捷方法論](02-agile-and-tools.md) 的具體應用。
+> 如果還不熟 Scrum 五件事 / standup / retro，先回去翻 02 再回來。
+
+### 節奏（每週固定，套用 02 章 Scrum 五件事）
 ```
-週一    sprint planning (1 hr)     決定本週做什麼
-週一-五 daily standup (10 min)     我做什麼 / 卡什麼 / 需要誰幫
-週五    sprint review (1 hr)       demo 給組內看
-週日    sprint retro (30 min)      什麼 ok 什麼不行
+週一    sprint planning (1 hr)     決定本週做什麼     ← 02 章 Sprint Planning
+週一-五 daily standup (10 min)     我做什麼 / 卡什麼  ← 02 章 Daily Standup
+週五    sprint review (1 hr)       demo 給組內看      ← 02 章 Sprint Review
+週日    sprint retro (30 min)      什麼 ok 什麼不行    ← 02 章 Sprint Retro
 ```
 
 ### Sprint 1（W10-W12，3 週）：跑通最小可行 pipeline
@@ -308,7 +311,7 @@ demo 前發現的問題：要熬夜。
 
 ## ⑩ 復盤（W20 後半，2 小時）
 
-詳見 [05 復盤 + 課後加強路徑](05-retro-and-after.md)。
+詳見 [06 復盤 + 課後加強路徑](06-retro-and-after.md)。
 
 關鍵：**復盤完才算真正畫上句點**。沒做復盤，這段累積的學習很容易在兩個月後忘光，下次遇到類似情境又會踩同個坑。
 
@@ -353,4 +356,4 @@ demo 前發現的問題：要熬夜。
 
 ---
 
-下一步：[03 業界協作 SOP →](03-collaboration-sop.md)
+下一步：[04 業界協作 SOP →](04-collaboration-sop.md)

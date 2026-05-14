@@ -14,7 +14,7 @@
 
 ## 業界對標
 
-→ 詳見 [04 痛點地圖 - 情境 2](../04-pain-points-industry-map.md#情境-2b2c-電商競品比價--動態定價)
+→ 詳見 [05 痛點地圖 - 情境 2](../05-pain-points-industry-map.md#情境-2b2c-電商競品比價--動態定價)
 
 **過往學長姐 demo**：
 - [16 水果價格預測系統（TJR103）](https://youtu.be/nIjxkWHxT5k)

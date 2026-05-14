@@ -14,7 +14,7 @@
 
 ## 業界對標
 
-→ 詳見 [04 痛點地圖 - 情境 3](../04-pain-points-industry-map.md#情境-3數位金融客訴效率--滿意度)
+→ 詳見 [05 痛點地圖 - 情境 3](../05-pain-points-industry-map.md#情境-3數位金融客訴效率--滿意度)
 
 **過往學長姐 demo**：
 - [07 反詐騙 LINE Bot（TIR104）](https://youtu.be/d0_EgIgMjOU)

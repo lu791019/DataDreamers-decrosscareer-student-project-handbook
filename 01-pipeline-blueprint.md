@@ -213,4 +213,4 @@ POS 系統  ───→   Python 抓 API ──→ MySQL 入庫 ──→ panda
 
 ---
 
-下一步：[02 小組專案 10 階段流程 →](02-team-process.md)
+下一步：[02 敏捷開發 + 工具選型 →](02-agile-and-tools.md)

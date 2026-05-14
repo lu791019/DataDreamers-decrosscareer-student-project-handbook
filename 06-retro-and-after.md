@@ -1,4 +1,4 @@
-# 05 復盤 + 課後加強路徑
+# 06 復盤 + 課後加強路徑
 
 > 復盤是把「我做了一個專題」轉成「我學到了 X」的關鍵動作。沒做的話，過了兩個月你會發現自己只記得「做過」，但講不出來具體學到什麼。
 
@@ -106,7 +106,7 @@
 ### 第 1 個月：把專題變成「履歷代表作」
 
 #### Week 1：repo 重整
-- [ ] README 重寫（用 [03 SOP](03-collaboration-sop.md) 的元素清單）
+- [ ] README 重寫（用 [03 SOP](04-collaboration-sop.md) 的元素清單）
 - [ ] 加上 GIF demo（用 [Kap](https://getkap.co/) 錄 20 秒）
 - [ ] 把 commit message 全部審一次，太爛的 squash
 - [ ] 加 LICENSE（MIT 最簡單）
@@ -177,7 +177,7 @@
 ```
 
 ### 5 分鐘版（技術面深聊）
-跟著 [02 階段流程的 demo 結構](02-team-process.md#demo-結構技術版-10-分鐘)走，但減掉前後段，留：
+跟著 [02 階段流程的 demo 結構](03-team-process.md#demo-結構技術版-10-分鐘)走，但減掉前後段，留：
 1. **問題 30 秒**
 2. **架構 + 選型 90 秒**：為什麼選 A 不選 B
 3. **demo 90 秒**
@@ -239,4 +239,4 @@ Sprint 1 結束的週日，全組坐下來做。
 
 ---
 
-下一步：[06 Demo Day 評分表 →](06-demo-day-rubric.md)
+下一步：[07 Demo Day 評分表 →](07-demo-day-rubric.md)

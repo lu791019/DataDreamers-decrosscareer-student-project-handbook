@@ -14,7 +14,7 @@
 
 ## 業界對標
 
-→ 詳見 [04 痛點地圖 - 情境 1](../04-pain-points-industry-map.md#情境-1餐飲連鎖-pos)
+→ 詳見 [05 痛點地圖 - 情境 1](../05-pain-points-industry-map.md#情境-1餐飲連鎖-pos)
 
 **過往學長姐 demo**：
 - [08 美味餐廳隨拾取（TIR104）](https://youtu.be/s2kePv2_A5I)
@@ -109,7 +109,7 @@ fork [template-repo/](../template-repo/) → 改 README → 設定 GitHub Action
 ```
 
 ### ⑩ 復盤
-詳見 [05](../05-retro-and-after.md)
+詳見 [06](../06-retro-and-after.md)
 
 ---
 

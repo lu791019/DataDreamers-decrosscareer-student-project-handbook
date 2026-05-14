@@ -14,7 +14,7 @@
 
 ## 業界對標
 
-→ 詳見 [04 痛點地圖 - 情境 4](../04-pain-points-industry-map.md#情境-4音樂串流推薦優化--用戶偏好)
+→ 詳見 [05 痛點地圖 - 情境 4](../05-pain-points-industry-map.md#情境-4音樂串流推薦優化--用戶偏好)
 
 **過往學長姐 demo**：
 - [03 KKBOX & Spotify 音樂串流市場比較分析（TIR102）](https://youtu.be/esk9n-bXJCY)

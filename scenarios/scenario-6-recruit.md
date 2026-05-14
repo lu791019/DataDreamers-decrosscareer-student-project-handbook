@@ -14,7 +14,7 @@
 
 ## 業界對標
 
-→ 詳見 [04 痛點地圖 - 情境 6](../04-pain-points-industry-map.md#情境-6求職媒合職缺趨勢--薪資洞察)
+→ 詳見 [05 痛點地圖 - 情境 6](../05-pain-points-industry-map.md#情境-6求職媒合職缺趨勢--薪資洞察)
 
 **過往學長姐 demo**：
 - [04 求職 360°（TIR103）](https://youtu.be/fCuxt4RLiiM)
