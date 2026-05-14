@@ -41,7 +41,8 @@
 
 ### Step 2 — 本機環境
 
-github安裝：https://git-scm.com/book/zh-tw/v2/%E9%96%8B%E5%A7%8B-Git-%E5%AE%89%E8%A3%9D%E6%95%99%E5%AD%B8
+[Github 本機安裝](https://git-scm.com/book/zh-tw/v2/%E9%96%8B%E5%A7%8B-Git-%E5%AE%89%E8%A3%9D%E6%95%99%E5%AD%B8)
+
 
 ```終端機 CLI 輸入
 
