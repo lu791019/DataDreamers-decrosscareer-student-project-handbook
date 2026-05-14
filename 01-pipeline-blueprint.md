@@ -61,9 +61,21 @@ POS 系統  ───→   Python 抓 API ──→ MySQL 入庫 ──→ panda
 │ Source  │→ │ Ingest  │→ │ Storage │→ │Transform│→ │  Serve  │→ │ Observe │
 │ 資料源  │  │ 進料    │  │ 儲存    │  │ 加工    │  │ 服務    │  │ 監控    │
 └─────────┘  └─────────┘  └─────────┘  └─────────┘  └─────────┘  └─────────┘
+                  │            │            │
+                  ▼            ▼            ▼
+              ┌─────────────────────────────────┐
+              │  ETL  =  E (Extract) → T → L    │  傳統：先轉再進倉
+              │  ELT  =  E → L (Load)  → T      │  雲端主流：先進倉再轉
+              └─────────────────────────────────┘
    ↑                                                                  │
    └──────────────── feedback loop（監控發現問題 → 改進 source）─────┘
 ```
+
+> 💡 **六階段 vs ETL/ELT 的關係**：
+> - **六階段**是整條 pipeline 的「結構視角」（從原始資料到使用者）
+> - **ETL/ELT**是中間三段的「動作流程」 — Ingest（=E 取）／Storage（=L 進倉）／Transform（=T 加工）
+> - 其餘三段（Source / Serve / Observe）是 ETL 通常不畫進去、但實務上少不了的環節
+> - ETL 跟 ELT 的差別 = **T 在 L 之前還是之後**（看上面對照框）
 
 ### 1️⃣ Source — 資料從哪來
 
@@ -77,7 +89,7 @@ POS 系統  ───→   Python 抓 API ──→ MySQL 入庫 ──→ panda
 
 **選型原則**：能用 API 別用爬蟲，能用爬蟲別硬刻。
 
-### 2️⃣ Ingest — 怎麼把資料拉進來
+### 2️⃣ Ingest — 怎麼把資料拉進來（= ETL 的 **E** Extract）
 
 | 模式 | 工具 | 何時用 |
 |---|---|---|
@@ -88,7 +100,7 @@ POS 系統  ───→   Python 抓 API ──→ MySQL 入庫 ──→ panda
 
 **一個小提醒**：很多人交作業時就停在「手動跑一次」—— 但 pipeline 的價值在「自動」。沒上排程的話，面試官比較難從你的 demo 感受到工程價值，可以排程的就盡量排起來。
 
-### 3️⃣ Storage — 資料放在哪
+### 3️⃣ Storage — 資料放在哪（= ETL 的 **L** Load 的目的地）
 
 ```
 原始層（Raw / Bronze）        → MongoDB / GCS / S3 / 本地 parquet
@@ -102,7 +114,7 @@ POS 系統  ───→   Python 抓 API ──→ MySQL 入庫 ──→ panda
 
 **建議習慣**：**Raw 永遠保留**，只在 Silver / Gold 層做清洗。多一份備份，安心很多。
 
-### 4️⃣ Transform — 加工成可用資訊
+### 4️⃣ Transform — 加工成可用資訊（= ETL 的 **T** Transform）
 
 | 工具 | 適用 |
 |---|---|
