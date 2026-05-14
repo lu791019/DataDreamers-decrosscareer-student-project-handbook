@@ -142,19 +142,19 @@ gh repo create your-team/G3-restaurant-pos --public --clone
 
 ### Step 3 — 第一個 commit
 
-把組員 4 人的名字 + 角色寫進 README，commit + push。
+把組員名稱/暱稱和組員分配的角色(若有)寫進 README，並進行 git commit + git push
 
 ### 完成 checklist
 
-- [ ] Public repo 已開（名稱遵循 `{組名}-{情境簡寫}`，例：`G3-restaurant-pos`）
-- [ ] README + `.gitignore`（Python） + MIT License 都加好
+- [ ] Public repo 已開（名稱遵循 `{組名}-{專題名稱}-{情境簡寫}`，例：`G3-project_name-restaurant_pos`）
+- [ ] 寫第一版本 README 
 - [ ] 所有組員已加為 collaborator
-- [ ] main branch protection 已設（PR + 1 approve）
-- [ ] 第一個 commit 已 push（含 4 人名單在 README）
+- [ ] main branch protection 簡單設定（PR + 1 approve）
+- [ ] 第一個 commit 進行 push（含組員名單在 README）
 
-**交付**：repo URL 貼到指定 channel。
+**交付**：repo URL 貼到 line群組
 
-> 💡 為什麼公開：8 週後這個 repo 是你的面試代表作，公開的話面試官可以直接看你的 PR / commit / 討論深度。怕 API key 外洩 → 看 03 章 secret 管理。
+> 💡 為什麼公開：專題結束後，這個 repo 會是你們各組和個人的面試代表作，公開的話面試官可以直接看你的 PR / commit / 討論深度。
 
 ---
 
