@@ -24,7 +24,7 @@
 ## 6 階段藍圖具體化
 
 ```
-Source              Ingest              Storage          Transform          Serve            Observe
+Source              Ingest              Storage          Process          Serve            Observe
 ─────               ──────              ───────          ─────────          ─────            ───────
 momo / PChome      Scrapy/             MySQL            pandas + SQL       FastAPI           Sentry
 蝦皮 / Yahoo       Playwright          (prices/         (時序處理 /         + Streamlit       + 排程監控

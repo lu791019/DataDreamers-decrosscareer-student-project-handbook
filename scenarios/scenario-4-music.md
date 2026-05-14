@@ -25,7 +25,7 @@
 ## 6 階段藍圖具體化
 
 ```
-Source              Ingest              Storage         Transform           Serve           Observe
+Source              Ingest              Storage         Process             Serve           Observe
 ─────               ──────              ───────         ─────────           ─────           ───────
 Spotify Web API    requests + retry    MongoDB         pandas + SQL          Streamlit       Airflow UI
 Spotify Charts     Airflow 每日        (tracks /        + sklearn            + Spotify       + cost watcher

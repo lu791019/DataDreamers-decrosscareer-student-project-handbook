@@ -10,7 +10,7 @@
 graph LR
     A[Source<br/>外部資料源] --> B[Ingest<br/>進料模組]
     B --> C[Storage<br/>儲存層]
-    C --> D[Transform<br/>加工層]
+    C --> D[Process<br/>加工層]
     D --> E[Serve<br/>服務層]
     E --> F[End User]
     G[Observe<br/>監控] -.監控.-> B
@@ -48,7 +48,7 @@ graph LR
 
 ER 圖見 [data-dictionary.md](data-dictionary.md)
 
-### 4. Transform — 加工
+### 4. Process — 加工
 
 - **工具**：pandas / SQL / {dbt / Spark}
 - **處理頻率**：{每日 6am / 每小時}

@@ -28,7 +28,7 @@
 | Source | | |
 | Ingest | | |
 | Storage | | |
-| Transform | | |
+| Process | | |
 | Serve | | |
 | Observe | | |
 

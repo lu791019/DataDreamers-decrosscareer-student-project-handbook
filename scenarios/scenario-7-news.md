@@ -28,7 +28,7 @@
 ## 6 階段藍圖具體化
 
 ```
-Source              Ingest             Storage         Transform         Serve              Observe
+Source              Ingest             Storage         Process         Serve              Observe
 ─────               ──────             ───────         ─────────         ─────              ───────
 RSS feeds          requests +         MongoDB         LLM 分類+情緒      Streamlit          Sentry
 NewsAPI            Airflow            (articles /     + 主題 cluster    + LINE Bot         + LLM cost

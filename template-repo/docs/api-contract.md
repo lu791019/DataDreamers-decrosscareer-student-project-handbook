@@ -39,9 +39,9 @@ class RawArticle(BaseModel):
 
 ---
 
-## 2. Storage → Transform
+## 2. Storage → Process
 
-### Transform 從 Storage 讀的查詢
+### Process 從 Storage 讀的查詢
 
 ```python
 # src/analytics/data_loader.py
@@ -67,7 +67,7 @@ class ClassifiedArticle(BaseModel):
 
 ---
 
-## 3. Transform → Serve
+## 3. Process → Serve
 
 ### Serve（Streamlit / API）讀什麼
 

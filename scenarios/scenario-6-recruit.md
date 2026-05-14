@@ -25,7 +25,7 @@
 ## 6 階段藍圖具體化
 
 ```
-Source                  Ingest             Storage         Transform         Serve            Observe
+Source                  Ingest             Storage         Process         Serve            Observe
 ─────                   ──────             ───────         ─────────         ─────            ───────
 104 / CakeResume       Playwright         MongoDB          pandas + LLM       Streamlit        Sentry
 LinkedIn (lite)        + Scrapy           (raw_jobs /      (技能抽取 /        + Tableau /       + scrape

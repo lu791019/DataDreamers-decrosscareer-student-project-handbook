@@ -19,7 +19,7 @@
 [完整架構圖](docs/architecture.md)
 
 ```
-Source → Ingest → Storage → Transform → Serve → Observe
+Source → Ingest → Storage → Process → Serve → Observe
 ```
 
 ## 快速開始
@@ -51,7 +51,7 @@ docker compose up -d
 | Source | {例：Spotify API, Kaggle CSV} |
 | Ingest | Python + Airflow |
 | Storage | MongoDB / MySQL |
-| Transform | pandas / SQL / dbt |
+| Process | pandas / SQL / dbt |
 | Serve | Streamlit / FastAPI |
 | Observe | Sentry / LINE Notify |
 

@@ -27,7 +27,7 @@
 ## 6 階段藍圖具體化
 
 ```
-Source                 Ingest              Storage         Transform          Serve           Observe
+Source                 Ingest              Storage         Process          Serve           Observe
 ─────                  ──────              ───────         ─────────          ─────           ───────
 Kaggle Restaurant     pandas              MySQL           pandas             Streamlit       Airflow UI
 Order Details         + Airflow           (orders /       (groupby /         (店長/區督       + LINE notify
@@ -164,7 +164,7 @@ Closes #9
 
 - [ ] 加 **LLM 評論分析**：抓 Google Maps 評論做情緒分類 → 結合銷售看「品項 vs 評論」
 - [ ] 加 **天氣 API**：天氣冷 → 火鍋類自動加成補貨建議
-- [ ] 加 **dbt + BigQuery**：把 Transform 層重寫成 dbt models
+- [ ] 加 **dbt + BigQuery**：把 Process 層重寫成 dbt models
 - [ ] 加 **異常偵測**：銷量突然掉 50% 自動 alert
 
 ---

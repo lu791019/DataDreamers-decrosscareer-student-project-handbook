@@ -25,7 +25,7 @@
 ## 6 階段藍圖具體化
 
 ```
-Source                     Ingest             Storage         Transform        Serve            Observe
+Source                     Ingest             Storage         Process        Serve            Observe
 ─────                      ──────             ───────         ─────────        ─────            ───────
 內政部實價登錄              下載 zip + parse   MySQL +         pandas + LSTM    Streamlit         Airflow UI
 data.gov.tw 周邊設施        每月觸發           PostGIS         + sklearn        + Folium 地圖     + 預測模型
@@ -152,7 +152,7 @@ VALUES (?, ST_SetSRID(ST_MakePoint(lng, lat), 4326), ...)
 
 - [ ] **PostGIS 進階**：用 ST_Buffer 算「500m 內捷運站數」
 - [ ] **ML 房價預測**：XGBoost + 多 feature
-- [ ] **dbt + BigQuery**：把 Transform 層重寫
+- [ ] **dbt + BigQuery**：把 Process 層重寫
 - [ ] **建設預測影響**：捷運完工前後價格變化模型
 - [ ] **租屋整合**：加 591 租屋資料看「租金回報率」
 

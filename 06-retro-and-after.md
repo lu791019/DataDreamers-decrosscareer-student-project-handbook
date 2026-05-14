@@ -132,7 +132,7 @@
 
 | 方向 | 推薦資源 | 目標 |
 |---|---|---|
-| **dbt + BigQuery 維度建模** | dbt fundamentals course | 把你的專案 Transform 層重寫成 dbt |
+| **dbt + BigQuery 維度建模** | dbt fundamentals course | 把你的專案 Process 層重寫成 dbt |
 | **Streaming（Kafka / Pub/Sub）** | Confluent dev courses | 加一條即時管線 |
 | **MLOps / ML pipeline** | MLOps Zoomcamp（DataTalksClub）| 把模型 production 化 |
 | **Cloud 認證** | GCP Pro Data Engineer / AWS DA | 履歷加分 |

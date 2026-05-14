@@ -25,7 +25,7 @@
 ## 6 階段藍圖具體化
 
 ```
-Source                  Ingest             Storage         Transform        Serve            Observe
+Source                  Ingest             Storage         Process        Serve            Observe
 ─────                   ──────             ───────         ─────────        ─────            ───────
 CFPB Complaint API     requests + cron    MongoDB          LLM API           Streamlit        Sentry
 PTT 銀行版              （每日 / 每小時）  (raw_complaints  + pandas          + LINE推播       + LLM cost 

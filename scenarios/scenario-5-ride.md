@@ -25,7 +25,7 @@
 ## 6 階段藍圖具體化
 
 ```
-Source                  Ingest             Storage         Transform        Serve            Observe
+Source                  Ingest             Storage         Process        Serve            Observe
 ─────                   ──────             ───────         ─────────        ─────            ───────
 NYC TLC Trip Records   下載 + Airflow     BigQuery        BigQuery GIS     FastAPI          Airflow UI
 Uber Movement          每 15 分鐘         (raw_trips /     + Python LSTM    + Streamlit       + BigQuery
