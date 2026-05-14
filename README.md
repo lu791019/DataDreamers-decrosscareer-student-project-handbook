@@ -54,11 +54,6 @@
 | **第 3 週** | [03 小組專案 10 階段流程](03-team-process.md) | 啟動 → 復盤的 20 週完整 SOP |
 | **第 4 週** | [04 8 情境痛點 × 業界對應地圖](04-pain-points-industry-map.md) | 選題 × 業界職位對應 |
 
-### 📚 持續參考（不綁定週次）
-- [05 業界協作 SOP](05-collaboration-sop.md) — Git / GitHub / PR / Code Review（實作期天天看）
-- [06 復盤 + 課後加強路徑](06-retro-and-after.md) — KPT / 4Ls / 履歷升級 checklist（每 sprint 末用）
-- [07 Demo Day 評分表](07-demo-day-rubric.md) — 業界 demo 最低門檻（學期末用）
-
 ### 🎯 8 情境完整 walkthrough
 | # | 情境 | 對應產業 | 過往作品參考 |
 |---|---|---|---|
@@ -74,20 +69,26 @@
 ### 🛠 GitHub Skeleton（學員 fork 用）
 - [template-repo/](template-repo/) — 開好的 repo 範本，含 README / PLAN / task / PR template / CI workflow
 
+### 📚 持續參考（不綁定週次）
+- [05 業界協作 SOP](05-collaboration-sop.md) — Git / GitHub / PR / Code Review（實作期天天看）
+- [06 復盤 + 課後加強路徑](06-retro-and-after.md) — KPT / 4Ls / 履歷升級 checklist（每 sprint 末用）
+- [07 Demo Day 評分表](07-demo-day-rubric.md) — 業界 demo 最低門檻（學期末用）
+
 ---
 
-## 22 部過往學長姐 demo（你的對標）
+## 過往學長姐 demo
 
-共 22 部專題 demo，YouTube 公開：
+YouTube 公開：
 
 **🔗 [完整 playlist](https://www.youtube.com/playlist?list=PL0seqKy3cp6nYX8aFh9oicSh0Gg4BGhQd)**
 
 **怎麼看才有效**：
+
 - 找清單中有興趣的 1~3 個過去專題觀看
 - 回答 3 個問題：
   1. 他們解的是什麼業務問題？
-  2.技術用了哪些？
-  3.我能比他們做得更好的地方是什麼？
+  2. 技術用了哪些？
+  3. 我能比他們做得更好的地方是什麼？
 
 ---
 
