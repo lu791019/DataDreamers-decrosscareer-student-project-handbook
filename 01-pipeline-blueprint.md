@@ -192,9 +192,9 @@ flowchart LR
 
 ---
 
-## 工具選型 3 條決策樹
-
-### 樹 1：資料規模
+## 工具選型 
+### 此章節參考和理解即可，基本上專題都要用上課所學或相對應工具較佳，包含Python、Pandas、DB(SQL、NoSQL)、Airflow、Docker等 
+### 思考點 1：資料規模
 
 ```
 你的資料每天進多少？
@@ -203,20 +203,20 @@ flowchart LR
 └ >100 GB      → BigQuery / Snowflake / Spark
 ```
 
-### 樹 2：更新頻率
+### 思考點 2：更新頻率
 
 ```
 資料多久要新一次？
-├ 每天 / 每週   → cron / GitHub Actions
+├ 每天 / 每週   → cron job （排程設定）
 ├ 每小時 / 15min→ Airflow
 └ 即時          → Kafka / Pub/Sub
 ```
 
-### 樹 3：使用者
+### 思考點 3：使用者
 
 ```
 誰在用你的結果？
-├ 工程師 / 自己   → 寫 notebook 或 SQL 就好
+├ 工程師 / 自己   → 寫 python 腳本 或 SQL 就好
 ├ 非技術同事     → Streamlit / Tableau
 ├ 一般用戶       → LINE Bot / 網頁
 └ 其他系統       → FastAPI
@@ -224,26 +224,15 @@ flowchart LR
 
 ---
 
-## 三個常見誤區
+## 🎯 小作業：畫出期初活動(或各組專題)的 6 階段架構圖
 
-1. **「我要學最潮的技術」** → 沒人在乎你用 Snowflake 還是 MySQL，業界在乎你解了什麼問題
-2. **「我要做完美再 demo」** → 完美等於拖延，先做出 v0 跑完整條 pipeline，再回來優化每段
-3. **「我自己做就好」** → 作品集如果沒 PR 紀錄，業界看不出你會不會協作
-
----
-
-## 🎯 小作業：畫出你的專題 6 階段架構圖
-
-照著本章 6 階段藍圖，把你們組選的情境填進去。
+照著本章 6 階段藍圖，把期初活動的 data pipeline 完成以下設計：
 
 - [ ] 用 draw.io / Excalidraw / Mermaid 畫一張架構圖（Source → Ingest → Storage → Process → Serve → Observe）
 - [ ] 每個階段標出**選的工具**和**為什麼選**（1 句話即可）
-- [ ] 存到 repo 的 `docs/architecture.md`
-- [ ] 對應的 scenarios/scenario-N 看一次當參考
+- [ ] 去參考相對應的 8 種情境當作參考並先了解
 
-**交付**：PR 連結貼到指定 channel。
-
-> 💡 用 Mermaid 寫進 markdown 最省事，PR review 看得到 diff、未來改動有歷史。
+> 💡 用 Mermaid 寫進 markdown 最省事，Mermaid 可以先了解即可，並透過 AI 協助撰寫。
 
 ---
 
