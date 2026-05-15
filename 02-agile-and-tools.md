@@ -311,9 +311,12 @@ Sprint 預算 = This Sprint 欄所有卡片的點數加總
 
 ```
 
-**個人推薦**：**Notion or Trello**。
+**個人推薦**：**Notion**（內容較雜但能記錄較多內容）**or Trello**（輕量化、純看板拖拉）。
 
-理由：你已經在用 GitHub 寫 code、開 PR、開 Issue —— 多開一個工具就多一個「記得去更新」的負擔。GitHub Projects 直接跟 Issue / PR 雙向綁定，task 狀態自動更新。
+理由：
+- **Notion** 適合「文件 + task + 會議紀錄 + 知識庫」全部混在一起的組別，PLAN.md / 設計圖 / sprint 規劃都能放同一處，缺點是 view 切換比較慢。
+- **Trello** 適合「只想要乾淨看板」的組別，5 分鐘就能上手、零學習成本，缺點是文件能力弱（要搭配 Google Docs / Notion）。
+- **GitHub Projects** 雖然跟 code 黏最緊（issue / PR 自動連動），但 UI 對非工程組員不那麼直覺；如果組員都熟 GitHub 操作，這個其實也很好（設定見下方補充）。
 
 ---
 
