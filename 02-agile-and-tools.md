@@ -411,14 +411,12 @@ pipeline 失敗自動通知到 #alerts，不靠人手動看
 前置期結束前完成，不然 Sprint 1 開始會混亂。做完 = 你們的協作基建跟業界小團隊一致。
 
 - [ ] **選工具組合**（推薦：Discord + GitHub Projects + GitHub Issues）
-- [ ] **開好溝通工具 channels**（依本章 channel 設計，至少 #announce / #standup / #help / 模組 channels）
-- [ ] **PM 工具設好**（GitHub Projects + 4 個 views，或 Trello / Notion 5 個 list）
-- [ ] **把 Sprint 1 任務都建成 Issue / card** + assign owner + acceptance criteria
-- [ ] **約定異步 daily check-in 時間**（建議每天 09:30）+ 形式
-- [ ] **約定 Sprint Planning / Sprint Review 兩個會議的固定時段**（每週各一次，60 分鐘）
-- [ ] **設 1-2 個自動化通知**（GitHub PR / Sentry → Discord/Slack）
-
-**交付**：把工具清單 + 會議時段表 + 第一張任務看板的截圖貼到指定 channel。
+- [ ] **溝通討論工具 channels**（依本章 channel 設計，至少 #announce / #standup / #help / 模組 channels）
+- [ ] **專案管理工具**（GitHub Projects + 4 個 views，或 Trello / Notion 5 個 list）
+- [ ] **約定 daily check-in 時間(用文字留言的非同步方式)** 時間 + 形式
+- [ ] **約定 Sprint Planning / Sprint Review 未來兩個會議的固定時段**（每週各一次，30~60 分鐘，養成溝通討論習慣）
+- [非必要] **設 1-2 個自動化通知**（GitHub PR / Sentry → Discord/Slack）
+- [非必要] **把 Sprint 1 任務都建成 Issue / card** + assign owner + acceptance criteria
 
 > 💡 工具沒選好 = 接下來整個學期都在切換 + 找訊息。前置期多花 1-2 小時，後面每個 sprint 都會更順。
 
