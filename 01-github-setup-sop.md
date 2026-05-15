@@ -1,4 +1,4 @@
-# 專案協作第 0 週 ｜ 00 GitHub 註冊、開通與 Fork SOP
+# 專案協作第 1 週 ｜ 01 GitHub 註冊、開通與 Fork SOP
 
 > 沒用過 GitHub？這篇給你最快的路徑。不重寫一遍別人寫好的教學 — 我們直接指你去看最棒的。
 
@@ -244,5 +244,7 @@ github.com/yourname/portfolio           ← 美人的個人作品集（每人一
 - 選不出題目？讀 [04 痛點地圖](04-pain-points-industry-map.md)
 
 ---
+
+下一步：[02 通用資料管線藍圖 →](02-pipeline-blueprint.md)
 
 ← [回到 README](README.md)

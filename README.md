@@ -31,9 +31,9 @@
 
 | 週 | 章節 | 重點 |
 |---|---|---|
-| **第 0 週** | [00 GitHub 註冊、開通與 Fork SOP](00-github-setup-sop.md) | GitHub 帳號 + repo 設定 |
-| **第 1 週** | [01 通用資料管線藍圖](01-pipeline-blueprint.md) | 六階段骨架 + ETL/ELT + 工具選型決策樹 |
-| **第 2 週** | [02 敏捷開發 + 溝通與專案管理工具選型](02-agile-and-tools.md) | Scrum 節奏 + Discord/Slack + Trello/Notion/GitHub Projects |
+| **第 0 週** | [00 敏捷開發 + 溝通與專案管理工具選型](00-agile-and-tools.md) | Scrumban 節奏 + Discord/Slack + Trello/Notion/GitHub Projects |
+| **第 1 週** | [01 GitHub 註冊、開通與 Fork SOP](01-github-setup-sop.md) | GitHub 帳號 + repo 設定 |
+| **第 2 週** | [02 通用資料管線藍圖](02-pipeline-blueprint.md) | 六階段骨架 + ETL/ELT + 工具選型決策樹 |
 | **第 3 週** | [03 小組專案 10 階段流程](03-team-process.md) | 啟動 → 復盤的 20 週完整 SOP |
 | **第 4 週** | [04 8 情境痛點 × 業界對應地圖](04-pain-points-industry-map.md) | 選題 × 業界職位對應 |
 
@@ -82,7 +82,7 @@ YouTube 公開：
 | 階段 | 課堂簡報 | 對應手冊章節 |
 |---|---|---|
 | 課程開始 | **課程總覽 & DE 介紹** ([PDF](../課程總覽%26DE介紹.pdf)) | README + [04 痛點地圖](04-pain-points-industry-map.md) |
-| 前置期 W1-W3 | **期初工作坊：資料解決方案顧問** ([PDF](../期初工作坊.pdf)) | [01 通用管線藍圖](01-pipeline-blueprint.md) + [scenarios/](scenarios/) |
+| 前置期 W1-W3 | **期初工作坊：資料解決方案顧問** ([PDF](../期初工作坊.pdf)) | [02 通用管線藍圖](02-pipeline-blueprint.md) + [scenarios/](scenarios/) |
 | 實作期 W10-W12 | **期中工作坊：個人 pipeline 實作** ([HTML](../course_project_slides.html)) | [03 10 階段流程](03-team-process.md) + [05 協作 SOP](05-collaboration-sop.md) |
 
 > 💡 **建議閱讀順序**：先看課堂簡報感受全貌，回手冊查細節與作業。
@@ -101,11 +101,11 @@ YouTube 公開：
 
 | 你的狀態 | 🎯 必讀（先看） | 📖 下一步 |
 |---|---|---|
-| 🌱 **完全沒用過 GitHub** | [00 GitHub 註冊 SOP](00-github-setup-sop.md) | [05 協作 SOP](05-collaboration-sop.md) |
-| 🤝 **還沒組好隊 / 不知怎麼啟動** | [03 10 階段流程](03-team-process.md)（① 啟動段） | [02 敏捷與工具選型](02-agile-and-tools.md) |
+| 🌱 **完全沒用過 GitHub** | [01 GitHub 註冊 SOP](01-github-setup-sop.md) | [05 協作 SOP](05-collaboration-sop.md) |
+| 🤝 **還沒組好隊 / 不知怎麼啟動** | [03 10 階段流程](03-team-process.md)（① 啟動段） | [00 敏捷與工具選型](00-agile-and-tools.md) |
 | 🎯 **組好了、正在選題** | [04 痛點 × 業界地圖](04-pain-points-industry-map.md) | [scenarios/](scenarios/) 挑 1-2 個對齊 |
-| 🏗 **開始實作、不知如何設計** | [01 通用管線藍圖](01-pipeline-blueprint.md) | 對應的 scenario 文件 |
-| 🛠 **動工中卡關 / 流程亂** | [05 協作 SOP](05-collaboration-sop.md) + [02 敏捷與工具](02-agile-and-tools.md) | [03 10 階段流程](03-team-process.md)（⑥ 衝刺段） |
+| 🏗 **開始實作、不知如何設計** | [02 通用管線藍圖](02-pipeline-blueprint.md) | 對應的 scenario 文件 |
+| 🛠 **動工中卡關 / 流程亂** | [05 協作 SOP](05-collaboration-sop.md) + [00 敏捷與工具](00-agile-and-tools.md) | [03 10 階段流程](03-team-process.md)（⑥ 衝刺段） |
 | 🎤 **快到 demo 了** | [07 Demo Day 評分表](07-demo-day-rubric.md) | [06 復盤模板](06-retro-and-after.md)（寫 final retro） |
 | 📜 **專題完了想升級履歷** | [06 課後加強路徑](06-retro-and-after.md) | 重看 [07 評分表](07-demo-day-rubric.md) self-check |
 | 👀 **第一次來、想全覽** | 從本 README 看完目錄 → 看 1 部 [學長姐 demo](https://www.youtube.com/playlist?list=PL0seqKy3cp6nYX8aFh9oicSh0Gg4BGhQd) | [03 10 階段流程](03-team-process.md) |

@@ -181,8 +181,8 @@ demo 前發現的問題：要熬夜。
 **把基建一次架好 — 後面 11 週就不用回頭調**。
 
 ### 產出物
-- GitHub repo 建好（看 [00 章 SOP](00-github-setup-sop.md) 一般版或專業版）
-- 溝通工具（Discord / Slack / LINE）+ channels 建好（看 [02 章](02-agile-and-tools.md)）
+- GitHub repo 建好（看 [01 章 SOP](01-github-setup-sop.md) 一般版或專業版）
+- 溝通工具（Discord / Slack / LINE）+ channels 建好（看 [00 章](00-agile-and-tools.md)）
 - PM 工具（GitHub Projects / Trello / Linear）設好
 - Branch 規範：`main` / `develop` / `feature/*` / `fix/*`
 - 第一個 PR 跑通 CI
@@ -190,7 +190,7 @@ demo 前發現的問題：要熬夜。
 
 ### 細節展開
 - Git 與 PR 流程 → [05 業界協作 SOP](05-collaboration-sop.md)
-- 工具選型 → [02 敏捷開發與工具選型](02-agile-and-tools.md)
+- 工具選型 → [00 敏捷開發與工具選型](00-agile-and-tools.md)
 
 > 前置期最後 2-3 週的事，慢慢架不要硬塞一天。
 
@@ -198,14 +198,14 @@ demo 前發現的問題：要熬夜。
 
 ## ⑥ 衝刺（W10-W18，3 個 sprint）
 
-> 這節是 [02 章敏捷方法論（Scrumban）](02-agile-and-tools.md) 的具體應用。
+> 這節是 [00 章敏捷方法論（Scrumban）](00-agile-and-tools.md) 的具體應用。
 > 如果還不熟 Scrumban 三大支柱（看板 / Planning / Review），先回去翻 02 再回來。
 
 ### 節奏（雙週 sprint，3 個 sprint × 3 週 ≈ 9 週實作期）
 ```
-Sprint 開始日   sprint planning (60 min)   決定本期要做什麼   ← 02 章 Sprint Planning
-每天 09:30      異步 daily check（文字）    我做什麼 / 卡什麼  ← 02 章 Daily Check-in
-Sprint 結束日   sprint review (60 min)     demo 給組內看      ← 02 章 Sprint Review
+Sprint 開始日   sprint planning (60 min)   決定本期要做什麼   ← 00 章 Sprint Planning
+每天 09:30      異步 daily check（文字）    我做什麼 / 卡什麼  ← 00 章 Daily Check-in
+Sprint 結束日   sprint review (60 min)     demo 給組內看      ← 00 章 Sprint Review
 （不做 sprint retro，學期末一次 final retro 即可，看 06 章）
 ```
 
