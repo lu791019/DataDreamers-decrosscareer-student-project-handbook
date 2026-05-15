@@ -25,23 +25,6 @@
 
 ---
 
-## 手冊閱讀方法
-
-依你目前的狀態，找到適合的閱讀路徑：
-
-| 你的狀態 | 🎯 必讀（先看） | 📖 下一步 | 
-|---|---|---|
-| 🌱 **完全沒用過 GitHub** | [00 GitHub 註冊 SOP](00-github-setup-sop.md) | [05 協作 SOP](05-collaboration-sop.md) | 
-| 🤝 **還沒組好隊 / 不知怎麼啟動** | [03 10 階段流程](03-team-process.md)（① 啟動段） | [02 敏捷與工具選型](02-agile-and-tools.md) | 
-| 🎯 **組好了、正在選題** | [04 痛點 × 業界地圖](04-pain-points-industry-map.md) | [scenarios/](scenarios/) 挑 1-2 個對齊 | 
-| 🏗 **開始實作、不知如何設計** | [01 通用管線藍圖](01-pipeline-blueprint.md) | 對應的 scenario 文件 |
-| 🛠 **動工中卡關 / 流程亂** | [05 協作 SOP](05-collaboration-sop.md) + [02 敏捷與工具](02-agile-and-tools.md) | [03 10 階段流程](03-team-process.md)（⑥ 衝刺段） |
-| 🎤 **快到 demo 了** | [07 Demo Day 評分表](07-demo-day-rubric.md) | [06 復盤模板](06-retro-and-after.md)（先寫 sprint retro） |
-| 📜 **專題完了想升級履歷** | [06 課後加強路徑](06-retro-and-after.md) | 重看 [07 評分表](07-demo-day-rubric.md) self-check |
-| 👀 **第一次來、想全覽** | 從本 README 看完目錄 → 看 1 部 [學長姐 demo](https://www.youtube.com/playlist?list=PL0seqKy3cp6nYX8aFh9oicSh0Gg4BGhQd) | [03 10 階段流程](03-team-process.md) |
-
----
-
 ## 目錄
 
 ### 📐 專案協作系列（每章對應一週）
@@ -109,6 +92,23 @@ YouTube 公開：
 ## 記住心法
 
 > **「業界專案不是把技術秀出來，是把情境、痛點、解法(最優解和最快解)、遇到的技術問題和如何處理等講清楚。」**
+
+---
+
+## 手冊閱讀方法
+
+依你目前的狀態，找到適合的閱讀路徑：
+
+| 你的狀態 | 🎯 必讀（先看） | 📖 下一步 |
+|---|---|---|
+| 🌱 **完全沒用過 GitHub** | [00 GitHub 註冊 SOP](00-github-setup-sop.md) | [05 協作 SOP](05-collaboration-sop.md) |
+| 🤝 **還沒組好隊 / 不知怎麼啟動** | [03 10 階段流程](03-team-process.md)（① 啟動段） | [02 敏捷與工具選型](02-agile-and-tools.md) |
+| 🎯 **組好了、正在選題** | [04 痛點 × 業界地圖](04-pain-points-industry-map.md) | [scenarios/](scenarios/) 挑 1-2 個對齊 |
+| 🏗 **開始實作、不知如何設計** | [01 通用管線藍圖](01-pipeline-blueprint.md) | 對應的 scenario 文件 |
+| 🛠 **動工中卡關 / 流程亂** | [05 協作 SOP](05-collaboration-sop.md) + [02 敏捷與工具](02-agile-and-tools.md) | [03 10 階段流程](03-team-process.md)（⑥ 衝刺段） |
+| 🎤 **快到 demo 了** | [07 Demo Day 評分表](07-demo-day-rubric.md) | [06 復盤模板](06-retro-and-after.md)（寫 final retro） |
+| 📜 **專題完了想升級履歷** | [06 課後加強路徑](06-retro-and-after.md) | 重看 [07 評分表](07-demo-day-rubric.md) self-check |
+| 👀 **第一次來、想全覽** | 從本 README 看完目錄 → 看 1 部 [學長姐 demo](https://www.youtube.com/playlist?list=PL0seqKy3cp6nYX8aFh9oicSh0Gg4BGhQd) | [03 10 階段流程](03-team-process.md) |
 
 ---
 
