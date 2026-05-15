@@ -215,14 +215,14 @@ github.com/yourname/portfolio           ← 美人的個人作品集（每人一
 #### 完成確認 checklist
 
 - [ ] 已開團隊 Organization（Free plan）
-- [ ] 團隊主 repo 開在 org 底下，4 人都進 org
+- [ ] 團隊主 repo 開在 org 底下，組員都進 org
 - [ ] 主 repo 已設 branch protection
 - [ ] 每人都開了自己的 portfolio repo
 - [ ] 個人 portfolio README 已用範本填好「我的角色 / 貢獻 / 技術棧」
 - [ ] 兩邊互相連結
 - [ ] 履歷只放個人 portfolio 連結（不放團隊 repo）
 
-**交付**：團隊 repo URL + 4 人個人 portfolio URL 都貼到 line 群組
+**交付**：團隊 repo URL + 全組組員 portfolio URL 都貼到 line 群組
 
 #### 💎 為何這樣做
 

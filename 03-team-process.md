@@ -148,17 +148,20 @@ demo 前發現的問題：要熬夜。
 | **Analytics Owner** | SQL / pandas / 模型 | 數理直覺好 |
 | **Product Owner** | Streamlit / API / UX | 會講故事、會 demo |
 
-> **每人主擔 1 個角色 + 副擔 1 個角色**，不是完全分割。
+> **每人主擔 1 個 + 副擔 1 個**。3 人組做 4 個 role 時，每人實質負責 1.33 個 role；副擔不只是備援，是真的會做。
 
-### RACI 矩陣（範例 — 假設 4 人組）
+### RACI 矩陣（範例 — 3 人組）
 
-| 任務 | 組員 A | 組員 B | 組員 C | 組員 D |
-|---|---|---|---|---|
-| 爬蟲開發 | **R** | C | A | I |
-| Airflow 排程 | C | **R** | I | A |
-| 分析模型 | I | A | **R** | C |
-| Streamlit | A | I | C | **R** |
-| Code Review | C | C | C | C |
+| 任務 | 組員 A | 組員 B | 組員 C |
+|---|---|---|---|
+| 爬蟲開發 | **R** | C | A |
+| Airflow 排程 | C | **R** | A |
+| 分析模型 | A | C | **R** |
+| Streamlit | A | **R** | C |
+| Code Review | C | C | C |
+
+> 3 人組面對 4 個模組角色，每人會主擔 1 個 + 副擔 1 個（例如 A 主擔 Ingest 副擔 Product；B 主擔 Pipeline 副擔 Product；C 主擔 Analytics 副擔 Pipeline）。
+> 角色不是「人」，是「職責」 — 一人可以兼。
 
 > R = Responsible（動手）／ A = Accountable（負責）／ C = Consulted（要問）／ I = Informed（要告知）
 
@@ -195,15 +198,15 @@ demo 前發現的問題：要熬夜。
 
 ## ⑥ 衝刺（W10-W18，3 個 sprint）
 
-> 這節是 [02 章敏捷方法論](02-agile-and-tools.md) 的具體應用。
-> 如果還不熟 Scrum 五件事 / standup / retro，先回去翻 02 再回來。
+> 這節是 [02 章敏捷方法論（Scrumban）](02-agile-and-tools.md) 的具體應用。
+> 如果還不熟 Scrumban 三大支柱（看板 / Planning / Review），先回去翻 02 再回來。
 
-### 節奏（每週固定，套用 02 章 Scrum 五件事）
+### 節奏（雙週 sprint，3 個 sprint × 3 週 ≈ 9 週實作期）
 ```
-週一    sprint planning (1 hr)     決定本週做什麼     ← 02 章 Sprint Planning
-週一-五 daily standup (10 min)     我做什麼 / 卡什麼  ← 02 章 Daily Standup
-週五    sprint review (1 hr)       demo 給組內看      ← 02 章 Sprint Review
-週日    sprint retro (30 min)      什麼 ok 什麼不行    ← 02 章 Sprint Retro
+Sprint 開始日   sprint planning (60 min)   決定本期要做什麼   ← 02 章 Sprint Planning
+每天 09:30      異步 daily check（文字）    我做什麼 / 卡什麼  ← 02 章 Daily Check-in
+Sprint 結束日   sprint review (60 min)     demo 給組內看      ← 02 章 Sprint Review
+（不做 sprint retro，學期末一次 final retro 即可，看 06 章）
 ```
 
 ### Sprint 1（W10-W12，3 週）：跑通最小可行 pipeline

@@ -17,66 +17,85 @@
 
 ---
 
-### 兩個學派，挑一個用就好
+### 為什麼選 Scrumban（不選完整 Scrum 或純 Kanban）
 
-| 學派 | 適合 | 一句話特色 |
+業界有兩大主流：
+
+| 學派 | 一句話特色 | 對小組的問題 |
 |---|---|---|
-| **Scrum** | 任務切得出明確邊界、有共同節奏 | 用 sprint 把時間切成等長的格子 |
-| **Kanban** | 任務大小差異很大、用戶研究多 | 用看板把流程視覺化、限制同時做的事 |
+| **Scrum** | 用 sprint 把時間切成等長格子，含 5 個 ceremonies | 5 個 ceremonies 對 3 人組太重，開會時間 > 寫 code 時間 |
+| **Kanban** | 用看板視覺化、WIP limit 限制同時做的事 | 沒有節奏感，學員容易拖延 |
 
-**90% 的學員小組適合 Scrum**。Kanban 適合做的事很雜、沒固定週期的團隊。
+**Scrumban = 兩者折衷**：保留 Kanban 看板 + 採 Scrum 的雙週節奏 + 只做最關鍵的兩個 ceremonies。
 
-下面用 Scrum 講。
-
----
-
-### Scrum 五件事（不要省）
-
-```
-1. Sprint Planning      週一上午 1 小時     決定本週要做什麼
-2. Daily Standup        每天 10 分鐘        互相同步、找卡關
-3. Sprint Review        週五下午 1 小時     對組內 / 教練 demo
-4. Sprint Retrospective 週日 30 分鐘         反省與調整
-5. Backlog Refinement   週中 30 分鐘（彈性） 把下週要做的整理清楚
-```
-
-> 不開 daily 是學員小組最常見的死法。10 分鐘的代價，換的是「一個人卡 3 天沒人發現」的避免。
+> 業界小團隊（新創 / 3-10 人）最常用 Scrumban。Dex 也推薦 3 人組用這個。
 
 ---
 
-### Sprint Planning 怎麼開（給第一次跑的人）
-
-**前置**：[03 階段流程](03-team-process.md) 寫好的 PLAN.md。
-
-**會議流程（60 分鐘）**：
+### Scrumban 三大支柱
 
 ```
-00-10 min   回顧上週進度（task.md 打勾的、沒打勾的）
-10-15 min   讀上週 retro 的 action items
-15-40 min   挑下週要做的任務（從 PLAN 的 sprint 清單）
-            ── 每個任務有：owner、估時、acceptance criteria
-40-55 min   風險討論（誰可能卡住、誰會缺席、API 額度…）
-55-60 min   結論 + 把任務寫進 task.md
+1. 看板 + WIP limit       任務狀態視覺化，限制同時做的事（每人最多 2 個 in-progress）
+2. Sprint Planning        每 2 週開一次，決定這 2 週要做什麼
+3. Sprint Review          每 2 週開一次，跟組內看「真的能用嗎」
 ```
 
-**估時用 T-shirt size 就好**：
-- S = 半天可以做完
-- M = 1-2 天
-- L = 3-4 天（超過 L 就要拆）
+**輔助（不開會的）**：
+- 異步 Daily Check-in（Discord 文字接龍，不開會）
+- final retro（只在學期末做，看 [06 章](06-retro-and-after.md)）
+
+**故意砍掉的**：
+- ❌ Sprint Retro（每週做反省太重，學員容易疲乏；改成學期末做一次深度 final retro）
+- ❌ Backlog Refinement（看板自然會處理）
+- ❌ Velocity / Story Points（用「進度感」就好）
+
+> 砍掉 sprint retro 不是不反省 —— 而是把反省濃縮成「學期末一次深度復盤」。8-10 個 sprint 各做小 retro，常常變成 ritual；一次 90 分鐘的 final retro 比較有產出。
+
+---
+
+### 看板長怎樣（5 個欄位）
+
+```
+📥 Backlog        🎯 This Sprint    🚧 In Progress    👀 Review        ✅ Done
+還沒排程           本 2 週要做       進行中（限 2/人）   等 PR review     已完成
+─────────         ─────────         ─────────         ─────────        ─────────
+T-001             T-005             T-002 (Alice)     T-006 (Bob)      T-001
+T-008             T-006             T-003 (Bob)                         T-004
+T-009             T-007             T-007 (Carol)
+...               T-008
+                  T-009
+```
+
+**WIP limit 規則**：每人 In Progress 最多 2 張卡。**超過要先做完一張才能新開**。
+這就是 Kanban 精髓 —— 強迫聚焦、暴露瓶頸。
+
+---
+
+### Sprint Planning 怎麼開（每 2 週一次，45-60 分鐘）
+
+**前置**：看板 Backlog 有待認領任務、PLAN.md 寫好。
+
+```
+00-10 min   回顧上 2 週進度（看板上 Done 欄、本期該完成沒完成的卡）
+10-30 min   挑下 2 週要做的任務 → 從 Backlog 拖到 This Sprint
+            ── 每張卡有：owner、估時（S/M/L）、acceptance criteria
+30-50 min   風險討論（誰會卡、誰會缺席、API 額度…）
+50-60 min   結論 + 看板更新
+```
+
+**估時用 T-shirt size**：
+- **S** = 半天能做完
+- **M** = 1-2 天
+- **L** = 3-4 天（超過 L 就要拆）
 
 不要用「story point」這種雞肋的東西，學員小組沒必要。
 
 ---
 
-### Daily Standup — 10 分鐘版本
+### 異步 Daily Check-in（不開會，文字接龍）
 
-**時間**：固定每天上午（建議 09:30 或 10:00）
+不開會！每天上午 09:30 在 Discord 貼三句：
 
-**形式**：
-- 同步開會 / 文字接龍 / 異步貼 Discord 都行
-- 文字版反而省時間、有紀錄
-
-**每人 3 句**：
 ```
 昨天：我做了 X
 今天：我打算做 Y
@@ -85,51 +104,39 @@
 
 **如果沒卡，也要明確說「沒卡」** —— 不然不知道是真的順還是不想講。
 
+> 開 daily 會議是學員小組最容易疲乏的地方。文字版省時間、有紀錄、可以慢慢回。
+
 ---
 
-### Sprint Review — 不是 Demo Day 排練
+### Sprint Review — 跟組內看「真的能用嗎」（每 2 週一次，45-60 分鐘）
 
 很多學員以為這就是練 demo —— 不是。
 
 **Review 的真正目的**：
 - 對「自己人」demo，看「東西是不是真的能用」
-- 收 feedback 給下個 sprint 用
+- 收 feedback 給下 sprint
 - 教練 / 同學在這時候給意見成本最低
 
 **結構（60 分鐘）**：
 ```
-0-15 min   product owner 講「這 sprint 做了什麼」
+0-15 min   product owner 講「這 2 週做了什麼」
 15-35 min  Live demo（不要投影片）
 35-50 min  Q&A + 反饋
-50-60 min  決定哪些反饋進下週 backlog
+50-60 min  決定哪些反饋進下 sprint backlog
 ```
 
 ---
 
-### Sprint Retro 5 個常用句型
-
-retro 在 [06](06-retro-and-after.md) 已詳述。補充給卡住的人：
-
-| 場合 | 句型 |
-|---|---|
-| 想講不順但怕傷人 | 「我發現 X 流程讓我們慢下來，不知道大家怎麼看？」 |
-| 想稱讚但不肉麻 | 「我覺得 Y 做得很穩，未來想學起來」 |
-| 不確定該不該講 | 「不一定要做，但我想分享一個觀察⋯」 |
-| 想推動行動 | 「下週要不要試試 Z？如果不行下下週就回原本」 |
-| 想結束無解討論 | 「這個我們今天決定不了，先當未解列下次再聊」 |
-
----
-
-### Velocity（速度感）— 小組怎麼用
+### 進度感（不用 velocity 數字）
 
 別套企業那種「我們 sprint velocity 是 23」這種數字。
 
 **學員小組用感覺就好**：
-- Sprint 1 你們完成了 60%
+- Sprint 1 你們完成了 60% 的計劃
 - Sprint 2 提升到 80%
 - Sprint 3 拉到 90%
 
-如果一直在 50%，要做的不是「逼自己快一點」，是「砍 scope」。
+如果一直在 50%，要做的不是「逼自己快一點」，是**砍 scope**（看下一節）。
 
 ---
 

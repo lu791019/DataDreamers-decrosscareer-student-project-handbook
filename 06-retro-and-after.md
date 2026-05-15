@@ -4,7 +4,11 @@
 
 ---
 
-## Sprint Retro（每週做一次）
+## Sprint Retro（optional — 進階小組才用）
+
+> ⚠️ **預設不做 sprint retro**。02 章採 Scrumban，每 sprint 只做 Planning + Review。
+> 反省濃縮成學期末的 final retro（往下看）即可。
+> 以下模板是給「想做更深反省」的進階組別參考。
 
 ### KPT 模板（最常用，20-30 分鐘）
 
@@ -194,12 +198,12 @@
 🚀 餐飲多門市庫存優化儀表板 (2026/03 - 2026/05)
    GitHub: github.com/dex/restaurant-pos-pipeline  |  Live demo: ...
 
-   - 主導 4 人組「資料工程養成班」期末專題，從 Kaggle Restaurant Orders +
+   - 主導 3 人組「資料工程養成班」期末專題，從 Kaggle Restaurant Orders +
      UCI Retail 兩個資料源建立端到端 pipeline
    - 架構：Python ingest → MySQL → Airflow（每日 6am）→ Streamlit
    - 實作補貨建議演算法，依據 7 日滑動平均 + 銷售趨勢，預測庫存到底日
    - 加入 dbt tests + LINE notify，pipeline 失敗 5 分鐘內收到通知
-   - 完整 PR review 流程、文件齊全、組員 30 個 PR 全部 reviewed merged
+   - 完整 PR review 流程、文件齊全、組員 25 個 PR 全部 reviewed merged
 ```
 
 ✅ 動詞開頭 ✅ 有數字 ✅ 有具體技術 ✅ 連結可驗證
@@ -223,19 +227,20 @@
 
 ---
 
-## 🎯 小作業：寫第一份 sprint retro
+## 🎯 小作業：寫專題 final retro
 
-Sprint 1 結束的週日，全組坐下來做。
+學期末 demo 結束後 1 週內，組內每人先寫個人 final retro，再合併小組 retro。
 
-- [ ] 用 KPT 模板（Keep / Problem / Try）寫
-- [ ] Keep / Problem / Try 各至少 2 條
-- [ ] 每條 Try 都對應一個下週的 action item + assignee
-- [ ] 存到 repo 的 `docs/retro/sprint-1.md` commit
-- [ ] 把上週 Try 的 action items 抄到下一份 sprint plan
+- [ ] 每人用「個人 final retro 模板」寫一份（6 個小題）
+- [ ] 全組 sync 一次（90 分鐘），整理出：
+  - 共識 3 件事 / 分歧 2-3 件事 / 一句總教訓
+- [ ] 存到 repo 的 `docs/retro/final.md` commit
+- [ ] 各人把「下次想加強的技能」寫進個人 portfolio 的「課後加強」段
 
 **交付**：PR 連結貼到指定 channel。
 
-> 💡 寫「都很好」「都很順」= 沒做 retro，這時候請組長重開一次討論。誠實的 retro 才有用。
+> 💡 寫「都很好」「都很順」= 沒做 retro，誠實才有用。
+> 進階組別可以加做 sprint retro（往上看「optional」段）— 但預設只做這份 final retro。
 
 ---
 

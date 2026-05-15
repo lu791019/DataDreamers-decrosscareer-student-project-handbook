@@ -50,7 +50,7 @@ UCI Online Retail     每日 6am            inventory)      rolling avg)       /
 ## 10 階段執行重點
 
 ### ① 啟動
-- 4 人組：1 ingest / 1 pipeline / 1 analytics / 1 product
+- 3 人組：每人主擔 1 個 role + 副擔 1 個（4 個 role 跨 3 人）
 - 選題理由：餐飲門檻低、資料公開、面試容易講故事
 
 ### ② Discovery
