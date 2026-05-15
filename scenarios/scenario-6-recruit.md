@@ -24,13 +24,15 @@
 
 ## 6 階段藍圖具體化
 
-```
-Source                  Ingest             Storage         Process         Serve            Observe
-─────                   ──────             ───────         ─────────         ─────            ───────
-104 / CakeResume       Playwright         MongoDB          pandas + LLM       Streamlit        Sentry
-LinkedIn (lite)        + Scrapy           (raw_jobs /      (技能抽取 /        + Tableau /       + scrape
-勞動部統計              Airflow daily      jobs_clean /     薪資 parse /       Looker Studio    success rate
-GitHub Jobs API                            skills_index)    embedding match）  互動式           monitor
+```mermaid
+flowchart LR
+    S["📁 Source<br/>104 / CakeResume<br/>LinkedIn (lite)<br/>勞動部統計<br/>GitHub Jobs API"] --> I["📥 Ingest<br/>Playwright + Scrapy<br/>Airflow daily"]
+    I --> ST["💾 Storage<br/>MongoDB<br/>raw_jobs / jobs_clean /<br/>skills_index"]
+    ST <-.順序可換.-> P["⚙️ Process<br/>pandas + LLM<br/>技能抽取 / 薪資 parse /<br/>embedding match"]
+    P --> SE["🖥 Serve<br/>Streamlit<br/>+ Tableau / Looker Studio"]
+    SE --> O["📡 Observe<br/>Sentry<br/>+ scrape success rate"]
+    style ST fill:#FEF3C7,stroke:#D97706
+    style P fill:#FEF3C7,stroke:#D97706
 ```
 
 ---

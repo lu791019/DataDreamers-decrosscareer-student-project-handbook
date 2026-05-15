@@ -26,13 +26,15 @@
 
 ## 6 階段藍圖具體化
 
-```
-Source                 Ingest              Storage         Process          Serve           Observe
-─────                  ──────              ───────         ─────────          ─────           ───────
-Kaggle Restaurant     pandas              MySQL           pandas             Streamlit       Airflow UI
-Order Details         + Airflow           (orders /       (groupby /         (店長/區督       + LINE notify
-UCI Online Retail     每日 6am            inventory)      rolling avg)       /總部三視圖)     失敗推播
-門市 POS export
+```mermaid
+flowchart LR
+    S["📁 Source<br/>Kaggle Restaurant<br/>UCI Online Retail<br/>門市 POS export"] --> I["📥 Ingest<br/>pandas + Airflow<br/>每日 6am"]
+    I --> ST["💾 Storage<br/>MySQL<br/>orders / inventory"]
+    ST <-.順序可換.-> P["⚙️ Process<br/>pandas<br/>groupby / rolling avg"]
+    P --> SE["🖥 Serve<br/>Streamlit<br/>店長/區督/總部 三視圖"]
+    SE --> O["📡 Observe<br/>Airflow UI<br/>+ LINE notify 失敗推播"]
+    style ST fill:#FEF3C7,stroke:#D97706
+    style P fill:#FEF3C7,stroke:#D97706
 ```
 
 ---

@@ -27,13 +27,15 @@
 
 ## 6 階段藍圖具體化
 
-```
-Source              Ingest             Storage         Process         Serve              Observe
-─────               ──────             ───────         ─────────         ─────              ───────
-RSS feeds          requests +         MongoDB         LLM 分類+情緒      Streamlit          Sentry
-NewsAPI            Airflow            (articles /     + 主題 cluster    + LINE Bot         + LLM cost
-PTT / Threads      每 30 分           classified /    + 趨勢偵測         即時警示           + scrape
-Google News API                       topics)                            主管推播           success rate
+```mermaid
+flowchart LR
+    S["📁 Source<br/>RSS feeds / NewsAPI<br/>PTT / Threads<br/>Google News API"] --> I["📥 Ingest<br/>requests + Airflow<br/>每 30 分"]
+    I --> ST["💾 Storage<br/>MongoDB<br/>articles / classified /<br/>topics"]
+    ST <-.順序可換.-> P["⚙️ Process<br/>LLM 分類+情緒<br/>+ 主題 cluster<br/>+ 趨勢偵測"]
+    P --> SE["🖥 Serve<br/>Streamlit + LINE Bot<br/>即時警示主管推播"]
+    SE --> O["📡 Observe<br/>Sentry<br/>+ LLM cost<br/>+ scrape success rate"]
+    style ST fill:#FEF3C7,stroke:#D97706
+    style P fill:#FEF3C7,stroke:#D97706
 ```
 
 ---

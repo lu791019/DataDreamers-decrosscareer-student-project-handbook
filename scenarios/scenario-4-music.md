@@ -24,13 +24,15 @@
 
 ## 6 階段藍圖具體化
 
-```
-Source              Ingest              Storage         Process             Serve           Observe
-─────               ──────              ───────         ─────────           ─────           ───────
-Spotify Web API    requests + retry    MongoDB         pandas + SQL          Streamlit       Airflow UI
-Spotify Charts     Airflow 每日        (tracks /        + sklearn            + Spotify       + cost watcher
-Kaggle KKBOX       (rate limit 30/sec) listenings /     (audio features      OAuth login     + API rate
-                                       playlists)        + 分群 + 推薦）                       monitoring
+```mermaid
+flowchart LR
+    S["📁 Source<br/>Spotify Web API<br/>Spotify Charts<br/>Kaggle KKBOX"] --> I["📥 Ingest<br/>requests + retry<br/>Airflow 每日<br/>(rate limit 30/sec)"]
+    I --> ST["💾 Storage<br/>MongoDB<br/>tracks / listenings /<br/>playlists"]
+    ST <-.順序可換.-> P["⚙️ Process<br/>pandas + SQL + sklearn<br/>audio features<br/>分群 + 推薦"]
+    P --> SE["🖥 Serve<br/>Streamlit + Spotify<br/>OAuth login"]
+    SE --> O["📡 Observe<br/>Airflow UI<br/>+ cost watcher<br/>+ API rate monitoring"]
+    style ST fill:#FEF3C7,stroke:#D97706
+    style P fill:#FEF3C7,stroke:#D97706
 ```
 
 ---

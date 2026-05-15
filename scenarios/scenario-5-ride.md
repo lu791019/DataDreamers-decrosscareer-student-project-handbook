@@ -24,13 +24,15 @@
 
 ## 6 階段藍圖具體化
 
-```
-Source                  Ingest             Storage         Process        Serve            Observe
-─────                   ──────             ───────         ─────────        ─────            ───────
-NYC TLC Trip Records   下載 + Airflow     BigQuery        BigQuery GIS     FastAPI          Airflow UI
-Uber Movement          每 15 分鐘         (raw_trips /     + Python LSTM    + Streamlit       + BigQuery
-台北 ETC 公開資料                          aggregated /                      地圖儀表板       cost monitor
-                                          predictions)
+```mermaid
+flowchart LR
+    S["📁 Source<br/>NYC TLC Trip Records<br/>Uber Movement<br/>台北 ETC 公開資料"] --> I["📥 Ingest<br/>下載 + Airflow<br/>每 15 分鐘"]
+    I --> ST["💾 Storage<br/>BigQuery<br/>raw_trips /<br/>aggregated / predictions"]
+    ST <-.順序可換.-> P["⚙️ Process<br/>BigQuery GIS<br/>+ Python LSTM"]
+    P --> SE["🖥 Serve<br/>FastAPI + Streamlit<br/>地圖儀表板"]
+    SE --> O["📡 Observe<br/>Airflow UI<br/>+ BigQuery cost monitor"]
+    style ST fill:#FEF3C7,stroke:#D97706
+    style P fill:#FEF3C7,stroke:#D97706
 ```
 
 ---

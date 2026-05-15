@@ -23,13 +23,15 @@
 
 ## 6 階段藍圖具體化
 
-```
-Source              Ingest              Storage          Process          Serve            Observe
-─────               ──────              ───────          ─────────          ─────            ───────
-momo / PChome      Scrapy/             MySQL            pandas + SQL       FastAPI           Sentry
-蝦皮 / Yahoo       Playwright          (prices/         (時序處理 /         + Streamlit       + 排程監控
-品牌商商品 list    Airflow 每小時      products/        定價建議模型）       (兩端：API        + 反爬蟲 alert
-                                       brand_skus)                          給品牌系統用)
+```mermaid
+flowchart LR
+    S["📁 Source<br/>momo / PChome<br/>蝦皮 / Yahoo<br/>品牌商商品 list"] --> I["📥 Ingest<br/>Scrapy / Playwright<br/>Airflow 每小時"]
+    I --> ST["💾 Storage<br/>MySQL<br/>prices / products /<br/>brand_skus"]
+    ST <-.順序可換.-> P["⚙️ Process<br/>pandas + SQL<br/>時序處理 /<br/>定價建議模型"]
+    P --> SE["🖥 Serve<br/>FastAPI + Streamlit<br/>API 給品牌系統用"]
+    SE --> O["📡 Observe<br/>Sentry<br/>+ 排程監控<br/>+ 反爬蟲 alert"]
+    style ST fill:#FEF3C7,stroke:#D97706
+    style P fill:#FEF3C7,stroke:#D97706
 ```
 
 ---

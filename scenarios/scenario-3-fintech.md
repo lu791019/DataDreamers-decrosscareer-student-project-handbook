@@ -24,12 +24,15 @@
 
 ## 6 階段藍圖具體化
 
-```
-Source                  Ingest             Storage         Process        Serve            Observe
-─────                   ──────             ───────         ─────────        ─────            ───────
-CFPB Complaint API     requests + cron    MongoDB          LLM API           Streamlit        Sentry
-PTT 銀行版              （每日 / 每小時）  (raw_complaints  + pandas          + LINE推播       + LLM cost 
-模擬客服紀錄             Airflow           / classified)    (分類+情緒)       (主管警示)        watcher
+```mermaid
+flowchart LR
+    S["📁 Source<br/>CFPB Complaint API<br/>PTT 銀行版<br/>模擬客服紀錄"] --> I["📥 Ingest<br/>requests + cron<br/>Airflow<br/>每日 / 每小時"]
+    I --> ST["💾 Storage<br/>MongoDB<br/>raw_complaints<br/>/ classified"]
+    ST <-.順序可換.-> P["⚙️ Process<br/>LLM API + pandas<br/>分類 + 情緒"]
+    P --> SE["🖥 Serve<br/>Streamlit + LINE 推播<br/>主管警示"]
+    SE --> O["📡 Observe<br/>Sentry<br/>+ LLM cost watcher"]
+    style ST fill:#FEF3C7,stroke:#D97706
+    style P fill:#FEF3C7,stroke:#D97706
 ```
 
 ---

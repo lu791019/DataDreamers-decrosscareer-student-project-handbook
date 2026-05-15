@@ -24,13 +24,15 @@
 
 ## 6 階段藍圖具體化
 
-```
-Source                     Ingest             Storage         Process        Serve            Observe
-─────                      ──────             ───────         ─────────        ─────            ───────
-內政部實價登錄              下載 zip + parse   MySQL +         pandas + LSTM    Streamlit         Airflow UI
-data.gov.tw 周邊設施        每月觸發           PostGIS         + sklearn        + Folium 地圖     + 預測模型
-Google Maps API（建設）     政府 API           (transactions   (區域 aggregation                  drift monitor
-                                              / pois / pred）  + 預測）
+```mermaid
+flowchart LR
+    S["📁 Source<br/>內政部實價登錄<br/>data.gov.tw 周邊設施<br/>Google Maps API"] --> I["📥 Ingest<br/>下載 zip + parse<br/>政府 API<br/>每月觸發"]
+    I --> ST["💾 Storage<br/>MySQL + PostGIS<br/>transactions / pois /<br/>predictions"]
+    ST <-.順序可換.-> P["⚙️ Process<br/>pandas + LSTM + sklearn<br/>區域 aggregation + 預測"]
+    P --> SE["🖥 Serve<br/>Streamlit + Folium<br/>地圖儀表板"]
+    SE --> O["📡 Observe<br/>Airflow UI<br/>+ 預測模型 drift monitor"]
+    style ST fill:#FEF3C7,stroke:#D97706
+    style P fill:#FEF3C7,stroke:#D97706
 ```
 
 ---
