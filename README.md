@@ -57,6 +57,9 @@
 - [06 復盤 + 課後加強路徑](06-retro-and-after.md) — KPT / 4Ls / 履歷升級 checklist（每 sprint 末用）
 - [07 Demo Day 評分表](07-demo-day-rubric.md) — 業界 demo 最低門檻（學期末用）
 
+### ❓ 常見問題
+- [FAQ](FAQ.md) — 學員實際提問與回答，卡關時先來這裡找
+
 ---
 
 ## 過往學長姐 demo
