@@ -1,0 +1,1806 @@
+
+<!doctype html>
+<html lang="zh-TW" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="TibaMe 雲端資料工程師養成班 — 從 0 到 1 建立面試作品集">
+      
+      
+        <meta name="author" content="Dex">
+      
+      
+      
+      
+        <link rel="next" href="00-agile-and-tools/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>DE 學員專題實戰手冊</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Noto Sans TC";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳轉到
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="頁首">
+    <a href="." title="DE 學員專題實戰手冊" class="md-header__button md-logo" aria-label="DE 學員專題實戰手冊" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DE 學員專題實戰手冊
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              首頁
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="orange"  aria-label="切換深色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切換深色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="orange"  aria-label="切換淺色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切換淺色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜尋" placeholder="搜尋" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="搜尋">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清除" aria-label="清除" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜尋引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/lu791019/DataDreamers-decrosscareer-student-project-handbook" title="前往倉庫" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="導覽列" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="DE 學員專題實戰手冊" class="md-nav__button md-logo" aria-label="DE 學員專題實戰手冊" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    DE 學員專題實戰手冊
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/lu791019/DataDreamers-decrosscareer-student-project-handbook" title="前往倉庫" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    首頁
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    首頁
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目錄">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目錄
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        先了解的 4 件事
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        目錄
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="目錄">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📐 專案協作系列（每章對應一週）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-walkthrough" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 8 情境完整 walkthrough
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#github-skeleton-fork" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛠 GitHub Skeleton（學員 fork 用）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 持續參考（不綁定週次）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ❓ 常見問題
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#demo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        過往學長姐 demo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        配套課堂材料
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        記住心法
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        手冊閱讀方法
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        關於作者
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="關於作者">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dex" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        關於 Dex
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        看完手冊後可以怎麼做
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#license" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        License
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    專案協作系列
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    專案協作系列
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="00-agile-and-tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 0 週 — 敏捷開發 + 工具選型
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="01-github-setup-sop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 1 週 — GitHub 註冊 SOP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="02-pipeline-blueprint/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 2 週 — 通用資料管線藍圖
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="03-team-process/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 3 週 — 小組專案 10 階段流程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="04-pain-points-industry-map/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 4 週 — 8 情境痛點 × 業界地圖
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8 情境 Walkthrough
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    8 情境 Walkthrough
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="scenarios/scenario-1-restaurant-pos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1 — 餐飲連鎖 POS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="scenarios/scenario-2-ecommerce/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2 — B2C 電商競品比價
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="scenarios/scenario-3-fintech/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3 — 數位金融客訴
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="scenarios/scenario-4-music/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4 — 音樂串流推薦
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="scenarios/scenario-5-ride/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5 — 叫車服務交通熱點
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="scenarios/scenario-6-recruit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6 — 求職媒合職缺趨勢
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="scenarios/scenario-7-news/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7 — 媒體業新聞輿情
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="scenarios/scenario-8-realestate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8 — 不動產房價趨勢
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    持續參考
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    持續參考
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="05-collaboration-sop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    協作 SOP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="06-retro-and-after/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    復盤 + 課後加強
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="07-demo-day-rubric/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Demo Day 評分表
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="FAQ/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目錄">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目錄
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        先了解的 4 件事
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        目錄
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="目錄">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📐 專案協作系列（每章對應一週）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-walkthrough" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 8 情境完整 walkthrough
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#github-skeleton-fork" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛠 GitHub Skeleton（學員 fork 用）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 持續參考（不綁定週次）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ❓ 常見問題
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#demo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        過往學長姐 demo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        配套課堂材料
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        記住心法
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        手冊閱讀方法
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        關於作者
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="關於作者">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dex" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        關於 Dex
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        看完手冊後可以怎麼做
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#license" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        License
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="_1">學員專題實戰手冊<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><strong>目標</strong>：從 0 到 1 建立「面試作品集」，並且升級成「業界最低標準等級的專案」</p>
+</blockquote>
+<hr />
+<p>學員專題大致可以分成三種樣貌：</p>
+<table>
+<thead>
+<tr>
+<th>等級</th>
+<th>樣貌</th>
+<th>面試時的結果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>作業</td>
+<td>跑得起 Jupyter Notebook、但沒架構圖、demo 只能手動執行</td>
+<td>面試官比較難看到亮點</td>
+</tr>
+<tr>
+<td>作品</td>
+<td>有敘述、能持續執行、技術棧豐富</td>
+<td>「跟其他人差別不大」</td>
+</tr>
+<tr>
+<td>MVP 最小可行性產品 (demo)</td>
+<td>有架構圖、有歷史紀錄，甚至能有監控和有下一步行動、能講為什麼選擇用 A 而不是選擇 B</td>
+<td>想深入了解專案</td>
+</tr>
+</tbody>
+</table>
+<p><strong>透過這裡幫你達到第三種等級</strong></p>
+<hr />
+<h2 id="4">先了解的 4 件事<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Data Pipeline 通用藍圖</strong> — 所有 DE 專案的骨架是同一套，看完就再也不會「不知道從哪開始」</li>
+<li><strong>小組 10 階段流程</strong> — 從第一次討論到 demo day 的完整 SOP</li>
+<li><strong>協作過程</strong> — 敏捷開發、Git 版本控制、溝通工具、專案管理工具</li>
+<li><strong>8 情境完整 walkthrough</strong> —  8 種場景能照著走，並加以改造</li>
+</ol>
+<hr />
+<h2 id="_2">目錄<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h3 id="_3">📐 專案協作系列（每章對應一週）<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>週</th>
+<th>章節</th>
+<th>重點</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>第 0 週</strong></td>
+<td><a href="00-agile-and-tools/">00 敏捷開發 + 溝通與專案管理工具選型</a></td>
+<td>Scrumban 節奏 + Discord/Slack + Trello/Notion/GitHub Projects</td>
+</tr>
+<tr>
+<td><strong>第 1 週</strong></td>
+<td><a href="01-github-setup-sop/">01 GitHub 註冊、開通與 Fork SOP</a></td>
+<td>GitHub 帳號 + repo 設定</td>
+</tr>
+<tr>
+<td><strong>第 2 週</strong></td>
+<td><a href="02-pipeline-blueprint/">02 通用資料管線藍圖</a></td>
+<td>六階段骨架 + ETL/ELT + 工具選型決策樹</td>
+</tr>
+<tr>
+<td><strong>第 3 週</strong></td>
+<td><a href="03-team-process/">03 小組專案 10 階段流程</a></td>
+<td>啟動 → 復盤的 20 週完整 SOP</td>
+</tr>
+<tr>
+<td><strong>第 4 週</strong></td>
+<td><a href="04-pain-points-industry-map/">04 8 情境痛點 × 業界對應地圖</a></td>
+<td>選題 × 業界職位對應</td>
+</tr>
+</tbody>
+</table>
+<h3 id="8-walkthrough">🎯 8 情境完整 walkthrough<a class="headerlink" href="#8-walkthrough" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>情境</th>
+<th>對應產業</th>
+<th>過往作品參考</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><a href="scenarios/scenario-1-restaurant-pos/">餐飲連鎖 POS 庫存優化</a></td>
+<td>餐飲 / 零售</td>
+<td>美味餐廳隨拾取、食喪地圖、找咖小幫手</td>
+</tr>
+<tr>
+<td>2</td>
+<td><a href="scenarios/scenario-2-ecommerce/">B2C 電商競品比價</a></td>
+<td>電商</td>
+<td>水果價格預測</td>
+</tr>
+<tr>
+<td>3</td>
+<td><a href="scenarios/scenario-3-fintech/">數位金融客訴效率</a></td>
+<td>銀行 / FinTech</td>
+<td>反詐騙 LINE Bot、打造自己的 ETF</td>
+</tr>
+<tr>
+<td>4</td>
+<td><a href="scenarios/scenario-4-music/">音樂串流推薦優化</a></td>
+<td>媒體 / 串流</td>
+<td>KKBOX&amp;Spotify 比較、SteamTrend</td>
+</tr>
+<tr>
+<td>5</td>
+<td><a href="scenarios/scenario-5-ride/">叫車服務交通熱點</a></td>
+<td>交通 / 物流</td>
+<td>國道車流 LSTM、國旅推薦</td>
+</tr>
+<tr>
+<td>6</td>
+<td><a href="scenarios/scenario-6-recruit/">求職媒合職缺趨勢</a></td>
+<td>HR Tech</td>
+<td>求職 360°、求職求值</td>
+</tr>
+<tr>
+<td>7</td>
+<td><a href="scenarios/scenario-7-news/">媒體業新聞輿情</a></td>
+<td>媒體 / 行銷</td>
+<td>社群輿情、夜市水軍王、巴哈姆特輿情、遊戲輿情</td>
+</tr>
+<tr>
+<td>8</td>
+<td><a href="scenarios/scenario-8-realestate/">不動產房價趨勢</a></td>
+<td>不動產 / GIS</td>
+<td>房價走勢密碼、六都寵物便利度</td>
+</tr>
+</tbody>
+</table>
+<h3 id="github-skeleton-fork">🛠 GitHub Skeleton（學員 fork 用）<a class="headerlink" href="#github-skeleton-fork" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="template-repo/">template-repo/</a> — 開好的 repo 範本，含 README / PLAN / task / PR template / CI workflow</li>
+</ul>
+<h3 id="_4">📚 持續參考（不綁定週次）<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="05-collaboration-sop/">05 業界協作 SOP</a> — Git / GitHub / PR / Code Review（實作期天天看）</li>
+<li><a href="06-retro-and-after/">06 復盤 + 課後加強路徑</a> — KPT / 4Ls / 履歷升級 checklist（每 sprint 末用）</li>
+<li><a href="07-demo-day-rubric/">07 Demo Day 評分表</a> — 業界 demo 最低門檻（學期末用）</li>
+</ul>
+<h3 id="_5">❓ 常見問題<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="FAQ/">FAQ</a> — 學員實際提問與回答，卡關時先來這裡找</li>
+</ul>
+<hr />
+<h2 id="demo">過往學長姐 demo<a class="headerlink" href="#demo" title="Permanent link">&para;</a></h2>
+<p>YouTube 公開：</p>
+<p><strong>🔗 <a href="https://www.youtube.com/playlist?list=PL0seqKy3cp6nYX8aFh9oicSh0Gg4BGhQd">完整 playlist</a></strong></p>
+<p><strong>怎麼看才有效</strong>：</p>
+<ul>
+<li>找清單中有興趣的 1~3 個過去專題觀看</li>
+<li>回答 3 個問題：</li>
+<li>他們解的是什麼業務問題？</li>
+<li>技術用了哪些？</li>
+<li>我能比他們做得更好的地方是什麼？</li>
+</ul>
+<hr />
+<h2 id="_6">配套課堂材料<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<p>這份手冊跟你在課堂上看到的三份簡報是一套，互相補強：</p>
+<table>
+<thead>
+<tr>
+<th>階段</th>
+<th>課堂簡報</th>
+<th>對應手冊章節</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>課程開始</td>
+<td><strong>課程總覽 &amp; DE 介紹</strong> (<a href="../課程總覽%26DE介紹.pdf">PDF</a>)</td>
+<td>README + <a href="04-pain-points-industry-map/">04 痛點地圖</a></td>
+</tr>
+<tr>
+<td>前置期 W1-W3</td>
+<td><strong>期初工作坊：資料解決方案顧問</strong> (<a href="../期初工作坊.pdf">PDF</a>)</td>
+<td><a href="02-pipeline-blueprint/">02 通用管線藍圖</a> + <a href="scenarios/">scenarios/</a></td>
+</tr>
+<tr>
+<td>實作期 W10-W12</td>
+<td><strong>期中工作坊：個人 pipeline 實作</strong> (<a href="../course_project_slides.html">HTML</a>)</td>
+<td><a href="03-team-process/">03 10 階段流程</a> + <a href="05-collaboration-sop/">05 協作 SOP</a></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>💡 <strong>建議閱讀順序</strong>：先看課堂簡報感受全貌，回手冊查細節與作業。</p>
+</blockquote>
+<hr />
+<h2 id="_7">記住心法<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>「業界專案不是把技術秀出來，是把情境、痛點、解法(最優解和最快解)、遇到的技術問題和如何處理等講清楚。」</strong></p>
+</blockquote>
+<hr />
+<h2 id="_8">手冊閱讀方法<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
+<p>依你目前的狀態，找到適合的閱讀路徑：</p>
+<table>
+<thead>
+<tr>
+<th>你的狀態</th>
+<th>🎯 必讀（先看）</th>
+<th>📖 下一步</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🌱 <strong>完全沒用過 GitHub</strong></td>
+<td><a href="01-github-setup-sop/">01 GitHub 註冊 SOP</a></td>
+<td><a href="05-collaboration-sop/">05 協作 SOP</a></td>
+</tr>
+<tr>
+<td>🤝 <strong>還沒組好隊 / 不知怎麼啟動</strong></td>
+<td><a href="03-team-process/">03 10 階段流程</a>（① 啟動段）</td>
+<td><a href="00-agile-and-tools/">00 敏捷與工具選型</a></td>
+</tr>
+<tr>
+<td>🎯 <strong>組好了、正在選題</strong></td>
+<td><a href="04-pain-points-industry-map/">04 痛點 × 業界地圖</a></td>
+<td><a href="scenarios/">scenarios/</a> 挑 1-2 個對齊</td>
+</tr>
+<tr>
+<td>🏗 <strong>開始實作、不知如何設計</strong></td>
+<td><a href="02-pipeline-blueprint/">02 通用管線藍圖</a></td>
+<td>對應的 scenario 文件</td>
+</tr>
+<tr>
+<td>🛠 <strong>動工中卡關 / 流程亂</strong></td>
+<td><a href="05-collaboration-sop/">05 協作 SOP</a> + <a href="00-agile-and-tools/">00 敏捷與工具</a></td>
+<td><a href="03-team-process/">03 10 階段流程</a>（⑥ 衝刺段）</td>
+</tr>
+<tr>
+<td>🎤 <strong>快到 demo 了</strong></td>
+<td><a href="07-demo-day-rubric/">07 Demo Day 評分表</a></td>
+<td><a href="06-retro-and-after/">06 復盤模板</a>（寫 final retro）</td>
+</tr>
+<tr>
+<td>📜 <strong>專題完了想升級履歷</strong></td>
+<td><a href="06-retro-and-after/">06 課後加強路徑</a></td>
+<td>重看 <a href="07-demo-day-rubric/">07 評分表</a> self-check</td>
+</tr>
+<tr>
+<td>👀 <strong>第一次來、想全覽</strong></td>
+<td>從本 README 看完目錄 → 看 1 部 <a href="https://www.youtube.com/playlist?list=PL0seqKy3cp6nYX8aFh9oicSh0Gg4BGhQd">學長姐 demo</a></td>
+<td><a href="03-team-process/">03 10 階段流程</a></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_9">關於作者<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
+<p><strong>Dex</strong> — 資料工程教練、自媒體經營者、個人品牌 DayDreamDex 塵世哲學。</p>
+<p>過去 10 年從 半導體QA 跨到資料工程、軟體開發 和 AI開發，現在同時是乙方純軟體開發公司的數位轉型部門AI技術負責人，也是教學講師/專題業師、職涯諮詢業師和數位轉型顧問。多重身份包含：
+- <strong>TibaMe 雲端資料工程師養成班</strong> 專題業師
+- <strong>DayDreamDex</strong> 主理人 — Dex 的塵世哲學品牌
+- <strong>我與經驗值（IandExp）</strong> 電子報主筆 — 寫給轉職者 / DE / 求知者的雙週信
+- <strong>沒走歪的才奇怪</strong> Podcast 主持人 — 跟走過彎路的人聊「彎路怎麼變捷徑」
+- Ｔ-Cross 數位人才 - NPO/NGO/在地創生的數位轉型顧問</p>
+<p>讓我們一起在轉折點上慢慢前行</p>
+<p>如果這份手冊對你有用，最大的回饋是讓我知道：你做到哪了、卡在哪、需要什麼</p>
+<h3 id="dex">關於 Dex<a class="headerlink" href="#dex" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>平台</th>
+<th>用途</th>
+<th>連結</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>📧 <strong>電子報（主力）</strong></td>
+<td>雙週寄一封：DE / AI / 職涯 / 轉職實戰</td>
+<td><a href="https://iandexp.kit.com/e0cd61d37a">iandexp.kit.com</a></td>
+</tr>
+<tr>
+<td>📝 Substack</td>
+<td>電子報備援平台</td>
+<td><a href="https://daydreamdex.substack.com/">daydreamdex.substack.com</a></td>
+</tr>
+<tr>
+<td>🧵 Threads</td>
+<td>日常碎念 + 短觀察</td>
+<td><a href="https://www.threads.com/@daydreamdex">@daydreamdex</a></td>
+</tr>
+<tr>
+<td>📸 Instagram</td>
+<td>視覺化短內容</td>
+<td><a href="https://www.instagram.com/daydreamdex/">@daydreamdex</a></td>
+</tr>
+<tr>
+<td>📘 Facebook</td>
+<td>長文 + 社群</td>
+<td><a href="https://www.facebook.com/profile.php?id=61560603174482">Dex 的 FB</a></td>
+</tr>
+<tr>
+<td>🌐 Blog</td>
+<td>長文與深度文章</td>
+<td><a href="https://daydreamdex.com/">daydreamdex.com</a></td>
+</tr>
+<tr>
+<td>🎙 Podcast (Spotify)</td>
+<td>沒走歪的才奇怪</td>
+<td><a href="https://open.spotify.com/show/2qV49EUjFOcJIqkUjwmu2T">Spotify 直連</a></td>
+</tr>
+<tr>
+<td>📺 YouTube</td>
+<td>教學影片 + Podcast 影音版</td>
+<td><a href="https://www.youtube.com/@WhySoStraight">@WhySoStraight</a></td>
+</tr>
+<tr>
+<td>🔗 一站式</td>
+<td>所有連結</td>
+<td><a href="https://portaly.cc/daydreamdex">portaly.cc/daydreamdex</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="_10">看完手冊後可以怎麼做<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>透過電子報或其他方式與我討論</strong></li>
+<li><strong>把這份手冊分享給也在轉職的朋友</strong> </li>
+<li><strong>訂閱「我與經驗值」電子報</strong> — 雙週收到 DE / 職涯 / 真實案例</li>
+</ol>
+<hr />
+<h2 id="license">License<a class="headerlink" href="#license" title="Permanent link">&para;</a></h2>
+<ul>
+<li>✅ 自由閱讀、分享、改編</li>
+<li>✅ 商業用途請先聯繫</li>
+<li>⚠️ 改編後需註明原作者並用相同授權</li>
+</ul>
+<p>GitHub Repo: <a href="https://github.com/lu791019/DataDreamers-decrosscareer-student-project-handbook">github.com/lu791019/DataDreamers-decrosscareer-student-project-handbook</a>（star ⭐ 一下方便日後找回）</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到頂端
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/lu791019/DataDreamers-decrosscareer-student-project-handbook" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "toc.follow"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u8907\u88fd", "clipboard.copy": "\u8907\u88fd", "search.result.more.one": "\u6b64\u9801\u5c1a\u6709 1 \u500b\u7b26\u5408\u7684\u9805\u76ee", "search.result.more.other": "\u6b64\u9801\u5c1a\u6709 # \u500b\u7b26\u5408\u7684\u9805\u76ee", "search.result.none": "\u6c92\u6709\u7b26\u5408\u7684\u9805\u76ee", "search.result.one": "\u627e\u5230 1 \u500b\u7b26\u5408\u7684\u9805\u76ee", "search.result.other": "\u627e\u5230 # \u500b\u7b26\u5408\u7684\u9805\u76ee", "search.result.placeholder": "\u6253\u5b57\u9032\u884c\u641c\u5c0b", "search.result.term.missing": "\u7f3a\u5c11\u5b57\u8a5e", "select.version": "\u9078\u64c7\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

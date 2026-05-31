@@ -1,0 +1,2556 @@
+
+<!doctype html>
+<html lang="zh-TW" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="TibaMe 雲端資料工程師養成班 — 從 0 到 1 建立面試作品集">
+      
+      
+        <meta name="author" content="Dex">
+      
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../01-github-setup-sop/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>第 0 週 — 敏捷開發 + 工具選型 - DE 學員專題實戰手冊</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Noto Sans TC";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#0-00" class="md-skip">
+          跳轉到
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="頁首">
+    <a href=".." title="DE 學員專題實戰手冊" class="md-header__button md-logo" aria-label="DE 學員專題實戰手冊" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DE 學員專題實戰手冊
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              第 0 週 — 敏捷開發 + 工具選型
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="orange"  aria-label="切換深色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切換深色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="orange"  aria-label="切換淺色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切換淺色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜尋" placeholder="搜尋" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="搜尋">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清除" aria-label="清除" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜尋引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/lu791019/DataDreamers-decrosscareer-student-project-handbook" title="前往倉庫" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="導覽列" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="DE 學員專題實戰手冊" class="md-nav__button md-logo" aria-label="DE 學員專題實戰手冊" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    DE 學員專題實戰手冊
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/lu791019/DataDreamers-decrosscareer-student-project-handbook" title="前往倉庫" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    首頁
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    專案協作系列
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    專案協作系列
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 0 週 — 敏捷開發 + 工具選型
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 0 週 — 敏捷開發 + 工具選型
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目錄">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目錄
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#part-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 1：敏捷開發 — 小組專案的最佳節奏
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 1：敏捷開發 — 小組專案的最佳節奏">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        為什麼是敏捷開發？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scrumban-scrum-kanban" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        為什麼選 Scrumban（不選完整 Scrum 或純 Kanban）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scrumban" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scrumban 三大支柱
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        看板長怎樣
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sprint-planning-1-45-60" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sprint Planning 怎麼做（每 1 週一次，每次限定 45-60 分鐘，嚴格計時）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#daily-check-in" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        異步 Daily Check-in
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sprint-review-2-45-60" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sprint Review — 跟組內看「真的能用嗎」（每 2 週一次，45-60 分鐘）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        進度追蹤 — 用「點數預算 + 完成率」
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="進度追蹤 — 用「點數預算 + 完成率」">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1 — 估時轉成點數
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-sprint" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2 — 算 Sprint 預算
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-sprint" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3 — Sprint 結束算「完成率」
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scope-trigger" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        砍 scope 的藝術 — 用優先級 + 明確 trigger
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="砍 scope 的藝術 — 用優先級 + 明確 trigger">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        每張卡開始就標 4 級優先級
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trigger" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        明確的「該砍了」trigger
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 2：溝通工具選型
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 2：溝通工具選型">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        工具地圖
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        學員小組的推薦組合
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="學員小組的推薦組合">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1discord-notiontrello-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        推薦 1：Discord + Notion/Trello + GitHub
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2line-google-drive-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        推薦 2：LINE + Google Drive + GitHub
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#discord-vs-slack-vs-line" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Discord vs Slack vs LINE 三個比較
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#channel-discord-slack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        [參考] Channel 設計（Discord / Slack 共用）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#announce-pin-standup-daily-standup-general-ingest-ingest-pipeline-pipeline-airflow-analytics-serve-api-review-pr-review-alerts-sentry-monitoring-help-decisions-standup-from-bot-github-bot-pr-issue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        #announce 重大公告（pin 用、不灌水） #standup daily standup（每天一篇） #general 輕鬆閒聊、迷因、加油 #ingest ingest 模組討論 #pipeline pipeline / airflow #analytics 分析 / 模型 #serve 前端 / API #review PR review 通知 + 討論 #alerts Sentry / monitoring 自動通知 #help 卡關喊救命專用 #decisions 做了什麼決策、為什麼（重要的） #standup-from-bot GitHub bot 自動通知（PR / Issue）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="#announce 重大公告（pin 用、不灌水） #standup daily standup（每天一篇） #general 輕鬆閒聊、迷因、加油 #ingest ingest 模組討論 #pipeline pipeline / airflow #analytics 分析 / 模型 #serve 前端 / API #review PR review 通知 + 討論 #alerts Sentry / monitoring 自動通知 #help 卡關喊救命專用 #decisions 做了什麼決策、為什麼（重要的） #standup-from-bot GitHub bot 自動通知（PR / Issue）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#notification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        [參考] Notification 設定（不被噪音淹）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 3：專案管理工具選型
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 3：專案管理工具選型">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        主流工具比較
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        給學員的選型流程
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#github-projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        [補充]GitHub Projects 快速設定
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trello" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trello 簡易設定（如果走輕量路線）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        不管哪個工具，這 5 件事不能省
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-4-nice-to-have" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 4：自動化整合（ nice-to-have）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 4：自動化整合（ nice-to-have）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-github-discord" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. GitHub → Discord 通知
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-standup-bot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Standup 自動提醒 Bot
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-sentry-discord" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Sentry → Discord
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-github-actions-weekly-report" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. GitHub Actions 跑 weekly report
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 小作業：把協作基建一次架好
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-github-setup-sop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 1 週 — GitHub 註冊 SOP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-pipeline-blueprint/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 2 週 — 通用資料管線藍圖
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-team-process/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 3 週 — 小組專案 10 階段流程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-pain-points-industry-map/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 4 週 — 8 情境痛點 × 業界地圖
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8 情境 Walkthrough
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    8 情境 Walkthrough
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scenarios/scenario-1-restaurant-pos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1 — 餐飲連鎖 POS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scenarios/scenario-2-ecommerce/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2 — B2C 電商競品比價
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scenarios/scenario-3-fintech/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3 — 數位金融客訴
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scenarios/scenario-4-music/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4 — 音樂串流推薦
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scenarios/scenario-5-ride/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5 — 叫車服務交通熱點
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scenarios/scenario-6-recruit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6 — 求職媒合職缺趨勢
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scenarios/scenario-7-news/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7 — 媒體業新聞輿情
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scenarios/scenario-8-realestate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8 — 不動產房價趨勢
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    持續參考
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    持續參考
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-collaboration-sop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    協作 SOP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-retro-and-after/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    復盤 + 課後加強
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-demo-day-rubric/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Demo Day 評分表
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FAQ/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目錄">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目錄
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#part-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 1：敏捷開發 — 小組專案的最佳節奏
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 1：敏捷開發 — 小組專案的最佳節奏">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        為什麼是敏捷開發？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scrumban-scrum-kanban" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        為什麼選 Scrumban（不選完整 Scrum 或純 Kanban）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scrumban" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scrumban 三大支柱
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        看板長怎樣
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sprint-planning-1-45-60" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sprint Planning 怎麼做（每 1 週一次，每次限定 45-60 分鐘，嚴格計時）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#daily-check-in" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        異步 Daily Check-in
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sprint-review-2-45-60" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sprint Review — 跟組內看「真的能用嗎」（每 2 週一次，45-60 分鐘）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        進度追蹤 — 用「點數預算 + 完成率」
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="進度追蹤 — 用「點數預算 + 完成率」">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1 — 估時轉成點數
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-sprint" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2 — 算 Sprint 預算
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-sprint" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3 — Sprint 結束算「完成率」
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scope-trigger" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        砍 scope 的藝術 — 用優先級 + 明確 trigger
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="砍 scope 的藝術 — 用優先級 + 明確 trigger">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        每張卡開始就標 4 級優先級
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trigger" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        明確的「該砍了」trigger
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 2：溝通工具選型
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 2：溝通工具選型">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        工具地圖
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        學員小組的推薦組合
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="學員小組的推薦組合">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1discord-notiontrello-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        推薦 1：Discord + Notion/Trello + GitHub
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2line-google-drive-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        推薦 2：LINE + Google Drive + GitHub
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#discord-vs-slack-vs-line" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Discord vs Slack vs LINE 三個比較
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#channel-discord-slack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        [參考] Channel 設計（Discord / Slack 共用）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#announce-pin-standup-daily-standup-general-ingest-ingest-pipeline-pipeline-airflow-analytics-serve-api-review-pr-review-alerts-sentry-monitoring-help-decisions-standup-from-bot-github-bot-pr-issue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        #announce 重大公告（pin 用、不灌水） #standup daily standup（每天一篇） #general 輕鬆閒聊、迷因、加油 #ingest ingest 模組討論 #pipeline pipeline / airflow #analytics 分析 / 模型 #serve 前端 / API #review PR review 通知 + 討論 #alerts Sentry / monitoring 自動通知 #help 卡關喊救命專用 #decisions 做了什麼決策、為什麼（重要的） #standup-from-bot GitHub bot 自動通知（PR / Issue）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="#announce 重大公告（pin 用、不灌水） #standup daily standup（每天一篇） #general 輕鬆閒聊、迷因、加油 #ingest ingest 模組討論 #pipeline pipeline / airflow #analytics 分析 / 模型 #serve 前端 / API #review PR review 通知 + 討論 #alerts Sentry / monitoring 自動通知 #help 卡關喊救命專用 #decisions 做了什麼決策、為什麼（重要的） #standup-from-bot GitHub bot 自動通知（PR / Issue）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#notification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        [參考] Notification 設定（不被噪音淹）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 3：專案管理工具選型
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 3：專案管理工具選型">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        主流工具比較
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        給學員的選型流程
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#github-projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        [補充]GitHub Projects 快速設定
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trello" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trello 簡易設定（如果走輕量路線）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        不管哪個工具，這 5 件事不能省
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-4-nice-to-have" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 4：自動化整合（ nice-to-have）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 4：自動化整合（ nice-to-have）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-github-discord" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. GitHub → Discord 通知
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-standup-bot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Standup 自動提醒 Bot
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-sentry-discord" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Sentry → Discord
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-github-actions-weekly-report" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. GitHub Actions 跑 weekly report
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 小作業：把協作基建一次架好
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="0-00">專案協作第 0 週 ｜ 00 敏捷開發 + 溝通與專案管理工具選型<a class="headerlink" href="#0-00" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>流程跑得順、訊息傳得清楚、卡關有人接 —— 這三件事決定整個學期能不能順利走完。
+這篇幫你把「該怎麼跑」和「該用什麼工具」一次想清楚。</p>
+</blockquote>
+<hr />
+<h2 id="part-1">Part 1：敏捷開發 — 小組專案的最佳節奏<a class="headerlink" href="#part-1" title="Permanent link">&para;</a></h2>
+<h3 id="_1">為什麼是敏捷開發？<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<p>學員專案時間有限、組員幾個、需求會變、不會做完美 —— 這正是敏捷被設計來解決的場景。</p>
+<blockquote>
+<p>敏捷不是「速度快」，是「願意接受『我們一開始想的不完全對』，然後快速調整」。</p>
+</blockquote>
+<p>直接照搬企業的 Scrum 方法會太笨重。下面是給「小組專題」剪裁過的版本 (模擬 Scrum 的簡化方法，關於Scrum正式做法補充在最後)</p>
+<hr />
+<h3 id="scrumban-scrum-kanban">為什麼選 Scrumban（不選完整 Scrum 或純 Kanban）<a class="headerlink" href="#scrumban-scrum-kanban" title="Permanent link">&para;</a></h3>
+<p>業界有兩大主流：</p>
+<table>
+<thead>
+<tr>
+<th>學派</th>
+<th>一句話特色</th>
+<th>對小組的問題</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Scrum</strong></td>
+<td>用 sprint 把時間切成等長格子，含 5 個 ceremonies</td>
+<td>5 個 ceremonies 對 3 人組太重，開會時間 &gt; 寫 code 時間</td>
+</tr>
+<tr>
+<td><strong>Kanban</strong></td>
+<td>用看板視覺化、WIP limit 限制同時做的事</td>
+<td>沒有節奏感，學員容易拖延</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Scrumban = 兩者折衷</strong>：保留 Kanban 看板 + 採 Scrum 的雙週節奏 + 只做最關鍵的兩個 ceremonies。</p>
+<blockquote>
+<p>業界小團隊（新創 / 3-10 人）最常用 Scrumban</p>
+</blockquote>
+<hr />
+<h3 id="scrumban">Scrumban 三大支柱<a class="headerlink" href="#scrumban" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>1. 看板 + WIP limit       任務狀態視覺化，限制同時做的事（每人最多 3 個 in-progress）
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>2. Sprint Planning        每 1 週開一次，決定這週要做什麼
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>3. Sprint Review          每 1 週開一次，跟組內確認想法或功能
+</code></pre></div>
+<p><strong>輔助</strong>：
+- 異步 Daily Check-in（溝通通句進行文字討論）
+- final retro（只在學期末做，看 <a href="../06-retro-and-after/">06 章</a>）</p>
+<p><strong>不用做的</strong>：
+- ❌ Sprint Retro（反省會議是不斷迭代和優化的關鍵，但課程中每週去做會容易疲乏；改成學期末做一次深度 final retro）
+- ❌ Velocity / Story Points（本來跑敏捷有所謂的計點制方式，每個人都有被分配的點數量要完成，但課程中我們有意識地持續「推進」就好）</p>
+<hr />
+<h3 id="_2">看板長怎樣<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>📥 Backlog        🎯 This Sprint    🚧 In Progress    👀 Done        ✅ Done
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>還沒排程           本 2 週要做       進行中（限 2/人）   等 Review 或確認     已完成
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>─────────         ─────────         ─────────         ─────────        ─────────
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>T-001             T-005             T-002 (Alice)     T-006 (Bob)      T-001
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>T-008             T-006             T-003 (Bob)                         T-004
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>T-009             T-007             T-007 (Carol)
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>...               T-008
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>                  T-009
+</code></pre></div>
+<p><strong>WIP limit 規則</strong>：每人 In Progress 最多 3 張卡。每張卡片要能在半天完成，<strong>超過要先做完一張才能新開</strong>。
+(這就是 Kanban 精髓 —— 強迫聚焦、暴露瓶頸)</p>
+<hr />
+<h3 id="sprint-planning-1-45-60">Sprint Planning 怎麼做（每 1 週一次，每次限定 45-60 分鐘，嚴格計時）<a class="headerlink" href="#sprint-planning-1-45-60" title="Permanent link">&para;</a></h3>
+<p><strong>前置</strong>：看板 Backlog 有待認領任務寫好。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>00-10 min   回顧上週進度（看板上 Done 欄、本期該完成沒完成的卡）
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>10-30 min   挑本週要做的任務 → 從 Backlog 拖到 This Sprint
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>            ── 每張卡有：owner、估時、acceptance criteria
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>30-50 min   風險討論（哪裏會卡、可能有什麼意外、可能誰本週比較忙碌、API 額度等…）
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>50-60 min   結論 + 看板更新
+</code></pre></div>
+<p><strong>估時用 size 區分</strong>：
+- <strong>S</strong> = 半天能做完
+- <strong>M</strong> = 1-2 天
+- <strong>L</strong> = 3 天
+- 超過 L 就要把討論任務或分配，將任務拆成更細或是有人能協助分工</p>
+<hr />
+<h3 id="daily-check-in">異步 Daily Check-in<a class="headerlink" href="#daily-check-in" title="Permanent link">&para;</a></h3>
+<p>每天團隊的確認時間點在 團隊溝通工具 中寫三句重點：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>昨天：我做了 X
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>今天：我打算做 Y
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>卡：我卡在 Z，需要如何幫忙
+</code></pre></div>
+<p><strong>如果沒卡，也要明確說「沒卡」</strong> —— 不然不知道是真的順還是不想講。</p>
+<blockquote>
+<p>開 daily 會議是學員小組最容易疲乏的地方。文字版省時間、有紀錄、可以慢慢回。</p>
+</blockquote>
+<hr />
+<h3 id="sprint-review-2-45-60">Sprint Review — 跟組內看「真的能用嗎」（每 2 週一次，45-60 分鐘）<a class="headerlink" href="#sprint-review-2-45-60" title="Permanent link">&para;</a></h3>
+<p><strong>Review 的真正目的</strong>：
+- 對「自己人」demo，看「東西是不是真的能用」
+- 收 feedback 給下 sprint
+- 教練 / 同學在這時候給意見成本最低</p>
+<p><strong>結構（60 分鐘）</strong>：
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>0-15 min   product owner(組長) 講「這 2 週做了什麼」
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>15-35 min  確認、測試功能的效果(小demo)
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>35-50 min  Q&amp;A + 反饋
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>50-60 min  決定哪些反饋進下 sprint backlog
+</code></pre></div></p>
+<hr />
+<h3 id="_3">進度追蹤 — 用「點數預算 + 完成率」<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>不用企業那種 story point 估算，但也不靠感覺。3 步驟就可以量化：</p>
+<h4 id="step-1">Step 1 — 估時轉成點數<a class="headerlink" href="#step-1" title="Permanent link">&para;</a></h4>
+<p>每張卡片在 Sprint Planning 時標 size，對應一個點數：</p>
+<table>
+<thead>
+<tr>
+<th>Size</th>
+<th>工時</th>
+<th>點數</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>S</strong></td>
+<td>半天能做完</td>
+<td><strong>1</strong></td>
+</tr>
+<tr>
+<td><strong>M</strong></td>
+<td>1-2 天</td>
+<td><strong>2</strong></td>
+</tr>
+<tr>
+<td><strong>L</strong></td>
+<td>3 天（超過要拆）</td>
+<td><strong>4</strong></td>
+</tr>
+</tbody>
+</table>
+<h4 id="step-2-sprint">Step 2 — 算 Sprint 預算<a class="headerlink" href="#step-2-sprint" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>Sprint 預算 = This Sprint 欄所有卡片的點數加總
+</code></pre></div>
+<p>例：本期總共 8 個 Task （8張卡片） = 3S + 4M + 1L → 預算 3×1 + 4×2 + 1×4 = <strong>15 點</strong></p>
+<blockquote>
+<p>第一個 sprint 憑直覺挑「應該做得完」的量；做完之後，下個 sprint 就有「我們組真實的負荷」作參考，以此不斷迭代優化。</p>
+</blockquote>
+<h4 id="step-3-sprint">Step 3 — Sprint 結束算「完成率」<a class="headerlink" href="#step-3-sprint" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>完成率 = 完成的點數 / 預算點數 × 100%
+</code></pre></div>
+<p>連續 3 個 sprint 後，你會看到組裡真實的 velocity：</p>
+<table>
+<thead>
+<tr>
+<th>Sprint</th>
+<th>預算</th>
+<th>完成</th>
+<th>完成率</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sprint 1</td>
+<td>15</td>
+<td>9</td>
+<td>60%</td>
+</tr>
+<tr>
+<td>Sprint 2</td>
+<td>12</td>
+<td>10</td>
+<td>83%</td>
+</tr>
+<tr>
+<td>Sprint 3</td>
+<td>11</td>
+<td>10</td>
+<td>91%</td>
+</tr>
+</tbody>
+</table>
+<p><strong>判讀</strong>：
+- 完成率 <strong>≥ 80%</strong> → 健康，下個 sprint 可以稍微增加一點Task/產量
+- 完成率 <strong>60-80%</strong> → 還行，下 sprint 維持Task/產量
+- 完成率 <strong>&lt; 60%</strong> → 嚴重，下 sprint ，評估是否估算太過樂觀，減少Task/產量</p>
+<hr />
+<h3 id="scope-trigger">砍 scope 的藝術 — 用優先級 + 明確 trigger<a class="headerlink" href="#scope-trigger" title="Permanent link">&para;</a></h3>
+<h4 id="4">每張卡開始就標 4 級優先級<a class="headerlink" href="#4" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>優先級</th>
+<th>意思</th>
+<th>沒這個會怎樣</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>P0 — must have</strong></td>
+<td>demo 一定要展、絕不能砍</td>
+<td>demo 沒辦法走完</td>
+</tr>
+<tr>
+<td><strong>P1 — should have</strong></td>
+<td>demo 沒這個會被嫌「不完整」</td>
+<td>demo 能跑但被問會卡</td>
+</tr>
+<tr>
+<td><strong>P2 — nice to have</strong></td>
+<td>加分項，先放著</td>
+<td>demo 不影響</td>
+</tr>
+<tr>
+<td><strong>P3 — delight</strong></td>
+<td>想做但純為自己爽</td>
+<td>完全不影響</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>規則：<strong>P0 不准砍</strong>。砍順序：P3 → P2 → P1。Sprint Planning 排卡片時，P0 + P1 加起來不該超過預算的 70%。</p>
+</blockquote>
+<h4 id="trigger">明確的「該砍了」trigger<a class="headerlink" href="#trigger" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>觸發條件</th>
+<th>動作</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sprint 過半（W4 / W7 / W10... 第 4 天），剩餘點數 &gt; 預算 60%</td>
+<td>開砍 P3，必要時砍 P2</td>
+</tr>
+<tr>
+<td>同一張 P0 卡片 in-progress &gt; 2 天</td>
+<td>拉教練 + 把卡拆小</td>
+</tr>
+<tr>
+<td>連續 2 個 sprint 完成率 &lt; 60%</td>
+<td>下 sprint 直接砍 30% scope（不用討論）</td>
+</tr>
+<tr>
+<td>Demo 前 1 週 P1 還沒做完</td>
+<td>全部 P2 / P3 砍掉，把資源集中到 P1</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>💡 <strong>砍 scope 不是失敗 — 是聰明</strong>。業界 PM 一年砍幾十次。重要的是 P0 必有、按時 demo。</p>
+</blockquote>
+<hr />
+<h2 id="part-2">Part 2：溝通工具選型<a class="headerlink" href="#part-2" title="Permanent link">&para;</a></h2>
+<p>「我們組討論在哪？」這件事如果沒在第一週決定，整個 sprint 都會混亂。</p>
+<h3 id="_4">工具地圖<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>即時 / 同步 ───────────────────────── 非同步 / 紀錄
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>     │                                      │
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>   LINE     Discord      Slack      Notion / GitHub
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>   群組     社群型        企業型     文件型
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>     │        │            │              │
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>     │        │            ▼              │
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>     │        │       適合多 channel       │
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>     ▼        ▼       適合 thread          ▼
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>   速度快   速度快+      品質高           品質高
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>   品質低   有 channel   $$              速度慢
+</code></pre></div>
+<h3 id="_5">學員小組的推薦組合<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<h4 id="1discord-notiontrello-github">推薦 1：Discord + Notion/Trello + GitHub<a class="headerlink" href="#1discord-notiontrello-github" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>工具</th>
+<th>用途</th>
+<th>為什麼</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Discord</strong></td>
+<td>daily standup / 即時討論 / voice call</td>
+<td>免費 / 多 channel / 整合機器人方便</td>
+</tr>
+<tr>
+<td><strong>Notion/Trello</strong></td>
+<td>會議紀錄 / 文件 / PLAN 中間版</td>
+<td>共編好、好搜尋</td>
+</tr>
+<tr>
+<td><strong>GitHub Issues</strong></td>
+<td>task / bug / 決策紀錄</td>
+<td>跟程式碼放一起、追溯方便</td>
+</tr>
+</tbody>
+</table>
+<h4 id="2line-google-drive-github">推薦 2：LINE + Google Drive + GitHub<a class="headerlink" href="#2line-google-drive-github" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>工具</th>
+<th>用途</th>
+<th>為什麼</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>LINE 群組</strong></td>
+<td>即時討論 / 提醒</td>
+<td>大家本來就有、學習曲線零</td>
+</tr>
+<tr>
+<td><strong>Google Docs / Sheets</strong></td>
+<td>共編文件</td>
+<td>老一輩 / 業界都會用</td>
+</tr>
+<tr>
+<td><strong>GitHub Issues</strong></td>
+<td>task</td>
+<td>同上</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="discord-vs-slack-vs-line">Discord vs Slack vs LINE 三個比較<a class="headerlink" href="#discord-vs-slack-vs-line" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>維度</th>
+<th>Discord</th>
+<th>Slack</th>
+<th>LINE 群</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>學習曲線</strong></td>
+<td>中</td>
+<td>中</td>
+<td>零</td>
+</tr>
+<tr>
+<td><strong>多 channel</strong></td>
+<td>✅</td>
+<td>✅</td>
+<td>❌</td>
+</tr>
+<tr>
+<td><strong>thread 討論</strong></td>
+<td>✅</td>
+<td>✅</td>
+<td>❌</td>
+</tr>
+<tr>
+<td><strong>語音會議</strong></td>
+<td>✅ 內建</td>
+<td>要 huddle</td>
+<td>通話</td>
+</tr>
+<tr>
+<td><strong>整合機器人</strong></td>
+<td>✅ 超多</td>
+<td>✅ 但要付費</td>
+<td>有限</td>
+</tr>
+<tr>
+<td><strong>保留歷史</strong></td>
+<td>✅</td>
+<td>免費版 90 天</td>
+<td>✅</td>
+</tr>
+<tr>
+<td><strong>業界用得多</strong></td>
+<td>較少</td>
+<td>多</td>
+<td>在地小公司</td>
+</tr>
+<tr>
+<td><strong>檔案傳輸</strong></td>
+<td>✅ 大檔 OK</td>
+<td>限額</td>
+<td>限額</td>
+</tr>
+<tr>
+<td><strong>費用</strong></td>
+<td>免費</td>
+<td>免費 / 付費</td>
+<td>免費</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>建議：專題用 <strong>Discord</strong> —— 學習曲線適中、機器人整合方便、學完還能用在其他社群活動。</p>
+</blockquote>
+<hr />
+<h3 id="channel-discord-slack">[參考] Channel 設計（Discord / Slack 共用）<a class="headerlink" href="#channel-discord-slack" title="Permanent link">&para;</a></h3>
+<p>開好下面這幾個 channel，溝通密度提升 50%：</p>
+<h2 id="announce-pin-standup-daily-standup-general-ingest-ingest-pipeline-pipeline-airflow-analytics-serve-api-review-pr-review-alerts-sentry-monitoring-help-decisions-standup-from-bot-github-bot-pr-issue"><div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>#announce        重大公告（pin 用、不灌水）
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>#standup         daily standup（每天一篇）
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>#general         輕鬆閒聊、迷因、加油
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>#ingest          ingest 模組討論
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>#pipeline        pipeline / airflow
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>#analytics       分析 / 模型
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>#serve           前端 / API
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>#review          PR review 通知 + 討論
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>#alerts          Sentry / monitoring 自動通知
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>#help            卡關喊救命專用
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>#decisions       做了什麼決策、為什麼（重要的）
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>#standup-from-bot  GitHub bot 自動通知（PR / Issue）
+</code></pre></div><a class="headerlink" href="#announce-pin-standup-daily-standup-general-ingest-ingest-pipeline-pipeline-airflow-analytics-serve-api-review-pr-review-alerts-sentry-monitoring-help-decisions-standup-from-bot-github-bot-pr-issue" title="Permanent link">&para;</a></h2>
+<h3 id="notification">[參考] Notification 設定（不被噪音淹）<a class="headerlink" href="#notification" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>#announce / #alerts</strong>：全員開通知（重要）</li>
+<li><strong>module channels</strong>：只 owner 開即時、其他人 daily summary</li>
+<li><strong>#general</strong>：關通知，自己想看再看</li>
+<li><strong>DM</strong>：要小心 —— 業界討論盡量公開到 channel，避免「只有我跟你知道」</li>
+</ul>
+<hr />
+<h2 id="part-3">Part 3：專案管理工具選型<a class="headerlink" href="#part-3" title="Permanent link">&para;</a></h2>
+<p>這是「task 放哪裡 / sprint 怎麼追」的選型。</p>
+<h3 id="_6">主流工具比較<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>工具</th>
+<th>學習曲線</th>
+<th>適合規模</th>
+<th>強項</th>
+<th>弱項</th>
+<th>費用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Trello</strong></td>
+<td>⭐ 最低</td>
+<td>1-5 人</td>
+<td>直覺 / 看板拖拉</td>
+<td>sprint 觀念弱、報表少</td>
+<td>免費 / 個人版 OK</td>
+</tr>
+<tr>
+<td><strong>Notion</strong></td>
+<td>⭐⭐</td>
+<td>1-10 人</td>
+<td>跟文件整合好</td>
+<td>Database 慢、view 切換麻煩</td>
+<td>免費 / Pro $10/m</td>
+</tr>
+<tr>
+<td><strong>GitHub Projects</strong></td>
+<td>⭐⭐</td>
+<td>1-20 人</td>
+<td>跟 code 黏緊</td>
+<td>UI 沒那麼順</td>
+<td>免費</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="_7">給學員的選型流程<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>你們是？
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>├ 第一次跑專案、想簡單一點
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>│   → Trello
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>│
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>├ 喜歡寫文件、會議紀錄想跟 task 整合
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>│   → Notion
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>│
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>├ 99% 時間都在 GitHub 操作 code
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>│   → GitHub Projects
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>│
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>└ 想體驗業界感、不怕學新工具 or 公司 / 學校已經在用 Jira
+<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>   → Jira
+</code></pre></div>
+<p><strong>個人推薦</strong>：<strong>Notion</strong>（內容較雜但能記錄較多內容）<strong>or Trello</strong>（輕量化、純看板拖拉）。</p>
+<p>理由：
+- <strong>Notion</strong> 適合「文件 + task + 會議紀錄 + 知識庫」全部混在一起的組別，PLAN.md / 設計圖 / sprint 規劃都能放同一處，缺點是 view 切換比較慢。
+- <strong>Trello</strong> 適合「只想要乾淨看板」的組別，5 分鐘就能上手、零學習成本，缺點是文件能力弱（要搭配 Google Docs / Notion）。
+- <strong>GitHub Projects</strong> 雖然跟 code 黏最緊（issue / PR 自動連動），但 UI 對非工程組員不那麼直覺；如果組員都熟 GitHub 操作，這個其實也很好（設定見下方補充）。</p>
+<hr />
+<h3 id="github-projects">[補充]GitHub Projects 快速設定<a class="headerlink" href="#github-projects" title="Permanent link">&para;</a></h3>
+<ol>
+<li>進你的 repo → Projects → New project</li>
+<li>選 <strong>Table</strong> view + <strong>Board</strong> view 兩個</li>
+<li>在 Settings → Custom fields 加：</li>
+<li><code>Sprint</code> (single select：Sprint 1 / 2 / 3 / Backlog)</li>
+<li><code>Priority</code> (single select：P0 / P1 / P2 / P3)</li>
+<li><code>Owner</code> (single select：你們組成員)</li>
+<li><code>Estimate</code> (single select：S / M / L)</li>
+<li>建 4 個 view：</li>
+<li><strong>Sprint Current</strong>：filter by Sprint=當週</li>
+<li><strong>Backlog</strong>：filter by Sprint=Backlog</li>
+<li><strong>My Tasks</strong>：filter by Owner=me</li>
+<li><strong>By Module</strong>：group by Label</li>
+<li>把所有 Issue 都拉進這個 Project</li>
+</ol>
+<p>每個 sprint planning 用 board view 拖拉，把 Backlog 的 issue 拉到當週 sprint。</p>
+<hr />
+<h3 id="trello">Trello 簡易設定（如果走輕量路線）<a class="headerlink" href="#trello" title="Permanent link">&para;</a></h3>
+<p>開 5 個 list：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>📥 Backlog       還沒排程的
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>🎯 This Sprint   本週要做
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>🚧 In Progress   進行中（限 3 張，超過要先做完才能新開）
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>👀 Review        等 review
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>✅ Done           本週完成
+</code></pre></div>
+<p>每張卡至少有：
+- title（動詞開頭）
+- description（acceptance criteria）
+- assignee（一人）
+- due date
+- labels（模組 / 優先級）</p>
+<p>WIP 限制（In Progress 限 3 張）超過就要先 finish 一張才能開新的 —— 這是 Kanban 精髓。</p>
+<hr />
+<h3 id="5">不管哪個工具，這 5 件事不能省<a class="headerlink" href="#5" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>每個 task 有明確 owner</strong>(可以一起做 但要有一個主負責人)</li>
+<li><strong>每個 task 有簡單的完成條件(例如：資料能成功抓下、DB在雲端環境能成功建立)</strong></li>
+<li><strong>狀態流轉清楚</strong>：Backlog → Sprint → In Progress → Review → Done</li>
+<li><strong>每週要確認有哪些在 In Progress</strong>：超過一週的 task = 暗藏問題</li>
+<li><strong>試著跟 Git commit 連動</strong>：commit / PR 提到 issue 編號（#123）自動關聯</li>
+</ol>
+<hr />
+<h2 id="part-4-nice-to-have">Part 4：自動化整合（ nice-to-have）<a class="headerlink" href="#part-4-nice-to-have" title="Permanent link">&para;</a></h2>
+<p>如果還有時間，加這些讓專案看起來更專業：</p>
+<h3 id="1-github-discord">1. GitHub → Discord 通知<a class="headerlink" href="#1-github-discord" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="c1"># .github/workflows/notify.yml</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">新 PR / Issue 自動發到</span><span class="w"> </span><span class="c1">#review channel</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CI 失敗發到</span><span class="w"> </span><span class="c1">#alerts</span>
+</code></pre></div>
+<h3 id="2-standup-bot">2. Standup 自動提醒 Bot<a class="headerlink" href="#2-standup-bot" title="Permanent link">&para;</a></h3>
+<p>Discord Bot（如 Donut / Standup Bot）每天 09:30 推：</p>
+<blockquote>
+<p>@everyone 該貼 standup 啦：昨天 / 今天 / 卡</p>
+</blockquote>
+<h3 id="3-sentry-discord">3. Sentry → Discord<a class="headerlink" href="#3-sentry-discord" title="Permanent link">&para;</a></h3>
+<p>pipeline 失敗自動通知到 #alerts，不靠人手動看</p>
+<h3 id="4-github-actions-weekly-report">4. GitHub Actions 跑 weekly report<a class="headerlink" href="#4-github-actions-weekly-report" title="Permanent link">&para;</a></h3>
+<p>每週日自動把：
+- 本週 merged PRs
+- 本週 closed issues
+- 各 owner commits 數
+- 沒動的 issues（超過 7 天）</p>
+<p>整理成 markdown 留在 <code>docs/weekly-reports/</code></p>
+<hr />
+<h2 id="_8">🎯 小作業：把協作基建一次架好<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
+<p>前置期結束前完成，不然 Sprint 1 開始會混亂。做完 = 你們的協作基建跟業界小團隊一致。</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>選工具組合</strong>（推薦：Discord + GitHub Projects + GitHub Issues）</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>溝通討論工具 channels</strong>（依本章 channel 設計，至少 #announce / #standup / #help / 模組 channels）</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>專案管理工具</strong>（GitHub Projects + 4 個 views，或 Trello / Notion 5 個 list）</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>約定 daily check-in 時間(用文字留言的非同步方式)</strong> 時間 + 形式</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>約定 Sprint Planning / Sprint Review 未來兩個會議的固定時段</strong>（每週各一次，30~60 分鐘，養成溝通討論習慣）</li>
+<li>[非必要] <strong>設 1-2 個自動化通知</strong>（GitHub PR / Sentry → Discord/Slack）</li>
+<li>[非必要] <strong>把 Sprint 1 任務都建成 Issue / card</strong> + assign owner + acceptance criteria</li>
+</ul>
+<blockquote>
+<p>💡 工具沒選好 = 接下來整個學期都在切換 + 找訊息。前置期多花 1-2 小時，後面每個 sprint 都會更順。</p>
+</blockquote>
+<hr />
+<p>← <a href="../">回到 README</a> | 下一步：<a href="../01-github-setup-sop/">01 GitHub 註冊、開通與 Fork SOP →</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到頂端
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/lu791019/DataDreamers-decrosscareer-student-project-handbook" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "toc.follow"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u8907\u88fd", "clipboard.copy": "\u8907\u88fd", "search.result.more.one": "\u6b64\u9801\u5c1a\u6709 1 \u500b\u7b26\u5408\u7684\u9805\u76ee", "search.result.more.other": "\u6b64\u9801\u5c1a\u6709 # \u500b\u7b26\u5408\u7684\u9805\u76ee", "search.result.none": "\u6c92\u6709\u7b26\u5408\u7684\u9805\u76ee", "search.result.one": "\u627e\u5230 1 \u500b\u7b26\u5408\u7684\u9805\u76ee", "search.result.other": "\u627e\u5230 # \u500b\u7b26\u5408\u7684\u9805\u76ee", "search.result.placeholder": "\u6253\u5b57\u9032\u884c\u641c\u5c0b", "search.result.term.missing": "\u7f3a\u5c11\u5b57\u8a5e", "select.version": "\u9078\u64c7\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

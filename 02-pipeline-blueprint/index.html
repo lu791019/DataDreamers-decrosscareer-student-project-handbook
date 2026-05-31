@@ -1,0 +1,2023 @@
+
+<!doctype html>
+<html lang="zh-TW" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="TibaMe 雲端資料工程師養成班 — 從 0 到 1 建立面試作品集">
+      
+      
+        <meta name="author" content="Dex">
+      
+      
+      
+        <link rel="prev" href="../01-github-setup-sop/">
+      
+      
+        <link rel="next" href="../03-team-process/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>第 2 週 — 通用資料管線藍圖 - DE 學員專題實戰手冊</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Noto Sans TC";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#2-02" class="md-skip">
+          跳轉到
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="頁首">
+    <a href=".." title="DE 學員專題實戰手冊" class="md-header__button md-logo" aria-label="DE 學員專題實戰手冊" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DE 學員專題實戰手冊
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              第 2 週 — 通用資料管線藍圖
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="orange"  aria-label="切換深色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切換深色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="orange"  aria-label="切換淺色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切換淺色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜尋" placeholder="搜尋" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="搜尋">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清除" aria-label="清除" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜尋引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/lu791019/DataDreamers-decrosscareer-student-project-handbook" title="前往倉庫" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="導覽列" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="DE 學員專題實戰手冊" class="md-nav__button md-logo" aria-label="DE 學員專題實戰手冊" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    DE 學員專題實戰手冊
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/lu791019/DataDreamers-decrosscareer-student-project-handbook" title="前往倉庫" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    首頁
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    專案協作系列
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    專案協作系列
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../00-agile-and-tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 0 週 — 敏捷開發 + 工具選型
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-github-setup-sop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 1 週 — GitHub 註冊 SOP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 2 週 — 通用資料管線藍圖
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 2 週 — 通用資料管線藍圖
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目錄">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目錄
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        一句話總結
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etlelt-de" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        從 ETL/ELT 講起：DE 工作的核心動作
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="從 ETL/ELT 講起：DE 工作的核心動作">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#etl-vs-elt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ETL vs ELT — 差異就在順序，而這個順序是為了解決儲存和運算
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pos-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        範例： 🍱 餐飲連鎖店 POS Pipeline
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        兩種視角：架構視角 vs 行為視角
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6 階段藍圖（架構視角）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6 階段藍圖（架構視角）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1️⃣ Source — 資料從哪來
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-ingest" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2️⃣ Ingest — 怎麼把資料拉進來
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3️⃣ Storage — 資料放在哪
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4️⃣ Process — 處理成可用資訊
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-serve" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5️⃣ Serve — 怎麼讓人用到
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-observe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6️⃣ Observe — 出問題你知道嗎？
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        怎麼套用到 8 情境
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="怎麼套用到 8 情境">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        以下作爲參考，基本上團隊專題還是建議用到課程所學的工具，或這些工具的進階等)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        工具選型
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="工具選型">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pythonpandasdbsqlnosqlairflowdocker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        此章節參考和理解即可，基本上專題都要用上課所學或相對應工具較佳，包含Python、Pandas、DB(SQL、NoSQL)、Airflow、Docker等
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        思考點 1：資料規模
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        思考點 2：更新頻率
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        思考點 3：使用者
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 小作業：畫出期初活動(或各組專題)的 6 階段架構圖
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-team-process/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 3 週 — 小組專案 10 階段流程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-pain-points-industry-map/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 4 週 — 8 情境痛點 × 業界地圖
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8 情境 Walkthrough
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    8 情境 Walkthrough
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scenarios/scenario-1-restaurant-pos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1 — 餐飲連鎖 POS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scenarios/scenario-2-ecommerce/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2 — B2C 電商競品比價
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scenarios/scenario-3-fintech/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3 — 數位金融客訴
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scenarios/scenario-4-music/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4 — 音樂串流推薦
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scenarios/scenario-5-ride/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5 — 叫車服務交通熱點
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scenarios/scenario-6-recruit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6 — 求職媒合職缺趨勢
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scenarios/scenario-7-news/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7 — 媒體業新聞輿情
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scenarios/scenario-8-realestate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8 — 不動產房價趨勢
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    持續參考
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    持續參考
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-collaboration-sop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    協作 SOP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-retro-and-after/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    復盤 + 課後加強
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-demo-day-rubric/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Demo Day 評分表
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FAQ/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目錄">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目錄
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        一句話總結
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etlelt-de" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        從 ETL/ELT 講起：DE 工作的核心動作
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="從 ETL/ELT 講起：DE 工作的核心動作">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#etl-vs-elt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ETL vs ELT — 差異就在順序，而這個順序是為了解決儲存和運算
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pos-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        範例： 🍱 餐飲連鎖店 POS Pipeline
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        兩種視角：架構視角 vs 行為視角
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6 階段藍圖（架構視角）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6 階段藍圖（架構視角）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1️⃣ Source — 資料從哪來
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-ingest" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2️⃣ Ingest — 怎麼把資料拉進來
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3️⃣ Storage — 資料放在哪
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4️⃣ Process — 處理成可用資訊
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-serve" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5️⃣ Serve — 怎麼讓人用到
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-observe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6️⃣ Observe — 出問題你知道嗎？
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        怎麼套用到 8 情境
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="怎麼套用到 8 情境">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        以下作爲參考，基本上團隊專題還是建議用到課程所學的工具，或這些工具的進階等)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        工具選型
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="工具選型">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pythonpandasdbsqlnosqlairflowdocker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        此章節參考和理解即可，基本上專題都要用上課所學或相對應工具較佳，包含Python、Pandas、DB(SQL、NoSQL)、Airflow、Docker等
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        思考點 1：資料規模
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        思考點 2：更新頻率
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        思考點 3：使用者
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 小作業：畫出期初活動(或各組專題)的 6 階段架構圖
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="2-02">專案協作第 2 週 ｜ 02 通用資料管線藍圖<a class="headerlink" href="#2-02" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>獲得一個通用的 Data Engineer Pipeline 架構：所有 DE 專案都長同一個樣子，只是每個 stage 用不同工具</p>
+</blockquote>
+<hr />
+<h2 id="_1">一句話總結<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p><strong>所有資料管線都是 6 個階段：Source → Ingest → Storage → Process → Serve → Observe。</strong></p>
+<p>我們的 8 種情境也好，業界等級的系統也好，骨架完全一樣。差別只在每階段的選型。</p>
+<hr />
+<h2 id="etlelt-de">從 ETL/ELT 講起：DE 工作的核心動作<a class="headerlink" href="#etlelt-de" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>在拆解六階段之前，先讓你認識業界最常掛在嘴邊的兩個縮寫：<strong>ETL</strong> 與 <strong>ELT</strong>。</p>
+</blockquote>
+<p>資料工程師（DE）的工作核心 = 蓋一條「從原始資料到可用洞察的輸送帶」，行話叫 <strong>Pipeline</strong>。最常見的 3 個動作合稱 <strong>ETL</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>步驟</th>
+<th>中文</th>
+<th>在做什麼</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>📥 <strong>E — Extract</strong></td>
+<td>取資料</td>
+<td>從來源把資料抓回來：API、爬蟲、CSV、資料庫</td>
+</tr>
+<tr>
+<td>🛠️ <strong>T — Transform</strong></td>
+<td>變乾淨 / 變有用</td>
+<td>清洗、補缺值、合併、計算指標、轉成可分析格式</td>
+</tr>
+<tr>
+<td>📤 <strong>L — Load</strong></td>
+<td>送到該去的地方</td>
+<td>寫進資料庫、產出儀表板、推播警示、寄出週報</td>
+</tr>
+</tbody>
+</table>
+<h3 id="etl-vs-elt">ETL vs ELT — 差異就在順序，而這個順序是為了解決儲存和運算<a class="headerlink" href="#etl-vs-elt" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>ETL（傳統）  E → T → L    先在中間轉換好再進倉儲
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>                          適合嚴格 schema、傳統資料倉儲、批次處理
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>ELT（雲端主流） E → L → T    先全部入倉儲，再用資料倉儲的設備或機器的運算力來做資料處理
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>                            (BigQuery / Snowflake / Databricks) 
+</code></pre></div>
+<blockquote>
+<p>💡 為什麼延伸出 ELT？因為雲端倉儲算力越來越強，成本也逐漸降低，「先進再轉」變得划算 —— <strong>原始資料保留</strong>、轉換邏輯可隨時重跑（你之前算錯了？重跑就好）</p>
+</blockquote>
+<h3 id="pos-pipeline">範例： 🍱 餐飲連鎖店 POS Pipeline<a class="headerlink" href="#pos-pipeline" title="Permanent link">&para;</a></h3>
+<p><strong>業務需求</strong>：店長想每天知道「哪些菜熱賣？什麼時候要補貨？哪間店做得最好？」
+→ DE 要設計一條每天自動跑的 pipeline。</p>
+<pre class="mermaid"><code>flowchart LR
+    A["🍱 POS 系統&lt;br/&gt;+ 各分店訂單"] --&gt; B["② Extract&lt;br/&gt;Python 抓 API/CSV"]
+    B --&gt; C["③ Storage&lt;br/&gt;MySQL 入庫"]
+    C --&gt; D["④ Transform&lt;br/&gt;pandas + SQL 算指標"]
+    D --&gt; E["⑤ Load&lt;br/&gt;Streamlit 儀表板"]</code></pre>
+<blockquote>
+<p><strong>對照架構視角</strong>：② Extract = 架構的 Ingest｜③ Storage = 架構的 Storage｜④ Transform = 架構的 Process｜⑤ Load 視情境落在 Serve 或 Storage</p>
+</blockquote>
+<p>這條 pipeline 把「業務問題（為什麼）」連到「工具選型（用什麼）」連到「執行流程（怎麼跑）」。
+<strong>DE 的價值所在</strong>：寫程式之外，也要把業務需求變成可運作的資料流(總結：程式碼正確正確且有高品質的資料或數據能持續進來)</p>
+<blockquote>
+<p>📚 接下來的「六階段藍圖」其實是把 ETL 拆得更細、補上前後端（資料來源、儲存、服務、監控），讓整條 pipeline 完整可運作。</p>
+</blockquote>
+<hr />
+<h2 id="vs">兩種視角：架構視角 vs 行為視角<a class="headerlink" href="#vs" title="Permanent link">&para;</a></h2>
+<p>DE 在講 pipeline 時，常常把兩件事混在一起講，先把它們分開：</p>
+<table>
+<thead>
+<tr>
+<th>視角</th>
+<th>看什麼</th>
+<th>用什麼詞彙</th>
+<th>回答什麼問題</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🏛 <strong>架構視角</strong></td>
+<td>整條 pipeline 由哪些<strong>階段組成</strong>（靜態結構）</td>
+<td>六階段：Source → Ingest → Storage → Process → Serve → Observe</td>
+<td>「pipeline 長什麼樣？」</td>
+</tr>
+<tr>
+<td>⚙️ <strong>行為視角</strong></td>
+<td>資料<strong>怎麼流動</strong>（動態執行）</td>
+<td>ETL（E → T → L）／ ELT（E → L → T）</td>
+<td>「資料怎麼動？什麼時候做轉換？」</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>💡 <strong>同一條 pipeline</strong>可以用兩種視角描述。架構是骨架，行為是它的執行順序。
+接下來先講架構，行為的部分回頭看上面「從 ETL 講起」那段。</p>
+</blockquote>
+<hr />
+<h2 id="6">6 階段藍圖（架構視角）<a class="headerlink" href="#6" title="Permanent link">&para;</a></h2>
+<pre class="mermaid"><code>flowchart LR
+    S["📁 Source&lt;br/&gt;資料源"] --&gt; I["📥 Ingest&lt;br/&gt;進料"]
+    I --&gt; ST["💾 Storage&lt;br/&gt;儲存"]
+    ST &lt;-.順序可換.-&gt; P["⚙️ Process&lt;br/&gt;處理"]
+    P --&gt; SE["🖥 Serve&lt;br/&gt;服務"]
+    SE --&gt; O["📡 Observe&lt;br/&gt;監控"]
+    O -.feedback loop.-&gt; S
+
+    style ST fill:#FEF3C7,stroke:#D97706
+    style P fill:#FEF3C7,stroke:#D97706</code></pre>
+<blockquote>
+<p><strong>💎 資料層（Storage ⇄ Process）順序可換</strong>：
+- <strong>ETL（傳統）</strong>：Process → Storage（先轉再進倉）
+- <strong>ELT（雲端主流）</strong>：Storage → Process（先進倉再用倉儲算力轉）</p>
+<p>💡 <strong>為什麼 Storage 和 Process 順序可以換？</strong>
+- <strong>ETL 傳統作法</strong>：資料先 Process（清洗、轉換）→ 再 Storage（存進倉儲）→ 嚴格 schema、批次處理
+- <strong>ELT 雲端主流</strong>：資料先 Storage（全部入倉）→ 再 Process（用倉儲算力轉換）→ 原始資料保留、轉換邏輯可隨時重跑
+- 兩種架構視角下的階段一樣，只是「執行順序」不同 — 這正是行為視角的工作</p>
+</blockquote>
+<h3 id="1-source">1️⃣ Source — 資料從哪來<a class="headerlink" href="#1-source" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>形式</th>
+<th>範例</th>
+<th>學期會碰到</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>API（被動拉）</td>
+<td>OpenAI / Spotify / 政府開放資料</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>爬蟲（主動抓）</td>
+<td>momo / 104</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>檔案下載</td>
+<td>Kaggle CSV / 壓縮檔 zip</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>資料庫匯出</td>
+<td>企業 ERP MySQL dump / python pandas read_sql()</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Streaming</td>
+<td>Kafka topic / Pub/Sub</td>
+<td>進階</td>
+</tr>
+</tbody>
+</table>
+<p><strong>選型原則</strong>：用 API 就別用爬蟲，用爬蟲了話也不能寫死(hard code，也就是要用function或把參數拉出來使用)。</p>
+<h3 id="2-ingest">2️⃣ Ingest — 怎麼把資料拉進來<a class="headerlink" href="#2-ingest" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>模式</th>
+<th>工具</th>
+<th>何時用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>一次性手動</td>
+<td>Python + requests</td>
+<td>POC 階段</td>
+</tr>
+<tr>
+<td>排程批次</td>
+<td>Airflow / cron / GitHub Actions</td>
+<td>多數情境</td>
+</tr>
+<tr>
+<td>即時串流</td>
+<td>Kafka / Pub/Sub</td>
+<td>高頻 + 低延遲</td>
+</tr>
+<tr>
+<td>事件觸發</td>
+<td>Webhook + Cloud Function</td>
+<td>整合第三方</td>
+</tr>
+</tbody>
+</table>
+<p><strong>一個小提醒</strong>：很多人交作業時就停在「手動跑一次」—— 但 pipeline 的價值在「自動」。沒上排程的話，面試官比較難從你的 demo 感受到工程價值，可以排程的就盡量排起來。</p>
+<h3 id="3-storage">3️⃣ Storage — 資料放在哪<a class="headerlink" href="#3-storage" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>原始層（Raw / Bronze）        → MongoDB / GCS / S3 / 本地 parquet
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>   ↓
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>清洗層（Cleaned / Silver）    → MySQL / PostgreSQL
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>   ↓
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>分析層（Curated / Gold）      → BigQuery / dbt model
+</code></pre></div>
+<p><strong>一個小提醒</strong>：剛開始很容易只開一張 MySQL table，原始資料每次直接覆蓋掉 —— 結果分析跑錯時，連回去重算的機會都沒有。</p>
+<p><strong>建議習慣</strong>：<strong>Raw 永遠保留</strong>，只在 Silver / Gold 層做清洗。多一份備份，安心很多。</p>
+<h3 id="4-process">4️⃣ Process — 處理成可用資訊<a class="headerlink" href="#4-process" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>行為視角下，這就是 ETL/ELT 的 <strong>T</strong>（Transform）動作；架構視角我們稱這一段為 <strong>Process</strong>。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>工具</th>
+<th>適用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pandas</td>
+<td>中小資料（&lt;10 GB）、單機</td>
+</tr>
+<tr>
+<td>SQL (BigQuery / Postgres)</td>
+<td>大資料分析</td>
+</tr>
+<tr>
+<td>dbt</td>
+<td>維度建模、版本控制的 SQL</td>
+</tr>
+<tr>
+<td>Spark</td>
+<td>超大資料、分散式</td>
+</tr>
+<tr>
+<td>LLM API</td>
+<td>文字理解 / 分類 / 摘要</td>
+</tr>
+</tbody>
+</table>
+<p><strong>一個值得早點養成的習慣</strong>：與其塞一支 1000 行的 notebook，不如拆成 staging → intermediate → mart 三層。
+每層職責清楚的好處：除錯時不用整支重看、組員 review 時抓得到重點。</p>
+<h3 id="5-serve">5️⃣ Serve — 怎麼讓人用到<a class="headerlink" href="#5-serve" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>形式</th>
+<th>工具</th>
+<th>何時用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dashboard</td>
+<td>Streamlit / Tableau / Looker</td>
+<td>內部視覺化</td>
+</tr>
+<tr>
+<td>API</td>
+<td>FastAPI / Flask</td>
+<td>給其他系統呼叫</td>
+</tr>
+<tr>
+<td>Chat Bot</td>
+<td>LINE Bot / Discord Bot</td>
+<td>一般用戶</td>
+</tr>
+<tr>
+<td>報告</td>
+<td>Notebook + PDF export</td>
+<td>一次性分析</td>
+</tr>
+<tr>
+<td>Notification</td>
+<td>Email / Slack / LINE 推播</td>
+<td>警示型</td>
+</tr>
+</tbody>
+</table>
+<p><strong>選型原則</strong>：跟著「使用者怎麼用」走，不是跟著「我會什麼」走。</p>
+<h3 id="6-observe">6️⃣ Observe — 出問題你知道嗎？<a class="headerlink" href="#6-observe" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>監控項目</th>
+<th>工具</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pipeline 跑沒跑</td>
+<td>Airflow UI / Sentry</td>
+</tr>
+<tr>
+<td>資料品質</td>
+<td>dbt tests / Great Expectations</td>
+</tr>
+<tr>
+<td>API 健康</td>
+<td>Uptime Robot / Cloudflare</td>
+</tr>
+<tr>
+<td>Cost</td>
+<td>GCP Billing / AWS Cost Explorer</td>
+</tr>
+<tr>
+<td>Alert</td>
+<td>Email / Slack / LINE notify</td>
+</tr>
+</tbody>
+</table>
+<p><strong>很容易被忽略的一步</strong> —— 但這一步往往就是讓作品從「能跑」變成「能讓人放心交給你」的關鍵。</p>
+<hr />
+<h2 id="8">怎麼套用到 8 情境<a class="headerlink" href="#8" title="Permanent link">&para;</a></h2>
+<h3 id="_2">以下作爲參考，基本上團隊專題還是建議用到課程所學的工具，或這些工具的進階等)<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>情境</th>
+<th>Source</th>
+<th>Storage</th>
+<th>Process</th>
+<th>Serve</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>餐飲 POS</td>
+<td>Kaggle / API</td>
+<td>MySQL</td>
+<td>pandas</td>
+<td>Streamlit</td>
+</tr>
+<tr>
+<td>2</td>
+<td>電商比價</td>
+<td>爬蟲 (momo/PChome)</td>
+<td>MySQL</td>
+<td>Airflow + SQL</td>
+<td>FastAPI</td>
+</tr>
+<tr>
+<td>3</td>
+<td>數位金融</td>
+<td>CFPB API</td>
+<td>MongoDB</td>
+<td>LLM 分類</td>
+<td>Streamlit</td>
+</tr>
+<tr>
+<td>4</td>
+<td>音樂串流</td>
+<td>Spotify API</td>
+<td>MongoDB</td>
+<td>SQL + pandas</td>
+<td>Streamlit</td>
+</tr>
+<tr>
+<td>5</td>
+<td>叫車交通</td>
+<td>NYC TLC</td>
+<td>BigQuery</td>
+<td>Airflow 15 min</td>
+<td>FastAPI</td>
+</tr>
+<tr>
+<td>6</td>
+<td>求職媒合</td>
+<td>104 爬蟲</td>
+<td>MongoDB</td>
+<td>pandas</td>
+<td>Streamlit</td>
+</tr>
+<tr>
+<td>7</td>
+<td>新聞輿情</td>
+<td>RSS / NewsAPI</td>
+<td>MongoDB</td>
+<td>LLM</td>
+<td>Streamlit + LINE</td>
+</tr>
+<tr>
+<td>8</td>
+<td>房地產</td>
+<td>data.gov.tw</td>
+<td>MySQL</td>
+<td>pandas</td>
+<td>Streamlit 地圖</td>
+</tr>
+</tbody>
+</table>
+<p>每個情境的細節展開請見 <code>scenarios/*.md</code>。</p>
+<hr />
+<h2 id="_3">工具選型<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h3 id="pythonpandasdbsqlnosqlairflowdocker">此章節參考和理解即可，基本上專題都要用上課所學或相對應工具較佳，包含Python、Pandas、DB(SQL、NoSQL)、Airflow、Docker等<a class="headerlink" href="#pythonpandasdbsqlnosqlairflowdocker" title="Permanent link">&para;</a></h3>
+<h3 id="1">思考點 1：資料規模<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>你的資料每天進多少？
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>├ &lt;1 GB        → MySQL / MongoDB 就夠
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>├ 1-100 GB     → BigQuery / PostgreSQL
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>└ &gt;100 GB      → BigQuery / Snowflake / Spark
+</code></pre></div>
+<h3 id="2">思考點 2：更新頻率<a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>資料多久要新一次？
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>├ 每天 / 每週   → cron job （排程設定）
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>├ 每小時 / 15min→ Airflow
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>└ 即時          → Kafka / Pub/Sub
+</code></pre></div>
+<h3 id="3">思考點 3：使用者<a class="headerlink" href="#3" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>誰在用你的結果？
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>├ 工程師 / 自己   → 寫 python 腳本 或 SQL 就好
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>├ 非技術同事     → Streamlit / Tableau
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>├ 一般用戶       → LINE Bot / 網頁
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>└ 其他系統       → FastAPI
+</code></pre></div>
+<hr />
+<h2 id="6_1">🎯 小作業：畫出期初活動(或各組專題)的 6 階段架構圖<a class="headerlink" href="#6_1" title="Permanent link">&para;</a></h2>
+<p>照著本章 6 階段藍圖，把期初活動的 data pipeline 完成以下設計：</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 用 draw.io / Excalidraw / Mermaid 畫一張架構圖（Source → Ingest → Storage → Process → Serve → Observe）</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 每個階段標出<strong>選的工具</strong>和<strong>為什麼選</strong>（1 句話即可）</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 去參考相對應的 8 種情境當作參考並先了解</li>
+</ul>
+<blockquote>
+<p>💡 用 Mermaid 寫進 markdown 最省事，Mermaid 可以先了解即可，並透過 AI 協助撰寫。</p>
+</blockquote>
+<hr />
+<p>下一步：<a href="../03-team-process/">03 小組專案 10 階段流程 →</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到頂端
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/lu791019/DataDreamers-decrosscareer-student-project-handbook" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "toc.follow"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u8907\u88fd", "clipboard.copy": "\u8907\u88fd", "search.result.more.one": "\u6b64\u9801\u5c1a\u6709 1 \u500b\u7b26\u5408\u7684\u9805\u76ee", "search.result.more.other": "\u6b64\u9801\u5c1a\u6709 # \u500b\u7b26\u5408\u7684\u9805\u76ee", "search.result.none": "\u6c92\u6709\u7b26\u5408\u7684\u9805\u76ee", "search.result.one": "\u627e\u5230 1 \u500b\u7b26\u5408\u7684\u9805\u76ee", "search.result.other": "\u627e\u5230 # \u500b\u7b26\u5408\u7684\u9805\u76ee", "search.result.placeholder": "\u6253\u5b57\u9032\u884c\u641c\u5c0b", "search.result.term.missing": "\u7f3a\u5c11\u5b57\u8a5e", "select.version": "\u9078\u64c7\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
