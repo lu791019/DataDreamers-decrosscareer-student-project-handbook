@@ -1,0 +1,96 @@
+site_name: DE 學員專題實戰手冊
+site_description: TibaMe 雲端資料工程師養成班 — 從 0 到 1 建立面試作品集
+site_author: Dex
+docs_dir: docs
+site_dir: site
+
+theme:
+  name: material
+  language: zh-TW
+  font:
+    text: Noto Sans TC
+    code: JetBrains Mono
+  palette:
+    - scheme: default
+      primary: blue
+      accent: orange
+      toggle:
+        icon: material/brightness-7
+        name: 切換深色模式
+    - scheme: slate
+      primary: blue
+      accent: orange
+      toggle:
+        icon: material/brightness-4
+        name: 切換淺色模式
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - toc.follow
+  icon:
+    repo: fontawesome/brands/github
+
+repo_url: https://github.com/lu791019/DataDreamers-decrosscareer-student-project-handbook
+repo_name: GitHub
+
+nav:
+  - 首頁: README.md
+  - 專案協作系列:
+    - 第 0 週 — 敏捷開發 + 工具選型: 00-agile-and-tools.md
+    - 第 1 週 — GitHub 註冊 SOP: 01-github-setup-sop.md
+    - 第 2 週 — 通用資料管線藍圖: 02-pipeline-blueprint.md
+    - 第 3 週 — 小組專案 10 階段流程: 03-team-process.md
+    - 第 4 週 — 8 情境痛點 × 業界地圖: 04-pain-points-industry-map.md
+  - 8 情境 Walkthrough:
+    - 1 — 餐飲連鎖 POS: scenarios/scenario-1-restaurant-pos.md
+    - 2 — B2C 電商競品比價: scenarios/scenario-2-ecommerce.md
+    - 3 — 數位金融客訴: scenarios/scenario-3-fintech.md
+    - 4 — 音樂串流推薦: scenarios/scenario-4-music.md
+    - 5 — 叫車服務交通熱點: scenarios/scenario-5-ride.md
+    - 6 — 求職媒合職缺趨勢: scenarios/scenario-6-recruit.md
+    - 7 — 媒體業新聞輿情: scenarios/scenario-7-news.md
+    - 8 — 不動產房價趨勢: scenarios/scenario-8-realestate.md
+  - 持續參考:
+    - 協作 SOP: 05-collaboration-sop.md
+    - 復盤 + 課後加強: 06-retro-and-after.md
+    - Demo Day 評分表: 07-demo-day-rubric.md
+  - FAQ: FAQ.md
+
+plugins:
+  - search:
+      lang:
+        - zh
+        - en
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - tables
+  - toc:
+      permalink: true
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/lu791019/DataDreamers-decrosscareer-student-project-handbook
