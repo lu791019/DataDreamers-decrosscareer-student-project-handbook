@@ -156,4 +156,4 @@ YouTube 公開：
 - ✅ 商業用途請先聯繫
 - ⚠️ 改編後需註明原作者並用相同授權
 
-GitHub Repo: [github.com/lu791019/tibame-student-project-handbook](https://github.com/lu791019/tibame-student-project-handbook)（star ⭐ 一下方便日後找回）
+GitHub Repo: [github.com/lu791019/DataDreamers-decrosscareer-student-project-handbook](https://github.com/lu791019/DataDreamers-decrosscareer-student-project-handbook)（star ⭐ 一下方便日後找回）
