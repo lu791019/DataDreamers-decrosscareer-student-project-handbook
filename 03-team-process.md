@@ -316,16 +316,18 @@ Sprint 結束日   sprint review (60 min)     demo 給組內看      ← 00 章 
 
 ---
 
-## 🎯 小作業：寫好 PLAN.md + task.md 第一版
+## 🎯 小作業：開一次團隊會議，建立協作節奏
 
-把本章的 10 階段轉成你們組的執行計畫。
+這週的重點不是寫文件，而是讓團隊真正動起來。
 
-- [ ] 用 [template-repo/PLAN.md](template-repo/PLAN.md) 為模板，填好「問題定義 + 系統設計 + Sprint 計畫」三段
-- [ ] 用 [template-repo/task.md](template-repo/task.md) 為模板，把初期任務拆成 4-6 個 task
-- [ ] 每個 task 都標 owner
-- [ ] 各人主擔的角色寫進 PLAN.md「分工」段（4 種角色：Ingest / Pipeline / Analytics / Product）
+- [ ] 約好每週固定 sync 的時間（什麼時候、用什麼方式：線上 / 實體）
+- [ ] 在看板（Trello / Notion）建好第一批任務卡（3-5 張就好，例如：選題討論、架構圖、資料來源調查）
+- [ ] 每張任務卡都指定負責人
+- [ ] 在團隊溝通群裡把以上決定 po 出來，讓大家都看到
 
-**交付**：把這兩份檔案 commit + push，repo 連結貼到指定 channel。(暫時不用)
+**交付**：在溝通群裡截圖看板 + sync 時間，貼到指定 channel。
+
+> 💡 template-repo 裡的 [PLAN.md](template-repo/PLAN.md) 和 [task.md](template-repo/task.md) 留著，等到實作期（W10 起）再來填會更有內容可以寫。
 
 ---
 

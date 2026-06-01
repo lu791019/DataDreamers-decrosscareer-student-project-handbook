@@ -45,8 +45,8 @@ nav:
     - 第 0 週 — 敏捷開發 + 工具選型: 00-agile-and-tools.md
     - 第 1 週 — GitHub 註冊 SOP: 01-github-setup-sop.md
     - 第 2 週 — 通用資料管線藍圖: 02-pipeline-blueprint.md
-    - 第 3 週 — 小組專案 10 階段流程: 03-team-process.md
-    - 第 4 週 — 8 情境痛點 × 業界地圖: 04-pain-points-industry-map.md
+    - 第 3 週 — 8 情境痛點 × 業界地圖: 04-pain-points-industry-map.md
+    - 第 4 週 — 小組專案 10 階段流程: 03-team-process.md
   - 8 情境 Walkthrough:
     - 1 — 餐飲連鎖 POS: scenarios/scenario-1-restaurant-pos.md
     - 2 — B2C 電商競品比價: scenarios/scenario-2-ecommerce.md

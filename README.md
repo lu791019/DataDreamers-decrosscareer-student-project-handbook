@@ -34,8 +34,8 @@
 | **第 0 週** | [00 敏捷開發 + 溝通與專案管理工具選型](00-agile-and-tools.md) | Scrumban 節奏 + Discord/Slack + Trello/Notion/GitHub Projects |
 | **第 1 週** | [01 GitHub 註冊、開通與 Fork SOP](01-github-setup-sop.md) | GitHub 帳號 + repo 設定 |
 | **第 2 週** | [02 通用資料管線藍圖](02-pipeline-blueprint.md) | 六階段骨架 + ETL/ELT + 工具選型決策樹 |
-| **第 3 週** | [03 小組專案 10 階段流程](03-team-process.md) | 啟動 → 復盤的 20 週完整 SOP |
-| **第 4 週** | [04 8 情境痛點 × 業界對應地圖](04-pain-points-industry-map.md) | 選題 × 業界職位對應 |
+| **第 3 週** | [04 8 情境痛點 × 業界對應地圖](04-pain-points-industry-map.md) | 選題 × 業界職位對應 |
+| **第 4 週** | [03 小組專案 10 階段流程](03-team-process.md) | 團隊協作節奏 + 看板任務建立 |
 
 ### 🎯 8 情境完整 walkthrough
 | # | 情境 | 對應產業 | 過往作品參考 |
