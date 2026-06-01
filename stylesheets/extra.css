@@ -4,48 +4,64 @@
   border-color: #D97706;
   border-width: 2px;
   border-left-width: 5px;
-  font-size: 1.05rem;
-  box-shadow: 0 2px 8px rgba(217, 119, 6, 0.12);
+  font-size: 1.1rem;
+  box-shadow: 0 2px 12px rgba(217, 119, 6, 0.15);
+  padding: 0.5em 0.8em;
+  margin-top: 2em;
+  margin-bottom: 2em;
 }
 
-/* 標題列 */
+/* 標題列 — H1 等級大小 */
 .md-typeset .homework > .admonition-title,
 .md-typeset .homework > summary {
-  background-color: rgba(217, 119, 6, 0.18);
+  background-color: rgba(217, 119, 6, 0.2);
   border-color: #D97706;
-  font-size: 1.25em;
-  font-weight: 700;
-  padding: 0.7em 0.8em;
+  font-size: 1.6em;
+  font-weight: 800;
+  padding: 0.6em 0.8em;
+  letter-spacing: 0.02em;
 }
 .md-typeset .homework > .admonition-title::before,
 .md-typeset .homework > summary::before {
   background-color: #D97706;
   -webkit-mask-image: var(--md-admonition-icon--homework);
   mask-image: var(--md-admonition-icon--homework);
+  width: 1.4em;
+  height: 1.4em;
 }
 
-/* 內容區：字體放大 + 行距寬鬆 */
+/* 內容區 — H3 等級大小 + 寬鬆行距 */
 .md-typeset .admonition.homework > :not(.admonition-title),
 .md-typeset details.homework > :not(summary) {
-  font-size: 1.02em;
-  line-height: 1.8;
+  font-size: 1.15em;
+  line-height: 1.9;
 }
 
-/* checkbox 清單放大 */
+/* 內容區段落間距加大 */
+.md-typeset .homework p {
+  margin-bottom: 0.8em;
+}
+
+/* checkbox 清單 — 放大 + 間距 */
 .md-typeset .homework .task-list-item {
-  font-size: 1.05em;
-  margin-bottom: 0.4em;
+  font-size: 1.15em;
+  margin-bottom: 0.6em;
+  line-height: 1.7;
 }
 
-/* 交付、提示等重點段落 */
+/* 交付、提示等粗體 — 深橘色 */
 .md-typeset .homework strong {
   color: #B45309;
+  font-size: 1.05em;
 }
+
+/* 💡 提示引言 */
 .md-typeset .homework blockquote {
   border-left-color: #D97706;
-  background-color: rgba(217, 119, 6, 0.06);
-  padding: 0.5em 1em;
+  background-color: rgba(217, 119, 6, 0.08);
+  padding: 0.6em 1.2em;
   border-radius: 4px;
+  font-size: 1.0em;
 }
 
 /* icon 定義 */
