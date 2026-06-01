@@ -226,15 +226,15 @@ flowchart LR
 
 ---
 
-## 🎯 小作業：畫出期初活動(或各組專題)的 6 階段架構圖
+!!! homework "🎯 小作業：畫出期初活動(或各組專題)的 6 階段架構圖"
 
-照著本章 6 階段藍圖，把期初活動的 data pipeline 完成以下設計：
+    照著本章 6 階段藍圖，把期初活動的 data pipeline 完成以下設計：
 
-- [ ] 用 draw.io / Excalidraw / Mermaid 畫一張架構圖（Source → Ingest → Storage → Process → Serve → Observe）
-- [ ] 每個階段標出**選的工具**和**為什麼選**（1 句話即可）
-- [ ] 去參考相對應的 8 種情境當作參考並先了解
+    - [ ] 用 draw.io / Excalidraw / Mermaid 畫一張架構圖（Source → Ingest → Storage → Process → Serve → Observe）
+    - [ ] 每個階段標出**選的工具**和**為什麼選**（1 句話即可）
+    - [ ] 去參考相對應的 8 種情境當作參考並先了解
 
-> 💡 用 Mermaid 寫進 markdown 最省事，Mermaid 可以先了解即可，並透過 AI 協助撰寫。
+    > 💡 用 Mermaid 寫進 markdown 最省事，Mermaid 可以先了解即可，並透過 AI 協助撰寫。
 
 ---
 

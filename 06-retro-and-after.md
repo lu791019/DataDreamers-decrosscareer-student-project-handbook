@@ -227,20 +227,20 @@
 
 ---
 
-## 🎯 小作業：寫專題 final retro
+!!! homework "🎯 小作業：寫專題 final retro"
 
-學期末 demo 結束後 1 週內，組內每人先寫個人 final retro，再合併小組 retro。
+    學期末 demo 結束後 1 週內，組內每人先寫個人 final retro，再合併小組 retro。
 
-- [ ] 每人用「個人 final retro 模板」寫一份（6 個小題）
-- [ ] 全組 sync 一次（90 分鐘），整理出：
-  - 共識 3 件事 / 分歧 2-3 件事 / 一句總教訓
-- [ ] 存到 repo 的 `docs/retro/final.md` commit
-- [ ] 各人把「下次想加強的技能」寫進個人 portfolio 的「課後加強」段
+    - [ ] 每人用「個人 final retro 模板」寫一份（6 個小題）
+    - [ ] 全組 sync 一次（90 分鐘），整理出：
+        - 共識 3 件事 / 分歧 2-3 件事 / 一句總教訓
+    - [ ] 存到 repo 的 `docs/retro/final.md` commit
+    - [ ] 各人把「下次想加強的技能」寫進個人 portfolio 的「課後加強」段
 
-**交付**：PR 連結貼到指定 channel。
+    **交付**：PR 連結貼到指定 channel。
 
-> 💡 寫「都很好」「都很順」= 沒做 retro，誠實才有用。
-> 進階組別可以加做 sprint retro（往上看「optional」段）— 但預設只做這份 final retro。
+    > 💡 寫「都很好」「都很順」= 沒做 retro，誠實才有用。
+    > 進階組別可以加做 sprint retro（往上看「optional」段）— 但預設只做這份 final retro。
 
 ---
 

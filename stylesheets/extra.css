@@ -1,0 +1,22 @@
+/* 小作業區塊強化 */
+.md-typeset .admonition.homework,
+.md-typeset details.homework {
+  border-color: #D97706;
+  border-width: 2px;
+}
+.md-typeset .homework > .admonition-title,
+.md-typeset .homework > summary {
+  background-color: rgba(217, 119, 6, 0.15);
+  border-color: #D97706;
+  font-size: 1.1em;
+  font-weight: 700;
+}
+.md-typeset .homework > .admonition-title::before,
+.md-typeset .homework > summary::before {
+  background-color: #D97706;
+  -webkit-mask-image: var(--md-admonition-icon--homework);
+  mask-image: var(--md-admonition-icon--homework);
+}
+:root {
+  --md-admonition-icon--homework: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>');
+}

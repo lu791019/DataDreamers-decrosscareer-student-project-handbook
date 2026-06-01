@@ -22,8 +22,9 @@ jobs:
 
       - name: Prepare docs directory
         run: |
-          mkdir -p docs/scenarios
+          mkdir -p docs/scenarios docs/stylesheets
           cp *.md docs/
           cp scenarios/*.md docs/scenarios/
+          cp -r stylesheets/* docs/stylesheets/
 
       - run: mkdocs gh-deploy --force
