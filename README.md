@@ -50,7 +50,7 @@
 | 8 | [不動產房價趨勢](scenarios/scenario-8-realestate.md) | 不動產 / GIS | 房價走勢密碼、六都寵物便利度 |
 
 ### 🛠 GitHub Skeleton（學員 fork 用）
-- [template-repo/](template-repo/) — 開好的 repo 範本，含 README / PLAN / task / PR template / CI workflow
+- [template-repo/](template-repo/) — 開好的 repo 範本，含 README / task.md / .gitignore / requirements.txt / .env.example
 
 ### 📚 持續參考（不綁定週次）
 - [05 業界協作 SOP](05-collaboration-sop.md) — Git / GitHub / PR / Code Review（實作期天天看）

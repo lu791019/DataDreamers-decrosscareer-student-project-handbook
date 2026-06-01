@@ -20,44 +20,26 @@
 
 ## 1. Repo 結構（fork [template-repo/](template-repo/) 直接用）
 
+最小起步只需要這些，後面需要再加就好：
+
 ```
 project-name/
-├── .github/
-│   ├── ISSUE_TEMPLATE/
-│   │   ├── bug_report.md
-│   │   ├── feature_request.md
-│   │   └── question.md
-│   ├── PULL_REQUEST_TEMPLATE.md
-│   └── workflows/
-│       └── ci.yml                 # GitHub Actions 自動測試
-├── docs/
-│   ├── architecture.md            # 系統架構圖（必要）
-│   ├── api-contract.md            # 模組間 API
-│   ├── data-dictionary.md         # 欄位定義
-│   ├── retro-template.md          # Sprint 復盤模板
-│   └── demo-script.md             # Demo 講稿
-├── src/
-│   ├── ingest/                    # 進料模組
-│   ├── pipeline/                  # 排程 / 轉換
-│   ├── analytics/                 # 分析 / 模型
-│   └── serve/                     # API / dashboard
-├── tests/
-│   ├── unit/
-│   └── integration/
-├── data/
-│   ├── raw/         (.gitignore)
-│   ├── processed/   (.gitignore)
-│   └── README.md    # 說明 data 從哪來、怎麼下載
-├── notebooks/                     # 探索用，不入 prod
-├── docker-compose.yml
-├── Dockerfile
-├── requirements.txt / pyproject.toml
 ├── .env.example                   # 環境變數樣板
 ├── .gitignore
-├── README.md                      # 入口
-├── PLAN.md                        # 設計 + 實作計畫
+├── README.md                      # 入口（填你們的專題資訊）
 ├── task.md                        # 進度追蹤
-└── GUIDE.md                       # 專案導覽
+└── requirements.txt               # Python 套件
+```
+
+實作期有需要時再逐步加入：
+
+```
+├── src/                           # 程式碼
+├── data/                          # 資料（記得加進 .gitignore）
+├── docs/                          # 架構圖、API 文件等
+├── tests/                         # 測試
+├── Dockerfile                     # 容器化（課程會教）
+└── docker-compose.yml
 ```
 
 ### 為什麼這樣分？
@@ -142,7 +124,7 @@ docs: 補上 dashboard 部署到 Streamlit Cloud 的步驟
 
 ---
 
-## 4. PR Template（[完整版見 template-repo/.github/PULL_REQUEST_TEMPLATE.md](template-repo/.github/PULL_REQUEST_TEMPLATE.md)）
+## 4. PR Template
 
 ```markdown
 ## 這個 PR 做什麼
@@ -184,7 +166,7 @@ Closes #
 
 ## 5. Issue Template
 
-3 種：bug / feature / question。內容見 [template-repo/.github/ISSUE_TEMPLATE/](template-repo/.github/ISSUE_TEMPLATE/)。
+3 種：bug / feature / question。
 
 關鍵原則：**Issue 不是聊天**，是「未來自己 / 別人翻得到的決策紀錄」。每個討論都該變 issue。
 
@@ -253,7 +235,7 @@ Closes #
 
 ## 8. CI/CD 最低門檻
 
-[`template-repo/.github/workflows/ci.yml`](template-repo/.github/workflows/ci.yml) 已經寫好，包含：
+CI/CD 基本項目（實作期有需要時再加 `.github/workflows/ci.yml`）：
 
 ```yaml
 - pytest 跑單元測試

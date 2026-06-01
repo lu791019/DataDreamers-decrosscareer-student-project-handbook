@@ -327,7 +327,7 @@ Sprint 結束日   sprint review (60 min)     demo 給組內看      ← 00 章 
 
     **交付**：在溝通群裡截圖看板 + sync 時間，貼到指定 channel。
 
-    > 💡 template-repo 裡的 [PLAN.md](template-repo/PLAN.md) 和 [task.md](template-repo/task.md) 留著，等到實作期（W10 起）再來填會更有內容可以寫。
+    > 💡 [template-repo/task.md](template-repo/task.md) 有任務追蹤的範本，等到實作期（W10 起）再來填會更有內容可以寫。
 
 ---
 
