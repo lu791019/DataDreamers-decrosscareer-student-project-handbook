@@ -3,13 +3,19 @@
 .md-typeset details.homework {
   border-color: #D97706;
   border-width: 2px;
+  border-left-width: 5px;
+  font-size: 1.05rem;
+  box-shadow: 0 2px 8px rgba(217, 119, 6, 0.12);
 }
+
+/* 標題列 */
 .md-typeset .homework > .admonition-title,
 .md-typeset .homework > summary {
-  background-color: rgba(217, 119, 6, 0.15);
+  background-color: rgba(217, 119, 6, 0.18);
   border-color: #D97706;
-  font-size: 1.1em;
+  font-size: 1.25em;
   font-weight: 700;
+  padding: 0.7em 0.8em;
 }
 .md-typeset .homework > .admonition-title::before,
 .md-typeset .homework > summary::before {
@@ -17,6 +23,32 @@
   -webkit-mask-image: var(--md-admonition-icon--homework);
   mask-image: var(--md-admonition-icon--homework);
 }
+
+/* 內容區：字體放大 + 行距寬鬆 */
+.md-typeset .admonition.homework > :not(.admonition-title),
+.md-typeset details.homework > :not(summary) {
+  font-size: 1.02em;
+  line-height: 1.8;
+}
+
+/* checkbox 清單放大 */
+.md-typeset .homework .task-list-item {
+  font-size: 1.05em;
+  margin-bottom: 0.4em;
+}
+
+/* 交付、提示等重點段落 */
+.md-typeset .homework strong {
+  color: #B45309;
+}
+.md-typeset .homework blockquote {
+  border-left-color: #D97706;
+  background-color: rgba(217, 119, 6, 0.06);
+  padding: 0.5em 1em;
+  border-radius: 4px;
+}
+
+/* icon 定義 */
 :root {
   --md-admonition-icon--homework: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>');
 }
