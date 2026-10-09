@@ -90,7 +90,7 @@
 - [ ] **第 0 週**：建好團隊溝通群（Discord / LINE）+ 開好看板工具（Trello / Notion）
 - [ ] **第 1 週**：每人完成 GitHub 帳號，團隊 repo 建好、每人都能正常 push
 - [ ] **第 2 週**：畫出你們專題的 **6 階段架構圖**（Source → Ingest → Storage → Process → Serve → Observe）
-- [ ] **第 3 週**：**選定題目** + 寫一份 persona / 痛點文件，去 [scenarios/](scenarios/) 挑 1-2 個對齊
+- [ ] **第 3 週**：**選定題目** + 寫一份 persona / 痛點文件，去 [scenarios/](scenarios/scenario-1-restaurant-pos.md) 挑 1-2 個對齊
 - [ ] **第 4 週**：**開一次團隊會議** — 在看板建 3-5 張任務卡（每張指定負責人）+ 約好每週固定 sync 時間，把決定 po 到溝通群
 
 ---

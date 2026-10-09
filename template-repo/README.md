@@ -25,7 +25,7 @@ Source → Ingest → Storage → Process → Serve → Observe
 | Storage | MySQL / MongoDB |
 | Process | pandas / SQL |
 | Serve | FastAPI / Streamlit |
-| Observe | LINE Notify / Sentry |
+| Observe | Discord webhook / Sentry |
 
 ---
 

@@ -32,7 +32,7 @@ flowchart LR
     I --> ST["💾 Storage<br/>MySQL<br/>orders / inventory"]
     ST <-.順序可換.-> P["⚙️ Process<br/>pandas<br/>groupby / rolling avg"]
     P --> SE["🖥 Serve<br/>Streamlit<br/>店長/區督/總部 三視圖"]
-    SE --> O["📡 Observe<br/>Airflow UI<br/>+ LINE notify 失敗推播"]
+    SE --> O["📡 Observe<br/>Airflow UI<br/>+ Discord webhook 失敗推播"]
     style ST fill:#FEF3C7,stroke:#D97706
     style P fill:#FEF3C7,stroke:#D97706
 ```
@@ -98,7 +98,7 @@ fork [template-repo/](../template-repo/) → 改 README → 設定 GitHub Action
 ### ⑧ 上線
 - Streamlit Cloud 部署 dashboard
 - Airflow 跑在 GCP Compute Engine（用學員額度）
-- LINE Notify 監控
+- Discord webhook 監控
 
 ### ⑨ Demo
 業務版 5 分鐘：
@@ -126,7 +126,7 @@ fork [template-repo/](../template-repo/) → 改 README → 設定 GitHub Action
 * docs: add architecture diagram and ER diagram (#12)
 * feat: add Airflow DAG for daily 6am refresh (#14)
 * refactor: split analytics module into staging/intermediate/mart (#17)
-* feat: integrate LINE Notify for pipeline failures (#19)
+* feat: integrate Discord webhook for pipeline failures (#19)
 * feat: 3-view dashboard - store/regional/HQ (#21)
 * ci: add docker-compose health check in CI (#23)
 * docs: update README with deployment guide (#25)
@@ -211,7 +211,7 @@ Closes #9
 | W4-W7 | 設計 + 分工 | 4 張圖 / RACI |
 | W10-W12 | Sprint 1 | 跑通 ingest → MySQL → Streamlit |
 | W13-W15 | Sprint 2 | 排程 + 補貨演算法 + 三視圖 |
-| W16-W18 | Sprint 3 | 監控 + 文件 + LINE notify |
+| W16-W18 | Sprint 3 | 監控 + 文件 + Discord webhook |
 | W19 | 整合 + 上線 | docker compose / 雲端部署 |
 | W20 | Demo + 復盤 | dry run × 3 / 個人 retro |
 

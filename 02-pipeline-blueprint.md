@@ -169,7 +169,7 @@ flowchart LR
 | 資料品質 | dbt tests / Great Expectations |
 | API 健康 | Uptime Robot / Cloudflare |
 | Cost | GCP Billing / AWS Cost Explorer |
-| Alert | Email / Slack / LINE notify |
+| Alert | Email / Slack / Discord webhook |
 
 **很容易被忽略的一步** —— 但這一步往往就是讓作品從「能跑」變成「能讓人放心交給你」的關鍵。
 
@@ -238,4 +238,4 @@ flowchart LR
 
 ---
 
-下一步：[03 小組專案 10 階段流程 →](03-team-process.md)
+下一步：[04 8 情境痛點 × 業界對應地圖 →](04-pain-points-industry-map.md)
