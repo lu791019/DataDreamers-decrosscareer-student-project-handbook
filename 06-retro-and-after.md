@@ -24,7 +24,7 @@
 - 三個人同時改 schema 出 conflict
 
 ## Try（下週試試）
-- 加 GitHub Actions 每天跑健康檢查 + LINE 通知
+- 加 GitHub Actions 每天跑健康檢查 + Discord 通知
 - Schema 改動必須先開 issue 討論再動工
 ```
 
@@ -202,7 +202,7 @@
      UCI Retail 兩個資料源建立端到端 pipeline
    - 架構：Python ingest → MySQL → Airflow（每日 6am）→ Streamlit
    - 實作補貨建議演算法，依據 7 日滑動平均 + 銷售趨勢，預測庫存到底日
-   - 加入 dbt tests + LINE notify，pipeline 失敗 5 分鐘內收到通知
+   - 加入 dbt tests + Discord webhook，pipeline 失敗 5 分鐘內收到通知
    - 完整 PR review 流程、文件齊全、組員 25 個 PR 全部 reviewed merged
 ```
 

@@ -85,7 +85,7 @@ YouTube 公開：
 | 階段 | 課堂簡報 | 對應手冊章節 |
 |---|---|---|
 | 課程開始 | **課程總覽 & DE 介紹** ([PDF](../課程總覽%26DE介紹.pdf)) | README + [04 痛點地圖](04-pain-points-industry-map.md) |
-| 前置期 W1-W3 | **期初工作坊：資料解決方案顧問** ([PDF](../期初工作坊.pdf)) | [02 通用管線藍圖](02-pipeline-blueprint.md) + [scenarios/](scenarios/) |
+| 前置期 W1-W3 | **期初工作坊：資料解決方案顧問** ([PDF](../期初工作坊.pdf)) | [02 通用管線藍圖](02-pipeline-blueprint.md) + [scenarios/](scenarios/scenario-1-restaurant-pos.md) |
 | 實作期 W10-W12 | **期中工作坊：個人 pipeline 實作** ([HTML](../course_project_slides.html)) | [03 10 階段流程](03-team-process.md) + [05 協作 SOP](05-collaboration-sop.md) |
 
 > 💡 **建議閱讀順序**：先看課堂簡報感受全貌，回手冊查細節與作業。
@@ -106,7 +106,7 @@ YouTube 公開：
 |---|---|---|
 | 🌱 **完全沒用過 GitHub** | [01 GitHub 註冊 SOP](01-github-setup-sop.md) | [05 協作 SOP](05-collaboration-sop.md) |
 | 🤝 **還沒組好隊 / 不知怎麼啟動** | [03 10 階段流程](03-team-process.md)（① 啟動段） | [00 敏捷與工具選型](00-agile-and-tools.md) |
-| 🎯 **組好了、正在選題** | [04 痛點 × 業界地圖](04-pain-points-industry-map.md) | [scenarios/](scenarios/) 挑 1-2 個對齊 |
+| 🎯 **組好了、正在選題** | [04 痛點 × 業界地圖](04-pain-points-industry-map.md) | [scenarios/](scenarios/scenario-1-restaurant-pos.md) 挑 1-2 個對齊 |
 | 🏗 **開始實作、不知如何設計** | [02 通用管線藍圖](02-pipeline-blueprint.md) | 對應的 scenario 文件 |
 | 🛠 **動工中卡關 / 流程亂** | [05 協作 SOP](05-collaboration-sop.md) + [00 敏捷與工具](00-agile-and-tools.md) | [03 10 階段流程](03-team-process.md)（⑥ 衝刺段） |
 | 🎤 **快到 demo 了** | [07 Demo Day 評分表](07-demo-day-rubric.md) | [06 復盤模板](06-retro-and-after.md)（寫 final retro） |

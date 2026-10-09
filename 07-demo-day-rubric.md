@@ -191,4 +191,4 @@
 
 ---
 
-下一步：[scenarios/ — 看具體情境走一遍 →](scenarios/)
+下一步：[8 情境 walkthrough — 看具體情境走一遍 →](scenarios/scenario-1-restaurant-pos.md)

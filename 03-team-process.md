@@ -1,4 +1,4 @@
-# 專案協作第 3 週 ｜ 03 團隊專案 10 階段流程
+# 專案協作第 4 週 ｜ 03 團隊專案 10 階段流程
 
 > 這是把整個課程的小組專案做完的完整 SOP。每階段都有：**目標 / 產出物 / 時間預算 / 卡關處方 / 建議**。
 
@@ -331,4 +331,4 @@ Sprint 結束日   sprint review (60 min)     demo 給組內看      ← 00 章 
 
 ---
 
-下一步：[04 8 情境痛點 × 業界對應地圖 →](04-pain-points-industry-map.md)
+下一步：[8 情境 walkthrough — 從情境 1 開始 →](scenarios/scenario-1-restaurant-pos.md)

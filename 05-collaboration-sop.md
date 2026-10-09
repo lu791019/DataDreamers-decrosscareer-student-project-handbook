@@ -337,4 +337,4 @@ make dev    # 5 分鐘內能跑起來
 
 ---
 
-下一步：[05 8 情境痛點 × 業界對應地圖 →](04-pain-points-industry-map.md)
+下一步：[06 復盤 + 課後加強路徑 →](06-retro-and-after.md)
